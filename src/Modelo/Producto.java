@@ -4,7 +4,7 @@ public class Producto {
 
     //Atributos
     private int id;
-    private int cod_producto;
+    private String cod_producto;
     private String nombre;
     private String modelo;
     private String marca;
