@@ -3,12 +3,14 @@ package Modelo;
 public class Producto {
 
     //Atributos
-    private Integer codigo;
+    private int id;
+    private int cod_producto;
     private String nombre;
-    private String descripcion;
-    private Categoria categoria;
+    private String modelo;
     private String marca;
-    private Integer cantidad;
+    private Categoria categoria;
+    private String descripcion;
+    private int stock;
     private double precio;
 
     public Producto() {

@@ -3,11 +3,11 @@ package Modelo;
 public class Venta {
 
     //Atributos
+    private Integer id;
     private Cliente cliente;
+    private Empleado empleado;
     private Producto producto;
-    private int cantidad;
-    private static final double igv = 0.18;
-    private DetalleVenta detalle;
+    private EstadoVenta estado_venta;
 
     public Venta() {
     }

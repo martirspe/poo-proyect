@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Cliente extends Persona {
+public class Cliente extends Usuario {
 
     //Cliente
     private String email;
