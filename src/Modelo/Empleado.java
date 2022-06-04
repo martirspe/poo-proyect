@@ -4,11 +4,16 @@ public class Empleado extends Usuario {
 
     //Atributos
     private String cargo;
-    private String usuario;
-    private String password;
-    private TipoUsuario tipo_usuario;
 
     public Empleado() {
     }
-    
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
 }

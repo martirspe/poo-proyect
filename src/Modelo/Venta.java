@@ -6,10 +6,32 @@ public class Venta {
     private Integer id;
     private Cliente cliente;
     private Empleado empleado;
-    private Producto producto;
-    private EstadoVenta estado_venta;
 
     public Venta() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
 
 }

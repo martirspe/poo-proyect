@@ -6,17 +6,134 @@ import java.time.LocalDate;
 public class DetalleVenta {
 
     //Atributos
-    private int id;
+    private Integer id;
     private Venta venta;
-    private int cantidad;
-    private int igv;
-    private int descuento;
-    private int precio;
-    private double total;
+    private Producto producto;
+    private Integer cantidad;
+    private String moneda;
+    private Double t_cambio;
+    private Double igv;
+    private Double descuento;
+    private Double precio;
+    private Double total;
     private LocalDate fecha;
     private String met_pago;
+    private String referencia;
+    private String nota;
 
     public DetalleVenta() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Venta getVenta() {
+        return venta;
+    }
+
+    public void setVenta(Venta venta) {
+        this.venta = venta;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getMoneda() {
+        return moneda;
+    }
+
+    public void setMoneda(String moneda) {
+        this.moneda = moneda;
+    }
+
+    public Double getT_cambio() {
+        return t_cambio;
+    }
+
+    public void setT_cambio(Double t_cambio) {
+        this.t_cambio = t_cambio;
+    }
+
+    public Double getIgv() {
+        return igv;
+    }
+
+    public void setIgv(Double igv) {
+        this.igv = igv;
+    }
+
+    public Double getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(Double descuento) {
+        this.descuento = descuento;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getMet_pago() {
+        return met_pago;
+    }
+
+    public void setMet_pago(String met_pago) {
+        this.met_pago = met_pago;
+    }
+
+    public String getReferencia() {
+        return referencia;
+    }
+
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
+    }
+
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
     }
 
 }
