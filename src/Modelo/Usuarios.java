@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Usuario {
+public class Usuarios {
 
     //Atributos
     private Integer id;
@@ -13,7 +13,7 @@ public class Usuario {
     private Integer movil;
     private String direccion;
 
-    public Usuario() {
+    public Usuarios() {
     }
 
     public Integer getId() {

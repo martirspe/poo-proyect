@@ -7,8 +7,8 @@ public class DetalleVenta {
 
     //Atributos
     private Integer id;
-    private Venta venta;
-    private Producto producto;
+    private Ventas venta;
+    private Productos producto;
     private Integer cantidad;
     private String moneda;
     private Double t_cambio;
@@ -32,19 +32,19 @@ public class DetalleVenta {
         this.id = id;
     }
 
-    public Venta getVenta() {
+    public Ventas getVenta() {
         return venta;
     }
 
-    public void setVenta(Venta venta) {
+    public void setVenta(Ventas venta) {
         this.venta = venta;
     }
 
-    public Producto getProducto() {
+    public Productos getProducto() {
         return producto;
     }
 
-    public void setProducto(Producto producto) {
+    public void setProducto(Productos producto) {
         this.producto = producto;
     }
 

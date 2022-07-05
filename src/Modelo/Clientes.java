@@ -1,12 +1,12 @@
 package Modelo;
 
-public class Cliente extends Usuario {
+public class Clientes extends Usuarios {
 
     //Cliente
     private String usuario;
     private String password;
 
-    public Cliente() {
+    public Clientes() {
     }
 
     public String getUsuario() {

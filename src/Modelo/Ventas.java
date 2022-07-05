@@ -1,13 +1,13 @@
 package Modelo;
 
-public class Venta {
+public class Ventas {
 
     //Atributos
     private Integer id;
-    private Cliente cliente;
-    private Empleado empleado;
+    private Clientes cliente;
+    private Empleados empleado;
 
-    public Venta() {
+    public Ventas() {
     }
 
     public Integer getId() {
@@ -18,19 +18,19 @@ public class Venta {
         this.id = id;
     }
 
-    public Cliente getCliente() {
+    public Clientes getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(Clientes cliente) {
         this.cliente = cliente;
     }
 
-    public Empleado getEmpleado() {
+    public Empleados getEmpleado() {
         return empleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
+    public void setEmpleado(Empleados empleado) {
         this.empleado = empleado;
     }
 

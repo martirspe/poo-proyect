@@ -1,0 +1,122 @@
+package DAO;
+
+//Librerías
+import Modelo.Productos;
+import Formatos.Mensajes;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import Formatos.ManejadorTabla;
+
+public class CRUDproductos extends ConectarBD {
+
+    public CRUDproductos() {
+    }
+
+    //Método que recibe un JTable y JLabel y miuestra los registros de la tabla en el JTable
+    public void MostrarProductosEnTabla(JTable tabla) {
+        String[] titulo = {"No.", "ID", "Código", "Nombre", "Modelo", "Marca", "Categoría", "Stock", "Precio", "Descripción"};
+        DefaultTableModel modelo = new DefaultTableModel(null, titulo);
+        tabla.setModel(modelo);
+        try {
+            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1");
+            int cont = 0;
+            while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
+                cont++;
+                Productos pro = new Productos();
+                pro.setIdpro(rs.getInt(1));
+                pro.setCodigo(rs.getString(2));
+                pro.setNombre(rs.getString(3));
+                pro.setModelo(rs.getString(4));
+                pro.setMarca(rs.getString(5));
+                pro.setCategoria(rs.getInt(6));
+                pro.setStock(rs.getInt(7));
+                pro.setPrecio(rs.getDouble(8));
+                pro.setDescripcion(rs.getString(9));
+                modelo.addRow(pro.RegistroProducto(cont));
+            }
+
+            ManejadorTabla.FormatoTablaProductos(tabla);
+            conexion.close();
+
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla productos." + e);
+        }
+    }
+
+    //Método que recibe un producto y lo inserta en la tabla PRODUCTOS
+    public void InsertarProducto(Productos pro) {
+        try {
+            ps = conexion.prepareStatement("INSERT INTO productos (codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion, estado)"
+                    + " values(?,?,?,?,?,?,?,?,1);");
+            ps.setString(1, pro.getCodigo());
+            ps.setString(2, pro.getNombre());
+            ps.setString(3, pro.getModelo());
+            ps.setString(4, pro.getMarca());
+            ps.setInt(5, pro.getCategoria());
+            ps.setInt(6, pro.getStock());
+            ps.setDouble(7, pro.getPrecio());
+            ps.setString(8, pro.getDescripcion());
+            ps.setInt(9, pro.getEstado());
+            ps.executeUpdate();
+            ps.close();
+            Mensajes.M1("¡El producto se ha registrado correctamente!");
+
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede registrar el producto." + e);
+        }
+    }
+
+    public Productos ObtenerRegistroPro(int idcat) {
+        Productos pro = null; //No hay datos asociados al objeto
+        try {
+            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1 AND id = " + idcat);
+            pro = new Productos();
+            if (rs.next()) {
+                pro.setIdpro(rs.getInt(1));
+                pro.setCodigo(rs.getString(2));
+                pro.setNombre(rs.getString(3));
+                pro.setModelo(rs.getString(4));
+                pro.setMarca(rs.getString(5));
+                pro.setCategoria(rs.getInt(6));
+                pro.setStock(rs.getInt(7));
+                pro.setPrecio(rs.getDouble(8));
+                pro.setDescripcion(rs.getString(9));
+            }
+            rs.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede recuperar el registro." + e);
+        }
+        return pro;
+    }
+
+    public void ActualizarRegistroPro(Productos pro) {
+        try {
+            ps = conexion.prepareStatement("UPDATE productos SET codigo = ?, nombre = ?, modelo = ?, marca = ?, categoria = ?, cantidad = ?, precio = ?, descripcion = ? WHERE id = ?");
+            ps.setString(1, pro.getCodigo());
+            ps.setString(2, pro.getNombre());
+            ps.setString(3, pro.getModelo());
+            ps.setString(4, pro.getMarca());
+            ps.setInt(5, pro.getCategoria());
+            ps.setInt(6, pro.getStock());
+            ps.setDouble(7, pro.getPrecio());
+            ps.setString(8, pro.getDescripcion());
+            ps.setInt(9, pro.getIdpro());
+            ps.executeUpdate();
+            ps.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede actualizar el registro." + e);
+        }
+    }
+
+    public void EliminarRegistroPro(int idcat) {
+        try {
+            ps = conexion.prepareStatement("UPDATE productos SET estado = 0 WHERE id = ?");
+            ps.setInt(1, idcat);
+            ps.executeUpdate();
+            ps.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede eliminar el registro." + e);
+        }
+    }
+
+}

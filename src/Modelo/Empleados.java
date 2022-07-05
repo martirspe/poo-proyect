@@ -1,11 +1,11 @@
 package Modelo;
 
-public class Empleado extends Usuario {
+public class Empleados extends Usuarios {
 
     //Atributos
     private String cargo;
 
-    public Empleado() {
+    public Empleados() {
     }
 
     public String getCargo() {

@@ -1,27 +1,28 @@
 package Modelo;
 
-public class Producto {
+public class Productos {
 
     //Atributos
-    private Integer id;
+    private Integer idpro;
     private String codigo;
     private String nombre;
     private String modelo;
     private String marca;
-    private Categoria categoria;
-    private String descripcion;
-    private Integer cantidad;
+    private Integer categoria;
+    private Integer stock;
     private Double precio;
+    private String descripcion;
+    private Integer estado;
 
-    public Producto() {
+    public Productos() {
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getIdpro() {
+        return idpro;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdpro(Integer idpro) {
+        this.idpro = idpro;
     }
 
     public String getCodigo() {
@@ -56,12 +57,28 @@ public class Producto {
         this.marca = marca;
     }
 
-    public Categoria getCategoria() {
+    public Integer getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(Integer categoria) {
         this.categoria = categoria;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
     }
 
     public String getDescripcion() {
@@ -72,20 +89,17 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public Integer getCantidad() {
-        return cantidad;
+    public Integer getEstado() {
+        return estado;
     }
 
-    public void setCantidad(Integer cantidad) {
-        this.cantidad = cantidad;
+    public void setEstado(Integer estado) {
+        this.estado = estado;
     }
 
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Double precio) {
-        this.precio = precio;
+    public Object[] RegistroProducto(int num) {
+        Object[] fila = {num, idpro, codigo, nombre, modelo, marca, categoria, stock, precio, descripcion};
+        return fila;
     }
 
 }
