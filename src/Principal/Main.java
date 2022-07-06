@@ -14,6 +14,8 @@ public class Main {
     //Productos
     public static FormProductos fpro;
     public static ControladorProductos cpro;
+    public static FormStock fstock;
+    public static ControladorStock cstock;
 
     //Formulario Menú
     public static FormMenu fm;

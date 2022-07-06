@@ -33,6 +33,7 @@ public class FormMenu extends javax.swing.JFrame {
         jmProductos = new javax.swing.JMenu();
         jmiMantenimientoCategorias = new javax.swing.JMenuItem();
         jmiMantenimientoProductos = new javax.swing.JMenuItem();
+        jmiMantenimientoStock = new javax.swing.JMenuItem();
         jmVentas = new javax.swing.JMenu();
         jmiRegistroVentas = new javax.swing.JMenuItem();
         jmReportes = new javax.swing.JMenu();
@@ -63,10 +64,29 @@ public class FormMenu extends javax.swing.JFrame {
         jmProductos.setText("Productos");
 
         jmiMantenimientoCategorias.setText("Mantenimiento de categorías");
+        jmiMantenimientoCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiMantenimientoCategoriasActionPerformed(evt);
+            }
+        });
         jmProductos.add(jmiMantenimientoCategorias);
 
         jmiMantenimientoProductos.setText("Mantenimiento de productos");
+        jmiMantenimientoProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiMantenimientoProductosActionPerformed(evt);
+            }
+        });
         jmProductos.add(jmiMantenimientoProductos);
+
+        jmiMantenimientoStock.setText("Mantenimiento de stock");
+        jmiMantenimientoStock.setToolTipText("");
+        jmiMantenimientoStock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiMantenimientoStockActionPerformed(evt);
+            }
+        });
+        jmProductos.add(jmiMantenimientoStock);
 
         jMenuBar1.add(jmProductos);
 
@@ -99,6 +119,18 @@ public class FormMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jmiMantenimientoStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiMantenimientoStockActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiMantenimientoStockActionPerformed
+
+    private void jmiMantenimientoProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiMantenimientoProductosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiMantenimientoProductosActionPerformed
+
+    private void jmiMantenimientoCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiMantenimientoCategoriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiMantenimientoCategoriasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,6 +178,7 @@ public class FormMenu extends javax.swing.JFrame {
     public javax.swing.JMenuItem jmiMantenimientoCategorias;
     public javax.swing.JMenuItem jmiMantenimientoClientes;
     public javax.swing.JMenuItem jmiMantenimientoProductos;
+    public javax.swing.JMenuItem jmiMantenimientoStock;
     public javax.swing.JMenuItem jmiRegistroVentas;
     public javax.swing.JMenuItem jmiReporteVentas;
     // End of variables declaration//GEN-END:variables
