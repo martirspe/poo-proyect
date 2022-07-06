@@ -17,6 +17,7 @@ public class ControladorMenu implements ActionListener {
         vista.jmiMantenimientoClientes.addActionListener(this);
         vista.jmiMantenimientoCategorias.addActionListener(this);
         vista.jmiMantenimientoProductos.addActionListener(this);
+        vista.jmiMantenimientoStock.addActionListener(this);
         vista.jmiRegistroVentas.addActionListener(this);
         vista.jmiReporteVentas.addActionListener(this);
         fm.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -40,6 +41,13 @@ public class ControladorMenu implements ActionListener {
             Main.cpro = new ControladorProductos(Main.fpro);
             vista.jdpContenedor.add(Main.fpro);
             CentrarForma.CPanel(vista.jdpContenedor, Main.fpro);
+        }
+        
+        if (e.getSource() == vista.jmiMantenimientoStock) {
+            Main.fstock = new FormStock();
+            Main.cstock = new ControladorStock(Main.fstock);
+            vista.jdpContenedor.add(Main.fstock);
+            CentrarForma.CPanel(vista.jdpContenedor, Main.fstock);
         }
     }
 
