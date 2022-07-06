@@ -43,6 +43,7 @@ public class ControladorProductos implements ActionListener {
             Productos prod = FormatoProductos.LeerProductos(vista);
             CRUDproductos crud = new CRUDproductos();
             crud.InsertarProducto(prod);
+            crud.MostrarProductosEnTabla(vista.jtblDatos);
             FormatoProductos.LimpiarEntradas(vista);
         }
         if (e.getSource() == vista.jbtnConsultar) {

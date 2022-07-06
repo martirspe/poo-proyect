@@ -56,7 +56,6 @@ public class CRUDproductos extends ConectarBD {
             ps.setInt(6, pro.getStock());
             ps.setDouble(7, pro.getPrecio());
             ps.setString(8, pro.getDescripcion());
-            ps.setInt(9, pro.getEstado());
             ps.executeUpdate();
             ps.close();
             Mensajes.M1("¡El producto se ha registrado correctamente!");
