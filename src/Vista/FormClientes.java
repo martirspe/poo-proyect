@@ -51,11 +51,13 @@ public class FormClientes extends javax.swing.JInternalFrame {
         jLabel12 = new javax.swing.JLabel();
         jtxtId = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
-        jspCelular = new javax.swing.JSpinner();
-        jspNumDoc = new javax.swing.JSpinner();
         jLabel13 = new javax.swing.JLabel();
         jtxtApellidos = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
+        jtxtNumDoc = new javax.swing.JTextField();
+        jSeparator7 = new javax.swing.JSeparator();
+        jtxtCelular = new javax.swing.JTextField();
+        jSeparator8 = new javax.swing.JSeparator();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -66,14 +68,14 @@ public class FormClientes extends javax.swing.JInternalFrame {
 
         jScrollPane1.setViewportView(jtblDatos);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 790, 580));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 910, 580));
 
         jPanel1.setBackground(new java.awt.Color(0, 173, 188));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, -30, 150, 160));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, -30, 150, 160));
 
         jLabel2.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,7 +88,7 @@ public class FormClientes extends javax.swing.JInternalFrame {
         jLabel3.setText("REGISTRO Y MANTENIMIENTO DEL CLIENTE / EMPRESA");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 670, 60));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1240, 100));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1360, 100));
 
         jLabel5.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel5.setText("NO. DE DOCUMENTO");
@@ -199,8 +201,6 @@ public class FormClientes extends javax.swing.JInternalFrame {
         jtxtId.setEnabled(false);
         jPanel2.add(jtxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 400, 20));
         jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 400, 10));
-        jPanel2.add(jspCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 400, -1));
-        jPanel2.add(jspNumDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 400, -1));
 
         jLabel13.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel13.setText("APELLIDOS");
@@ -217,7 +217,29 @@ public class FormClientes extends javax.swing.JInternalFrame {
         jPanel2.add(jtxtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 400, 20));
         jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 400, 10));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 710));
+        jtxtNumDoc.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtNumDoc.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtNumDoc.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtNumDoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtNumDocActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jtxtNumDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 400, 20));
+        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 400, 10));
+
+        jtxtCelular.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtCelular.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtCelular.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtCelular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtCelularActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jtxtCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 400, 20));
+        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 400, 10));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -237,6 +259,14 @@ public class FormClientes extends javax.swing.JInternalFrame {
     private void jtxtApellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtApellidosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtApellidosActionPerformed
+
+    private void jtxtNumDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtNumDocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtNumDocActionPerformed
+
+    private void jtxtCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCelularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtCelularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -297,19 +327,21 @@ public class FormClientes extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     public javax.swing.JButton jbtnActualizar;
     public javax.swing.JButton jbtnConsultar;
     public javax.swing.JButton jbtnEliminar;
     public javax.swing.JButton jbtnRegistrar;
     public javax.swing.JComboBox<String> jcbxSexo;
     public javax.swing.JComboBox<String> jcbxTipoDoc;
-    public javax.swing.JSpinner jspCelular;
-    public javax.swing.JSpinner jspNumDoc;
     public javax.swing.JTable jtblDatos;
     public javax.swing.JTextField jtxtApellidos;
+    public javax.swing.JTextField jtxtCelular;
     public javax.swing.JTextField jtxtCorreo;
     public javax.swing.JTextField jtxtDireccion;
     public javax.swing.JTextField jtxtId;
     public javax.swing.JTextField jtxtNombreRazon;
+    public javax.swing.JTextField jtxtNumDoc;
     // End of variables declaration//GEN-END:variables
 }

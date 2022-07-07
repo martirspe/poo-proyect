@@ -58,7 +58,7 @@ public class CRUDclientes extends ConectarBD {
             ps.setString(8, cli.getEmail());
             ps.executeUpdate();
             ps.close();
-            Mensajes.M1("¡El cliducto se ha registrado correctamente!");
+            Mensajes.M1("¡El cliente se ha registrado correctamente!");
 
         } catch (Exception e) {
             Mensajes.M1("ERROR: no se puede registrar el cliducto." + e);

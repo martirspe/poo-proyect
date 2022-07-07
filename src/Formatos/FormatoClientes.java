@@ -13,14 +13,14 @@ public class FormatoClientes {
     public static void LimpiarEntradas(FormClientes fcli) {
         fcli.jtxtId.setText("");
         fcli.jcbxTipoDoc.setSelectedIndex(0);
-        fcli.jspNumDoc.setValue(0);
+        fcli.jtxtNumDoc.setText("");
         fcli.jtxtNombreRazon.setText("");
         fcli.jtxtApellidos.setText("");
         fcli.jtxtDireccion.setText("");
         fcli.jtxtCorreo.setText("");
-        fcli.jspCelular.setValue(0);
+        fcli.jtxtCelular.setText("");
         fcli.jcbxSexo.setSelectedIndex(0);
-        fcli.jspNumDoc.requestFocus();
+        fcli.jtxtNumDoc.requestFocus();
     }
 
     public static void Estado1(FormClientes fcli) {
@@ -40,12 +40,12 @@ public class FormatoClientes {
     public static Clientes LeerClientes(FormClientes fcli) {
         Clientes cli = new Clientes();
         cli.setTipo_doc(fcli.jcbxTipoDoc.getSelectedItem().toString());
-        cli.setNum_doc(Integer.parseInt(fcli.jspNumDoc.getValue().toString()));
+        cli.setNum_doc(Integer.parseInt(fcli.jtxtNumDoc.getText()));
         cli.setNombre(fcli.jtxtNombreRazon.getText());
         cli.setApellidos(fcli.jtxtApellidos.getText());
         cli.setDireccion(fcli.jtxtDireccion.getText());
         cli.setEmail(fcli.jtxtCorreo.getText());
-        cli.setMovil(Integer.parseInt(fcli.jspCelular.getValue().toString()));
+        cli.setMovil(Integer.parseInt(fcli.jtxtCelular.getText()));
         cli.setSexo(fcli.jcbxSexo.getSelectedItem().toString());
         return cli;
     }

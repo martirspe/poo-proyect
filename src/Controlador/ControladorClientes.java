@@ -48,12 +48,12 @@ public class ControladorClientes implements ActionListener {
             } else {
                 vista.jtxtId.setText(String.valueOf(cli.getId()));
                 vista.jcbxTipoDoc.setSelectedItem(cli.getTipo_doc());
-                vista.jspNumDoc.setValue(cli.getNum_doc());
+                vista.jtxtNumDoc.setText(String.valueOf(cli.getNum_doc()));
                 vista.jtxtNombreRazon.setText(cli.getNombre());
                 vista.jtxtApellidos.setText(cli.getApellidos());
                 vista.jtxtDireccion.setText(cli.getDireccion());
                 vista.jtxtCorreo.setText(cli.getEmail());
-                vista.jspCelular.setValue(cli.getMovil());
+                vista.jtxtCelular.setText(String.valueOf(cli.getMovil()));
                 vista.jcbxSexo.setSelectedItem(cli.getSexo());
                 FormatoClientes.Estado2(vista);
             }
