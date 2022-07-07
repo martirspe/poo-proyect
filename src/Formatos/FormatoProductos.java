@@ -43,11 +43,10 @@ public class FormatoProductos {
         pro.setModelo(fp.jtxtModelo.getText());
         pro.setMarca(fp.jtxtMarca.getText());
         //Lee los ID de las categorías
-        pro.setIdpro(Main.Listacat.BuscarIdCategoria(fp.jcbxCategorias.getSelectedItem().toString()));
+        pro.setCategoria(Main.Listacat.BuscarIdCategoria(fp.jcbxCategorias.getSelectedItem().toString()));
         pro.setStock(Integer.parseInt(fp.jspStock.getValue().toString()));
         pro.setPrecio(Double.parseDouble(fp.jspPrecio.getValue().toString()));
-        pro.setNombre(fp.jtxtaDescripcion.getText());
-
+        pro.setDescripcion(fp.jtxtaDescripcion.getText());
         return pro;
     }
 }
