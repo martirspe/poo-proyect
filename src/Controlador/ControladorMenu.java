@@ -36,13 +36,20 @@ public class ControladorMenu implements ActionListener {
             CentrarForma.CPanel(vista.jdpContenedor, Main.fcat);
         }
 
+        if (e.getSource() == vista.jmiMantenimientoClientes) {
+            Main.fcli = new FormClientes();
+            Main.ccli = new ControladorClientes(Main.fcli);
+            vista.jdpContenedor.add(Main.fcli);
+            CentrarForma.CPanel(vista.jdpContenedor, Main.fcli);
+        }
+
         if (e.getSource() == vista.jmiMantenimientoProductos) {
             Main.fpro = new FormProductos();
             Main.cpro = new ControladorProductos(Main.fpro);
             vista.jdpContenedor.add(Main.fpro);
             CentrarForma.CPanel(vista.jdpContenedor, Main.fpro);
         }
-        
+
         if (e.getSource() == vista.jmiMantenimientoStock) {
             Main.fstock = new FormStock();
             Main.cstock = new ControladorStock(Main.fstock);

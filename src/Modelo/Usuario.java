@@ -1,11 +1,11 @@
 package Modelo;
 
-public class Usuarios {
+public class Usuario {
 
     //Atributos
     private Integer id;
     private String tipo_doc;
-    private Number num_doc;
+    private Integer num_doc;
     private String nombre;
     private String apellidos;
     private String sexo;
@@ -13,7 +13,7 @@ public class Usuarios {
     private Integer movil;
     private String direccion;
 
-    public Usuarios() {
+    public Usuario() {
     }
 
     public Integer getId() {
@@ -32,11 +32,11 @@ public class Usuarios {
         this.tipo_doc = tipo_doc;
     }
 
-    public Number getNum_doc() {
+    public Integer getNum_doc() {
         return num_doc;
     }
 
-    public void setNum_doc(Number num_doc) {
+    public void setNum_doc(Integer num_doc) {
         this.num_doc = num_doc;
     }
 

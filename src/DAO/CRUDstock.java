@@ -1,38 +1,40 @@
 package DAO;
 
+//Librerías
 import Formatos.ManejadorTabla;
 import Formatos.Mensajes;
 import Modelo.Productos;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class CRUDstock extends ConectarBD  {
-    public void ObtenerStockProductos(Productos stock,JTable tabla) {
+public class CRUDstock extends ConectarBD {
+
+    public void ObtenerStockProductos(Productos stock, JTable tabla) {
         try {
             String[] titulo = {"No.", "ID", "Código", "Nombre", "Modelo", "Marca", "Categoría", "Stock", "Precio", "Descripción"};
             DefaultTableModel modelo = new DefaultTableModel(null, titulo);
             tabla.setModel(modelo);
-            String sWhere = ""; 
-            
-            if(stock.getCategoria()!= null && stock.getCategoria() > 0){
-                sWhere += " AND categoria = "+stock.getCategoria();
+            String sWhere = "";
+
+            if (stock.getCategoria() != null && stock.getCategoria() > 0) {
+                sWhere += " AND categoria = " + stock.getCategoria();
             }
-            if(!stock.getCodigo().isEmpty()){
-                sWhere += " AND codigo LIKE '%"+stock.getCodigo()+"%'";
+            if (!stock.getCodigo().isEmpty()) {
+                sWhere += " AND codigo LIKE '%" + stock.getCodigo() + "%'";
             }
-            if(!stock.getMarca().isEmpty()){
-                sWhere += " AND marca LIKE '%"+stock.getMarca()+"%'";
+            if (!stock.getMarca().isEmpty()) {
+                sWhere += " AND marca LIKE '%" + stock.getMarca() + "%'";
             }
-            if(!stock.getNombre().isEmpty()){
-                sWhere += " AND nombre LIKE '%"+stock.getNombre()+"%'";
+            if (!stock.getNombre().isEmpty()) {
+                sWhere += " AND nombre LIKE '%" + stock.getNombre() + "%'";
             }
-            if(!stock.getModelo().isEmpty()){
-                sWhere += " AND modelo LIKE '%"+stock.getModelo()+"%'";
+            if (!stock.getModelo().isEmpty()) {
+                sWhere += " AND modelo LIKE '%" + stock.getModelo() + "%'";
             }
-            if(stock.getPrecio()!= null && stock.getPrecio()> 0){
-                sWhere += " AND precio = "+stock.getPrecio();
+            if (stock.getPrecio() != null && stock.getPrecio() > 0) {
+                sWhere += " AND precio = " + stock.getPrecio();
             }
-            
+
             rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1 " + sWhere);
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
@@ -49,11 +51,10 @@ public class CRUDstock extends ConectarBD  {
                 pro.setDescripcion(rs.getString(9));
                 modelo.addRow(pro.RegistroProducto(cont));
             }
-            ManejadorTabla.FormatoTablaProductos(tabla);
+            ManejadorTabla.FormatoTablaStock(tabla);
             rs.close();
         } catch (Exception e) {
             Mensajes.M1("ERROR: no se puede recuperar el registro." + e);
         }
-        //return pro;
     }
 }

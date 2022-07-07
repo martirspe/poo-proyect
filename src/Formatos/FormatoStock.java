@@ -1,14 +1,16 @@
 package Formatos;
 
+//Librerías
 import Modelo.Productos;
 import Principal.Main;
 import Vista.FormStock;
 
 public class FormatoStock {
+
     public static void Presentacion(FormStock fs) {
-        fs.setTitle("Mantenimiento de Stock");
+        fs.setTitle("Gestión de Stock");
     }
-    
+
     public static void LimpiarEntradas(FormStock fs) {
         fs.field_codigo.setText("");
         fs.fied_nombre.setText("");
@@ -17,6 +19,7 @@ public class FormatoStock {
         fs.field_precio.setText("");
         fs.jcbxCategorias.setSelectedIndex(0);
     }
+
     public static Productos LeerProductos(FormStock fs) {
         Productos pro = new Productos();
         pro.setCodigo(fs.field_codigo.getText());
@@ -29,5 +32,4 @@ public class FormatoStock {
 
         return pro;
     }
-    
 }
