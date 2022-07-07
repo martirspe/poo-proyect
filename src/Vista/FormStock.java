@@ -31,7 +31,7 @@ public class FormStock extends javax.swing.JInternalFrame {
         btn_buscar = new javax.swing.JButton();
         jcbxCategorias = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table_stock = new javax.swing.JTable();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -133,7 +133,7 @@ public class FormStock extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 1230, 140));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table_stock.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -144,7 +144,7 @@ public class FormStock extends javax.swing.JInternalFrame {
                 "N°", "CODIGO", "NOMBRE", "MODELO", "MARCA", "CATEGORIA", "CANTIDAD", "PRECIO"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(table_stock);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 1230, 260));
 
@@ -182,7 +182,7 @@ public class FormStock extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     public javax.swing.JComboBox<String> jcbxCategorias;
+    public javax.swing.JTable table_stock;
     // End of variables declaration//GEN-END:variables
 }
