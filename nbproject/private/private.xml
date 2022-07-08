@@ -6,9 +6,8 @@
             <file>file:/D:/Programacion/Java/proyect-poo/src/DAO/CRUDstock.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/Vista/FormStock.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/Controlador/ControladorProductos.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Formatos/FormatoProductos.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/DAO/CRUDproductos.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Vista/FormProductos.java</file>
+            <file>file:/D:/Programacion/Java/proyect-poo/src/DAO/ConectarBD.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/Controlador/ControladorStock.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/Formatos/FormatoStock.java</file>
         </group>
