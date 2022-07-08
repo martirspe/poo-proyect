@@ -9,33 +9,16 @@ import javax.swing.table.DefaultTableModel;
 
 public class CRUDstock extends ConectarBD {
 
-    public void ObtenerStockProductos(Productos stock, JTable tabla) {
+    public CRUDstock() {
+    }
+
+    //Método que recibe un JTable y JLabel y miuestra los registros de la tabla en el JTable
+    public void MostrarStockEnTabla(JTable tabla) {
+        String[] titulo = {"No.", "ID", "Código", "Nombre", "Modelo", "Marca", "Categoría", "Stock", "Precio", "Descripción"};
+        DefaultTableModel modelo = new DefaultTableModel(null, titulo);
+        tabla.setModel(modelo);
         try {
-            String[] titulo = {"No.", "ID", "Código", "Nombre", "Modelo", "Marca", "Categoría", "Stock", "Precio", "Descripción"};
-            DefaultTableModel modelo = new DefaultTableModel(null, titulo);
-            tabla.setModel(modelo);
-            String sWhere = "";
-
-            if (stock.getCategoria() != null && stock.getCategoria() > 0) {
-                sWhere += " AND categoria = " + stock.getCategoria();
-            }
-            if (!stock.getCodigo().isEmpty()) {
-                sWhere += " AND codigo LIKE '%" + stock.getCodigo() + "%'";
-            }
-            if (!stock.getMarca().isEmpty()) {
-                sWhere += " AND marca LIKE '%" + stock.getMarca() + "%'";
-            }
-            if (!stock.getNombre().isEmpty()) {
-                sWhere += " AND nombre LIKE '%" + stock.getNombre() + "%'";
-            }
-            if (!stock.getModelo().isEmpty()) {
-                sWhere += " AND modelo LIKE '%" + stock.getModelo() + "%'";
-            }
-            if (stock.getPrecio() != null && stock.getPrecio() > 0) {
-                sWhere += " AND precio = " + stock.getPrecio();
-            }
-
-            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1 " + sWhere);
+            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1");
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;
@@ -51,10 +34,45 @@ public class CRUDstock extends ConectarBD {
                 pro.setDescripcion(rs.getString(9));
                 modelo.addRow(pro.RegistroProducto(cont));
             }
+
             ManejadorTabla.FormatoTablaStock(tabla);
-            rs.close();
+            conexion.close();
+
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede recuperar el registro." + e);
+            Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla productos." + e);
         }
     }
+
+    public Productos ObtenerRegistroPro(int idcat) {
+        Productos pro = null; //No hay datos asociados al objeto
+        try {
+            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, cantidad FROM productos WHERE estado = 1 AND id = " + idcat);
+            pro = new Productos();
+            if (rs.next()) {
+                pro.setIdpro(rs.getInt(1));
+                pro.setCodigo(rs.getString(2));
+                pro.setNombre(rs.getString(3));
+                pro.setModelo(rs.getString(4));
+                pro.setMarca(rs.getString(5));
+                pro.setStock(rs.getInt(6));
+            }
+            rs.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede recuperar el producto." + e);
+        }
+        return pro;
+    }
+
+    public void ActualizarRegistroPro(Productos pro) {
+        try {
+            ps = conexion.prepareStatement("UPDATE productos SET cantidad = ? WHERE id = ?");
+            ps.setInt(1, pro.getStock());
+            ps.setInt(2, pro.getIdpro());
+            ps.executeUpdate();
+            ps.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede actualizar el stock del producto." + e);
+        }
+    }
+
 }

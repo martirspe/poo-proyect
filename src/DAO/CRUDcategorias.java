@@ -64,7 +64,7 @@ public class CRUDcategorias extends ConectarBD {
             }
             rs.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede recuperar el registro." + e);
+            Mensajes.M1("ERROR: no se puede recuperar la categoría." + e);
         }
         return cat;
     }
@@ -78,7 +78,7 @@ public class CRUDcategorias extends ConectarBD {
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede actualizar el registro." + e);
+            Mensajes.M1("ERROR: no se puede actualizar la categoría." + e);
         }
     }
 
@@ -89,7 +89,7 @@ public class CRUDcategorias extends ConectarBD {
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede eliminar el registro." + e);
+            Mensajes.M1("ERROR: no se puede eliminar la cetegoría." + e);
         }
     }
 

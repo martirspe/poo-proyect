@@ -128,7 +128,7 @@ public class FormCategorias extends javax.swing.JInternalFrame {
         jPanel2.add(jbtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, 110, 30));
 
         jLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel8.setText("ID DE LA CATEGORÍA");
+        jLabel8.setText("ID");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 200, 20));
 
         jtxtId.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N

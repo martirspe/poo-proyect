@@ -47,7 +47,7 @@ public class ControladorProductos implements ActionListener {
             FormatoProductos.LimpiarEntradas(vista);
         }
         if (e.getSource() == vista.jbtnConsultar) {
-            idpro = Mensajes.M2("Ingrese el ID de la categoria a buscar");
+            idpro = Mensajes.M2("Ingrese el ID del producto a buscar");
             crud = new CRUDproductos();
             pro = crud.ObtenerRegistroPro(idpro);
             if (pro == null) {
@@ -70,19 +70,19 @@ public class ControladorProductos implements ActionListener {
             pro.setIdpro(Integer.parseInt(vista.jtxtId.getText()));
             crud = new CRUDproductos();
             crud.ActualizarRegistroPro(pro);
-            Mensajes.M1("Datos actualizados.");
+            Mensajes.M1("Producto actualizado.");
             crud.MostrarProductosEnTabla(vista.jtblDatos);
             FormatoProductos.LimpiarEntradas(vista);
             FormatoProductos.Estado1(vista);
         }
 
         if (e.getSource() == vista.jbtnEliminar) {
-            int respuesta = Mensajes.M3("¡Confirmar!", "¿Desea eliminar el registro?");
+            int respuesta = Mensajes.M3("¡Confirmar!", "¿Desea eliminar el producto?");
             if (respuesta == 0) {
                 idpro = Integer.parseInt(vista.jtxtId.getText());
                 crud = new CRUDproductos();
                 crud.EliminarRegistroPro(idpro);
-                Mensajes.M1("Registro eliminado");
+                Mensajes.M1("Producto eliminado.");
                 crud.MostrarProductosEnTabla(vista.jtblDatos);
                 FormatoProductos.LimpiarEntradas(vista);
                 FormatoProductos.Estado1(vista);

@@ -83,7 +83,7 @@ public class CRUDproductos extends ConectarBD {
             }
             rs.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede recuperar el registro." + e);
+            Mensajes.M1("ERROR: no se puede recuperar el producto." + e);
         }
         return pro;
     }
@@ -103,7 +103,7 @@ public class CRUDproductos extends ConectarBD {
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede actualizar el registro." + e);
+            Mensajes.M1("ERROR: no se puede actualizar el producto." + e);
         }
     }
 
@@ -114,7 +114,7 @@ public class CRUDproductos extends ConectarBD {
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede eliminar el registro." + e);
+            Mensajes.M1("ERROR: no se puede eliminar el producto." + e);
         }
     }
 

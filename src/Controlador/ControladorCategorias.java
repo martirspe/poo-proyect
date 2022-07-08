@@ -35,15 +35,15 @@ public class ControladorCategorias implements ActionListener {
             crud = new CRUDcategorias();
             crud.InsertarCategoria(cate);
             FormatoCategorias.LimpiarEntradas(vista);
-            Mensajes.M1("Registro insertado correctamente");
+            Mensajes.M1("Categoría registrada correctamente.");
             crud.MostrarCategoriasEnTabla(vista.jtblDatos);
         }
         if (e.getSource() == vista.jbtnConsultar) {
-            idcat = Mensajes.M2("Ingrese el Id de la categoría a buscar");
+            idcat = Mensajes.M2("Ingrese el ID de la categoría a buscar");
             crud = new CRUDcategorias();
             cate = crud.ObtenerRegistroCat(idcat);
             if (cate == null) {
-                Mensajes.M1("El id " + idcat + " no existe en la tabla categorias");
+                Mensajes.M1("El ID " + idcat + " no existe en la tabla categorias");
             } else {
                 vista.jtxtId.setText(String.valueOf(cate.getIdcat()));
                 vista.jtxtCategoria.setText(cate.getNombre());
@@ -56,18 +56,18 @@ public class ControladorCategorias implements ActionListener {
             cate.setIdcat(Integer.parseInt(vista.jtxtId.getText()));
             crud = new CRUDcategorias();
             crud.ActualizarRegistroCat(cate);
-            Mensajes.M1("Datos actualizados.");
+            Mensajes.M1("Categoría actualizada.");
             crud.MostrarCategoriasEnTabla(vista.jtblDatos);
             FormatoCategorias.LimpiarEntradas(vista);
             FormatoCategorias.Estado1(vista);
         }
         if (e.getSource() == vista.jbtnEliminar) {
-            int respuesta = Mensajes.M3("¡Confirmar!", "¿Desea eliminar el registro?");
+            int respuesta = Mensajes.M3("¡Confirmar!", "¿Desea eliminar la categoría?");
             if (respuesta == 0) {
                 idcat = Integer.parseInt(vista.jtxtId.getText());
                 crud = new CRUDcategorias();
                 crud.EliminarRegistroCat(idcat);
-                Mensajes.M1("Registro eliminado.");
+                Mensajes.M1("Categoría eliminada.");
                 crud.MostrarCategoriasEnTabla(vista.jtblDatos);
                 FormatoCategorias.LimpiarEntradas(vista);
                 FormatoCategorias.Estado1(vista);

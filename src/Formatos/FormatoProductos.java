@@ -12,6 +12,7 @@ public class FormatoProductos {
     }
 
     public static void LimpiarEntradas(FormProductos fp) {
+        fp.jtxtId.setText("");
         fp.jtxtCodigo.setText("");
         fp.jtxtNombre.setText("");
         fp.jtxtMarca.setText("");
