@@ -54,7 +54,7 @@ public class FormStock extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("CONTROL DE STOCK");
+        jLabel3.setText("CONTROL Y GESTIÓN DE STOCK");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 560, 60));
 
         jLabel2.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N

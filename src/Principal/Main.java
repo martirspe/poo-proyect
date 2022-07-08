@@ -11,9 +11,15 @@ public class Main {
     public static FormCategorias fcat;
     public static ControladorCategorias ccat;
 
+    //Clientes
+    public static FormClientes fcli;
+    public static ControladorClientes ccli;
+
     //Productos
     public static FormProductos fpro;
     public static ControladorProductos cpro;
+
+    //Stock
     public static FormStock fstock;
     public static ControladorStock cstock;
 

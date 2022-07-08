@@ -43,4 +43,50 @@ public class ManejadorTabla {
         AnchoColumnas(tabla, 3, 500);
         JustificarCelda(tabla, 3);
     }
+
+    //Método que la da formato a la JTable del tabla Stock
+    public static void FormatoTablaStock(JTable tabla) {
+        AnchoColumnas(tabla, 0, 15);
+        JustificarCelda(tabla, 0);
+        AnchoColumnas(tabla, 1, 15);
+        JustificarCelda(tabla, 1);
+        AnchoColumnas(tabla, 2, 25);
+        JustificarCelda(tabla, 2);
+        AnchoColumnas(tabla, 3, 200);
+        AnchoColumnas(tabla, 4, 30);
+        JustificarCelda(tabla, 4);
+        AnchoColumnas(tabla, 5, 30);
+        JustificarCelda(tabla, 5);
+        AnchoColumnas(tabla, 6, 50);
+        JustificarCelda(tabla, 6);
+        AnchoColumnas(tabla, 7, 30);
+        JustificarCelda(tabla, 7);
+        AnchoColumnas(tabla, 8, 30);
+        JustificarCelda(tabla, 8);
+        AnchoColumnas(tabla, 9, 300);
+    }
+
+    //Método que la da formato a la JTable del tabla Clientes
+    public static void FormatoTablaClientes(JTable tabla) {
+        AnchoColumnas(tabla, 0, 100);
+        JustificarCelda(tabla, 0);
+        AnchoColumnas(tabla, 1, 100);
+        JustificarCelda(tabla, 1);
+        AnchoColumnas(tabla, 2, 100);
+        JustificarCelda(tabla, 2);
+        AnchoColumnas(tabla, 3, 250);
+        JustificarCelda(tabla, 3);
+        AnchoColumnas(tabla, 4, 250);
+        JustificarCelda(tabla, 4);
+        AnchoColumnas(tabla, 5, 250);
+        JustificarCelda(tabla, 5);
+        AnchoColumnas(tabla, 6, 350);
+        JustificarCelda(tabla, 6);
+        AnchoColumnas(tabla, 7, 250);
+        JustificarCelda(tabla, 7);
+        AnchoColumnas(tabla, 8, 250);
+        JustificarCelda(tabla, 8);
+        AnchoColumnas(tabla, 9, 500);
+        JustificarCelda(tabla, 9);
+    }
 }

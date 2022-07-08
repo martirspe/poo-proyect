@@ -16,6 +16,7 @@ public class FormatoProductos {
         fp.jtxtNombre.setText("");
         fp.jtxtMarca.setText("");
         fp.jtxtModelo.setText("");
+        fp.jcbxCategorias.setSelectedIndex(0);
         fp.jspPrecio.setValue(0);
         fp.jspStock.setValue(0);
         fp.jtxtaDescripcion.setText("");

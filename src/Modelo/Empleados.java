@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Empleados extends Usuarios {
+public class Empleados extends Usuario {
 
     //Atributos
     private String cargo;
