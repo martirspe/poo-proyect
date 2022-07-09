@@ -39,9 +39,9 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jSeparator12 = new javax.swing.JSeparator();
         jTextField12 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -63,14 +63,14 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 840, 260));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 850, 260));
 
         jPanel1.setBackground(new java.awt.Color(0, 173, 188));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, -40, 150, 160));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, -40, 150, 160));
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -83,7 +83,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel2.setText("INFOCOM SAC");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 230, 50));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 840, 50));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 850, 50));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -97,16 +97,16 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
                 jTextField11ActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 170, -1));
-        jPanel3.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 170, 10));
+        jPanel3.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 270, -1));
+        jPanel3.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 270, 10));
 
         jLabel17.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel17.setText("FECHA DE INICIO");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 150, -1));
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 250, -1));
 
         jLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel8.setText("MONEDA:");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 70, 20));
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 170, 20));
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
@@ -116,15 +116,15 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 170, 30));
+        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 270, 30));
 
         jButton8.setBackground(new java.awt.Color(47, 123, 123));
         jButton8.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("VENTAS POR VENDEDOR");
         jButton8.setBorder(null);
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 210, 30));
-        jPanel3.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 170, 10));
+        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 270, 30));
+        jPanel3.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 270, 10));
 
         jTextField12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField12.setForeground(new java.awt.Color(153, 153, 153));
@@ -134,36 +134,36 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
                 jTextField12ActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 170, -1));
+        jPanel3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 270, -1));
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel18.setText("FECHA DE FIN");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 150, -1));
-
-        jButton9.setBackground(new java.awt.Color(47, 123, 123));
-        jButton9.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("CONSULTAR VENTAS");
-        jButton9.setBorder(null);
-        jPanel3.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 210, 30));
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
 
         jButton10.setBackground(new java.awt.Color(47, 123, 123));
         jButton10.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("VENTAS POR CLIENTE");
         jButton10.setBorder(null);
-        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 210, 30));
+        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
 
         jButton11.setBackground(new java.awt.Color(47, 123, 123));
         jButton11.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(255, 255, 255));
         jButton11.setText("VENTAS POR PRODUCTO");
         jButton11.setBorder(null);
-        jPanel3.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 210, 30));
+        jPanel3.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 270, 30));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 840, 190));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 850, 160));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 870, 550));
+        jButton9.setBackground(new java.awt.Color(47, 123, 123));
+        jButton9.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setText("CONSULTAR VENTAS");
+        jButton9.setBorder(null);
+        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 770, 30));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 880, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

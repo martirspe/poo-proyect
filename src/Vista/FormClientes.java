@@ -68,7 +68,7 @@ public class FormClientes extends javax.swing.JInternalFrame {
 
         jScrollPane1.setViewportView(jtblDatos);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 910, 580));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 900, 580));
 
         jPanel1.setBackground(new java.awt.Color(0, 173, 188));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

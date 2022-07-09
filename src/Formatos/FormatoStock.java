@@ -12,7 +12,7 @@ public class FormatoStock {
 
     public static void LimpiarEntradas(FormStock fp) {
         fp.jtxtId.setText("");
-        fp.jtxtId.setText("");
+        fp.jtxtCodigo.setText("");
         fp.jtxtNombre.setText("");
         fp.jtxtMarca.setText("");
         fp.jtxtModelo.setText("");
