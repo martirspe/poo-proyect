@@ -61,7 +61,7 @@ public class CRUDclientes extends ConectarBD {
             Mensajes.M1("¡El cliente se ha registrado correctamente!");
 
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede registrar el cliducto." + e);
+            Mensajes.M1("ERROR: no se puede registrar el cliente." + e);
         }
     }
 
@@ -83,7 +83,7 @@ public class CRUDclientes extends ConectarBD {
             }
             rs.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede recuperar el registro." + e);
+            Mensajes.M1("ERROR: no se puede recuperar el cliente." + e);
         }
         return cli;
     }
@@ -103,7 +103,7 @@ public class CRUDclientes extends ConectarBD {
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede actualizar el registro." + e);
+            Mensajes.M1("ERROR: no se puede actualizar el cliente." + e);
         }
     }
 
@@ -114,7 +114,7 @@ public class CRUDclientes extends ConectarBD {
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede eliminar el registro." + e);
+            Mensajes.M1("ERROR: no se puede eliminar el cliente." + e);
         }
     }
 }

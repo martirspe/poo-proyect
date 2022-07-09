@@ -40,7 +40,7 @@ public class ControladorClientes implements ActionListener {
             FormatoClientes.LimpiarEntradas(vista);
         }
         if (e.getSource() == vista.jbtnConsultar) {
-            idcli = Mensajes.M2("Ingrese el ID de la categoria a buscar");
+            idcli = Mensajes.M2("Ingrese el ID del cliente a buscar");
             crud = new CRUDclientes();
             cli = crud.ObtenerRegistroCli(idcli);
             if (cli == null) {
@@ -63,19 +63,19 @@ public class ControladorClientes implements ActionListener {
             cli.setId(Integer.parseInt(vista.jtxtId.getText()));
             crud = new CRUDclientes();
             crud.ActualizarRegistroCli(cli);
-            Mensajes.M1("Datos actualizados.");
+            Mensajes.M1("Cliente actualizado.");
             crud.MostrarClientesEnTabla(vista.jtblDatos);
             FormatoClientes.LimpiarEntradas(vista);
             FormatoClientes.Estado1(vista);
         }
 
         if (e.getSource() == vista.jbtnEliminar) {
-            int respuesta = Mensajes.M3("¡Confirmar!", "¿Desea eliminar el registro?");
+            int respuesta = Mensajes.M3("¡Confirmar!", "¿Desea eliminar el cliente?");
             if (respuesta == 0) {
                 idcli = Integer.parseInt(vista.jtxtId.getText());
                 crud = new CRUDclientes();
                 crud.EliminarRegistroPro(idcli);
-                Mensajes.M1("Registro eliminado");
+                Mensajes.M1("Cliente eliminado.");
                 crud.MostrarClientesEnTabla(vista.jtblDatos);
                 FormatoClientes.LimpiarEntradas(vista);
                 FormatoClientes.Estado1(vista);
