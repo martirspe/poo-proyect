@@ -1,13 +1,13 @@
 package Controlador;
 
 //Librerías
-import DAO.CRUDstock;
-import Formatos.Mensajes;
-import Formatos.FormatoStock;
-import Modelo.Productos;
-import Vista.FormStock;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Modelo.Productos;
+import DAO.CRUDstock;
+import Vista.FormStock;
+import Formatos.Mensajes;
+import Formatos.FormatoStock;
 
 public class ControladorStock implements ActionListener {
 

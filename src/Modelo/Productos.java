@@ -1,5 +1,9 @@
 package Modelo;
 
+//Librería
+import java.text.DecimalFormat;
+import DAO.NombreObjetos;
+
 public class Productos {
 
     //Atributos
@@ -98,7 +102,9 @@ public class Productos {
     }
 
     public Object[] RegistroProducto(int num) {
-        Object[] fila = {num, idpro, codigo, nombre, modelo, marca, categoria, stock, precio, descripcion};
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        NombreObjetos no = new NombreObjetos();
+        Object[] fila = {num, idpro, codigo, nombre, modelo, marca, no.RecuperarNombrecat(categoria), stock, df.format(precio), descripcion};
         return fila;
     }
 

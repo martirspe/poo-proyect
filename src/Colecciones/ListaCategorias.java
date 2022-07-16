@@ -30,7 +30,7 @@ public class ListaCategorias {
                 return Listacat.get(i).getNombre();
             }
         }
-        return null; // no existe el id
+        return null;
     }
 
     public int BuscarIdCategoria(String nomcat) {

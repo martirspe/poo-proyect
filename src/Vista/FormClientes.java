@@ -182,7 +182,7 @@ public class FormClientes extends javax.swing.JInternalFrame {
         jPanel2.add(jbtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 650, 110, 30));
 
         jLabel11.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel11.setText("TIPO DE DOCUMENTO");
+        jLabel11.setText("T. DOCUMENTO");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 400, 20));
 
         jcbxSexo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
