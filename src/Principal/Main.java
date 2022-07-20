@@ -23,12 +23,17 @@ public class Main {
     public static FormStock fstock;
     public static ControladorStock cstock;
 
+    //Ventas
+    public static FormVentas fventas;
+    public static ControladorVentas cventas;
+
     //Formulario Menú
     public static FormMenu fm;
     public static ControladorMenu cfm;
 
     //Colecciones de datos
     public static ListaCategorias Listacat;
+    public static ListaVendedores Listaven;
 
     public static void main(String[] args) {
         fm = new FormMenu();

@@ -4,6 +4,7 @@ public class Empleados extends Usuario {
 
     //Atributos
     private String cargo;
+    private Integer estado;
 
     public Empleados() {
     }
@@ -16,4 +17,11 @@ public class Empleados extends Usuario {
         this.cargo = cargo;
     }
 
+    public Integer getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Integer estado) {
+        this.estado = estado;
+    }
 }

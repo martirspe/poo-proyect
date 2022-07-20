@@ -36,7 +36,8 @@ public class Clientes extends Usuario {
 
     public Object[] RegistroCliente(int num) {
         Object[] fila = {num, super.getId(), super.getTipo_doc(), super.getNum_doc(),
-            super.getNombre(), super.getApellidos(), super.getDireccion(), super.getSexo(), super.getMovil(), super.getEmail(), usuario, password};
+            super.getNombre(), super.getApellidos(), super.getDireccion(), super.getSexo(),
+            super.getMovil(), super.getEmail(), usuario, password};
         return fila;
     }
 }

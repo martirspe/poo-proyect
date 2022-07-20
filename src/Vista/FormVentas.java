@@ -24,55 +24,61 @@ public class FormVentas extends javax.swing.JInternalFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtblDatos = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jtxtCodigo = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jTextField8 = new javax.swing.JTextField();
+        jtxtProducto = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jTextField11 = new javax.swing.JTextField();
-        jSeparator11 = new javax.swing.JSeparator();
-        jLabel17 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jSeparator12 = new javax.swing.JSeparator();
-        jLabel18 = new javax.swing.JLabel();
+        jtxtDireccion = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-        jTextField4 = new javax.swing.JTextField();
+        jtxtTCambio = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField2 = new javax.swing.JTextField();
+        jcbxMoneda = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jcbxFPago = new javax.swing.JComboBox<>();
+        jcbxTDocumento = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        jSeparator4 = new javax.swing.JSeparator();
-        jTextField13 = new javax.swing.JTextField();
+        jtxtCliente = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jSeparator13 = new javax.swing.JSeparator();
-        jButton8 = new javax.swing.JButton();
+        jbtnBCliente = new javax.swing.JButton();
+        jdcFecha = new com.toedter.calendar.JDateChooser();
+        jLabel21 = new javax.swing.JLabel();
+        jtxtNDocumento = new javax.swing.JTextField();
+        jSeparator14 = new javax.swing.JSeparator();
+        jcbxReferencia = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
-        jButton9 = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
-        jTextField3 = new javax.swing.JTextField();
+        jbtnBProducto = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jbtnAProducto = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        jtxtObservacion = new javax.swing.JTextField();
+        jSeparator12 = new javax.swing.JSeparator();
+        jLabel17 = new javax.swing.JLabel();
+        jspCantidad = new javax.swing.JSpinner();
+        jcbxVendedor = new javax.swing.JComboBox<>();
         jTextField5 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
-        jButton7 = new javax.swing.JButton();
+        jbtnRVenta = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jSeparator7 = new javax.swing.JSeparator();
+        jLabel20 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jSeparator8 = new javax.swing.JSeparator();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -81,332 +87,356 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "CODIGO","PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL",
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtblDatos);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 1240, 260));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 860, 160));
 
         jPanel1.setBackground(new java.awt.Color(0, 173, 188));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, -60, 150, 160));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, -50, 150, 160));
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("REGISTRO DE VENTA");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 250, 50));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 250, 50));
 
         jLabel2.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/favicon.png"))); // NOI18N
         jLabel2.setText("INFOCOM SAC");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 230, 50));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 230, 50));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1240, 50));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 880, 50));
 
         jLabel5.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel5.setText("CODIGO");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 70, 20));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 70, 20));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 140, 20));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 140, 10));
+        jtxtCodigo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtCodigo.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtCodigo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtCodigo.setEnabled(false);
+        jPanel2.add(jtxtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 140, 20));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 140, 10));
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField8.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        jtxtProducto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtProducto.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtProducto.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtProducto.setEnabled(false);
+        jtxtProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                jtxtProductoActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 320, 20));
-        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 320, 10));
+        jPanel2.add(jtxtProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 420, 20));
+        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 420, 10));
 
         jLabel9.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel9.setText("PRODUCTO");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 90, 20));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 90, 20));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField11.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField11.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 300, -1));
-        jPanel3.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 300, 10));
-
-        jLabel17.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel17.setText("VENDEDOR");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, -1));
-
-        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField9.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 170, -1));
-
         jLabel15.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel15.setText("DNI/RUC");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, -1));
-        jPanel3.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 170, 10));
-        jPanel3.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 260, 10));
+        jLabel15.setText("T. DOCUMENTO");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
+        jPanel3.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 340, 10));
 
         jLabel16.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel16.setText("DIRECCION");
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 150, -1));
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, -1));
 
-        jTextField10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField10.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        jtxtDireccion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtDireccion.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtDireccion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtDireccion.setEnabled(false);
+        jtxtDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                jtxtDireccionActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 260, -1));
+        jPanel3.add(jtxtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 340, -1));
+        jPanel3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 120, 10));
 
-        jTextField12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField12.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField12.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        jtxtTCambio.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtTCambio.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtTCambio.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtTCambio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                jtxtTCambioActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 440, -1));
-        jPanel3.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 440, 10));
-
-        jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel18.setText("OBSERVACION");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 150, -1));
-        jPanel3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, 200, 10));
-
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 130, 200, 20));
+        jPanel3.add(jtxtTCambio, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 130, 120, 20));
 
         jLabel14.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel14.setText("TIPO DE CAMBIO");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 110, 160, 20));
+        jLabel14.setText("T. CAMBIO:");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 80, 20));
 
         jLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel8.setText("MONEDA:");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 60, 70, 20));
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 70, 20));
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PEN", "USD" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jcbxMoneda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxMoneda.setForeground(new java.awt.Color(153, 153, 153));
+        jcbxMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PEN", "USD" }));
+        jcbxMoneda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jcbxMonedaActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, 130, 30));
-
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 20, 180, 20));
+        jPanel3.add(jcbxMoneda, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, 130, 20));
 
         jLabel7.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel7.setText("FECHA :");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 60, 20));
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 60, 20));
 
         jLabel13.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel13.setText("FORMAS DE PAGO:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 60, 140, 20));
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 140, 20));
 
-        jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CONTADO", "CREDITO" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        jcbxFPago.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxFPago.setForeground(new java.awt.Color(153, 153, 153));
+        jcbxFPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CONTADO", "CREDITO" }));
+        jcbxFPago.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                jcbxFPagoActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 50, 110, 30));
+        jPanel3.add(jcbxFPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 110, 20));
 
-        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FACEBOOK", "WHATSAPP", "MERCADO LIBRE", "LINIO", "PÁGINA WEB", "RECOMENDACIÓN", "OTRO" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jcbxTDocumento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxTDocumento.setForeground(new java.awt.Color(153, 153, 153));
+        jcbxTDocumento.setEnabled(false);
+        jcbxTDocumento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jcbxTDocumentoActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 110, 150, 30));
+        jPanel3.add(jcbxTDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 20));
 
         jLabel10.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel10.setText("REFERENCIA:");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 120, 90, 20));
-        jPanel3.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 40, 180, 10));
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 90, 20));
 
-        jTextField13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField13.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField13.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCliente.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtCliente.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtCliente.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtCliente.setEnabled(false);
+        jtxtCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                jtxtClienteActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 300, -1));
+        jPanel3.add(jtxtCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 340, -1));
 
         jLabel19.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel19.setText("CLIENTE");
-        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 150, -1));
-        jPanel3.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 300, 10));
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, -1));
+        jPanel3.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 340, 10));
 
-        jButton8.setBackground(new java.awt.Color(47, 123, 123));
-        jButton8.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("BUSCAR CLIENTE");
-        jButton8.setBorder(null);
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 150, 210, 30));
+        jbtnBCliente.setBackground(new java.awt.Color(47, 123, 123));
+        jbtnBCliente.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jbtnBCliente.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnBCliente.setText("BUSCAR CLIENTE");
+        jbtnBCliente.setBorder(null);
+        jPanel3.add(jbtnBCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 840, 30));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 1240, 190));
+        jdcFecha.setEnabled(false);
+        jPanel3.add(jdcFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 30, 180, -1));
+
+        jLabel21.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel21.setText("NO. DOCUMENTO");
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 120, -1));
+
+        jtxtNDocumento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtNDocumento.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtNDocumento.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtNDocumento.setEnabled(false);
+        jtxtNDocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtNDocumentoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jtxtNDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 200, -1));
+        jPanel3.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 200, 10));
+
+        jcbxReferencia.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxReferencia.setForeground(new java.awt.Color(153, 153, 153));
+        jcbxReferencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FACEBOOK", "WHATSAPP", "MERCADO LIBRE", "LINIO", "PÁGINA WEB", "RECOMENDACIÓN", "OTRO" }));
+        jcbxReferencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbxReferenciaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jcbxReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 140, 20));
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 860, 210));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton9.setBackground(new java.awt.Color(47, 123, 123));
-        jButton9.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("BUSCAR PRODUCTO");
-        jButton9.setBorder(null);
-        jPanel5.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 20, 210, 30));
-        jPanel5.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 130, 10));
-
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, 130, 20));
+        jbtnBProducto.setBackground(new java.awt.Color(47, 123, 123));
+        jbtnBProducto.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jbtnBProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnBProducto.setText("BUSCAR PRODUCTO");
+        jbtnBProducto.setBorder(null);
+        jPanel5.add(jbtnBProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 240, 30));
 
         jLabel6.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel6.setText("CANTIDAD");
-        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 130, 20));
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 130, 20));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 1240, 60));
+        jbtnAProducto.setBackground(new java.awt.Color(47, 123, 123));
+        jbtnAProducto.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jbtnAProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnAProducto.setText("AÑADIR PRODUCTO");
+        jbtnAProducto.setBorder(null);
+        jPanel5.add(jbtnAProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, 240, 30));
+
+        jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel18.setText("OBSERVACION");
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, -1));
+
+        jtxtObservacion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtxtObservacion.setForeground(new java.awt.Color(153, 153, 153));
+        jtxtObservacion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtxtObservacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtObservacionActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jtxtObservacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 840, -1));
+        jPanel5.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 840, 10));
+
+        jLabel17.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel17.setText("VENDEDOR");
+        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 150, -1));
+        jPanel5.add(jspCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 140, -1));
+
+        jPanel5.add(jcbxVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 420, -1));
+
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 860, 170));
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(153, 153, 153));
         jTextField5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTextField5.setEnabled(false);
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 620, 100, 20));
+        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 640, 190, 20));
 
         jLabel11.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
-        jLabel11.setText("TOTAL A PAGAR: ");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 620, 130, 20));
-        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 640, 100, 10));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel11.setText("SUBTOTAL:");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 640, 130, 20));
+        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 660, 190, 10));
 
-        jButton7.setBackground(new java.awt.Color(47, 123, 123));
-        jButton7.setFont(new java.awt.Font("Roboto Black", 3, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("REGISTRAR VENTA");
-        jButton7.setBorder(null);
-        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 630, 250, 40));
+        jbtnRVenta.setBackground(new java.awt.Color(47, 123, 123));
+        jbtnRVenta.setFont(new java.awt.Font("Roboto Black", 3, 18)); // NOI18N
+        jbtnRVenta.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnRVenta.setText("REGISTRAR VENTA");
+        jbtnRVenta.setBorder(null);
+        jPanel2.add(jbtnRVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 530, 40));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 700));
+        jLabel12.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel12.setText("IGV:");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 670, 130, 20));
+
+        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jTextField6.setForeground(new java.awt.Color(153, 153, 153));
+        jTextField6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTextField6.setEnabled(false);
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 670, 190, 20));
+        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 690, 190, 10));
+
+        jLabel20.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel20.setText("TOTAL:");
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 700, 130, 20));
+
+        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jTextField7.setForeground(new java.awt.Color(153, 153, 153));
+        jTextField7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTextField7.setEnabled(false);
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 700, 190, 20));
+        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 720, 190, 10));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 740));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jcbxTDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxTDocumentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jcbxTDocumentoActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void jcbxFPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxFPagoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_jcbxFPagoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jcbxMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxMonedaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jcbxMonedaActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jtxtTCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtTCambioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jtxtTCambioActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jtxtObservacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtObservacionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jtxtObservacionActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void jtxtDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtDireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_jtxtDireccionActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void jtxtProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_jtxtProductoActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void jtxtClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_jtxtClienteActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jtxtNDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtNDocumentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtNDocumentoActionPerformed
+
+    private void jcbxReferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxReferenciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbxReferenciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -451,15 +481,10 @@ public class FormVentas extends javax.swing.JInternalFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -468,6 +493,8 @@ public class FormVentas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -481,26 +508,35 @@ public class FormVentas extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
-    private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    public javax.swing.JTextField jTextField5;
+    public javax.swing.JTextField jTextField6;
+    public javax.swing.JTextField jTextField7;
+    public javax.swing.JButton jbtnAProducto;
+    public javax.swing.JButton jbtnBCliente;
+    public javax.swing.JButton jbtnBProducto;
+    public javax.swing.JButton jbtnRVenta;
+    public javax.swing.JComboBox<String> jcbxFPago;
+    public javax.swing.JComboBox<String> jcbxMoneda;
+    public javax.swing.JComboBox<String> jcbxReferencia;
+    public javax.swing.JComboBox<String> jcbxTDocumento;
+    public javax.swing.JComboBox<String> jcbxVendedor;
+    public com.toedter.calendar.JDateChooser jdcFecha;
+    public javax.swing.JSpinner jspCantidad;
+    public javax.swing.JTable jtblDatos;
+    public javax.swing.JTextField jtxtCliente;
+    public javax.swing.JTextField jtxtCodigo;
+    public javax.swing.JTextField jtxtDireccion;
+    public javax.swing.JTextField jtxtNDocumento;
+    public javax.swing.JTextField jtxtObservacion;
+    public javax.swing.JTextField jtxtProducto;
+    public javax.swing.JTextField jtxtTCambio;
     // End of variables declaration//GEN-END:variables
 }

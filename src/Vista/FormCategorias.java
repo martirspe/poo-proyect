@@ -143,7 +143,7 @@ public class FormCategorias extends javax.swing.JInternalFrame {
         jPanel2.add(jtxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 400, 20));
         jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 400, 10));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 520));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
