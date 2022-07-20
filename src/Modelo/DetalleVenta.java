@@ -1,6 +1,7 @@
 package Modelo;
 
 //Librería
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class DetalleVenta {
@@ -135,5 +136,9 @@ public class DetalleVenta {
     public void setNota(String nota) {
         this.nota = nota;
     }
-
+    public Object[] RegistroDetalleVenta(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        Object[] fila = {num, id, producto.getNombre(), cantidad, df.format(precio), total};
+        return fila;
+    }
 }

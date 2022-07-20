@@ -30,6 +30,11 @@ public class Main {
     //Formulario Menú
     public static FormMenu fm;
     public static ControladorMenu cfm;
+    
+        //Formulario Menú
+    public static FormReporteVentas FRventas;
+    public static ControladorReporteVentas crventas;
+
 
     //Colecciones de datos
     public static ListaCategorias Listacat;
