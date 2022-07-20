@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/UTP/SEMESTRE%201/PROGRAMACION%20ORIENTADA%20A%20OBJETOS/PROYECTO/3%20avance/INFOCOMSAC/src/Modelo/Categorias.java</file>
+            <file>file:/D:/UTP/SEMESTRE%201/PROGRAMACION%20ORIENTADA%20A%20OBJETOS/PROYECTO/3%20avance/INFOCOMSAC/src/Controlador/ControladorVentas.java</file>
+            <file>file:/D:/UTP/SEMESTRE%201/PROGRAMACION%20ORIENTADA%20A%20OBJETOS/PROYECTO/3%20avance/INFOCOMSAC/src/DAO/CRUDventas.java</file>
+            <file>file:/D:/UTP/SEMESTRE%201/PROGRAMACION%20ORIENTADA%20A%20OBJETOS/PROYECTO/3%20avance/INFOCOMSAC/src/Formatos/FormatoVentas.java</file>
+            <file>file:/D:/UTP/SEMESTRE%201/PROGRAMACION%20ORIENTADA%20A%20OBJETOS/PROYECTO/3%20avance/INFOCOMSAC/src/DAO/NombreObjetos.java</file>
         </group>
     </open-files>
 </project-private>

@@ -3,11 +3,20 @@ package Modelo;
 public class Clientes extends Usuario {
 
     //Cliente
+    private Integer id_cliente;
     private String usuario;
     private String password;
     private Integer estado;
 
     public Clientes() {
+    }
+
+    public Integer getId_cliente() {
+        return id_cliente;
+    }
+
+    public void setId_cliente(Integer id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
     public String getUsuario() {
@@ -35,7 +44,7 @@ public class Clientes extends Usuario {
     }
 
     public Object[] RegistroCliente(int num) {
-        Object[] fila = {num, super.getId(), super.getTipo_doc(), super.getNum_doc(),
+        Object[] fila = {num, id_cliente, super.getTipo_doc(), super.getNum_doc(),
             super.getNombre(), super.getApellidos(), super.getDireccion(), super.getSexo(),
             super.getMovil(), super.getEmail(), usuario, password};
         return fila;

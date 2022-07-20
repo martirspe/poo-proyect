@@ -3,7 +3,7 @@ package Modelo;
 public class Categorias {
 
     //Atributos
-    private Integer idcat;
+    private Integer id_categoria;
     private String nombre;
     private String descripcion;
     private Integer estado;
@@ -12,11 +12,11 @@ public class Categorias {
     }
 
     public Integer getIdcat() {
-        return idcat;
+        return id_categoria;
     }
 
-    public void setIdcat(Integer idcat) {
-        this.idcat = idcat;
+    public void setIdcat(Integer id_categoria) {
+        this.id_categoria = id_categoria;
     }
 
     public String getNombre() {
@@ -44,7 +44,7 @@ public class Categorias {
     }
 
     public Object[] RegistroCategoria(int num) {
-        Object[] fila = {num, idcat, nombre, descripcion};
+        Object[] fila = {num, id_categoria, nombre, descripcion};
         return fila;
     }
 

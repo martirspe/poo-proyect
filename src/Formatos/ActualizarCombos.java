@@ -14,8 +14,7 @@ public class ActualizarCombos {
 
     public static void ActualizarComboVendedor(JComboBox combo) {
         for (int i = 0; i < Main.Listaven.CantidadVendedores(); i++) {
-            combo.addItem(Main.Listaven.RecuperarVendedor(i).getNombre());
-            combo.addItem(Main.Listaven.RecuperarVendedor(i).getApellidos());
+            combo.addItem(Main.Listaven.RecuperarVendedor(i).getNombre() + " " + Main.Listaven.RecuperarVendedor(i).getApellidos());
         }
     }
 

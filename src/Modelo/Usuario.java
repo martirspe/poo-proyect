@@ -3,7 +3,6 @@ package Modelo;
 public class Usuario {
 
     //Atributos
-    private Integer id;
     private String tipo_doc;
     private Integer num_doc;
     private String nombre;
@@ -14,14 +13,6 @@ public class Usuario {
     private String direccion;
 
     public Usuario() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getTipo_doc() {

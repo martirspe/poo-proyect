@@ -27,6 +27,10 @@ public class Main {
     public static FormVentas fventas;
     public static ControladorVentas cventas;
 
+    //Reporte de Ventas
+    public static FormReporteVentas rventas;
+    public static ControladorDetalleVenta crventas;
+
     //Formulario Menú
     public static FormMenu fm;
     public static ControladorMenu cfm;

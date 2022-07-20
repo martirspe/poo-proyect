@@ -18,7 +18,7 @@ public class CRUDstock extends ConectarBD {
         DefaultTableModel modelo = new DefaultTableModel(null, titulo);
         tabla.setModel(modelo);
         try {
-            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1");
+            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, id_categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1");
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;

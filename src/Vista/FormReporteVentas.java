@@ -24,24 +24,23 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtblDatos = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jTextField11 = new javax.swing.JTextField();
-        jSeparator11 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton8 = new javax.swing.JButton();
-        jSeparator12 = new javax.swing.JSeparator();
-        jTextField12 = new javax.swing.JTextField();
+        jcbxMoneda = new javax.swing.JComboBox<>();
+        jbntVVendedor = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        jbntVCliente = new javax.swing.JButton();
+        jbntVProducto = new javax.swing.JButton();
+        jdcFFin = new com.toedter.calendar.JDateChooser();
+        jdcFInicio = new com.toedter.calendar.JDateChooser();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jbtnCVentas = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -50,18 +49,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "CODIGO","PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL",
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtblDatos);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 850, 260));
 
@@ -89,96 +77,72 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField11.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField11.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 270, -1));
-        jPanel3.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 270, 10));
-
         jLabel17.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel17.setText("FECHA DE INICIO");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 250, -1));
 
-        jLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel8.setText("MONEDA:");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 170, 20));
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PEN", "USD" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jcbxMoneda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxMoneda.setForeground(new java.awt.Color(153, 153, 153));
+        jcbxMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PEN", "USD" }));
+        jcbxMoneda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jcbxMonedaActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 270, 30));
+        jPanel3.add(jcbxMoneda, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 270, 20));
 
-        jButton8.setBackground(new java.awt.Color(47, 123, 123));
-        jButton8.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("VENTAS POR VENDEDOR");
-        jButton8.setBorder(null);
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 270, 30));
-        jPanel3.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 270, 10));
-
-        jTextField12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField12.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField12.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 270, -1));
+        jbntVVendedor.setBackground(new java.awt.Color(47, 123, 123));
+        jbntVVendedor.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jbntVVendedor.setForeground(new java.awt.Color(255, 255, 255));
+        jbntVVendedor.setText("VENTAS POR VENDEDOR");
+        jbntVVendedor.setBorder(null);
+        jPanel3.add(jbntVVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel18.setText("FECHA DE FIN");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
+        jLabel18.setText("MONEDA");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 250, -1));
 
-        jButton10.setBackground(new java.awt.Color(47, 123, 123));
-        jButton10.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("VENTAS POR CLIENTE");
-        jButton10.setBorder(null);
-        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
+        jbntVCliente.setBackground(new java.awt.Color(47, 123, 123));
+        jbntVCliente.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jbntVCliente.setForeground(new java.awt.Color(255, 255, 255));
+        jbntVCliente.setText("VENTAS POR CLIENTE");
+        jbntVCliente.setBorder(null);
+        jPanel3.add(jbntVCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 270, 30));
 
-        jButton11.setBackground(new java.awt.Color(47, 123, 123));
-        jButton11.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(255, 255, 255));
-        jButton11.setText("VENTAS POR PRODUCTO");
-        jButton11.setBorder(null);
-        jPanel3.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 270, 30));
+        jbntVProducto.setBackground(new java.awt.Color(47, 123, 123));
+        jbntVProducto.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jbntVProducto.setForeground(new java.awt.Color(255, 255, 255));
+        jbntVProducto.setText("VENTAS POR PRODUCTO");
+        jbntVProducto.setBorder(null);
+        jPanel3.add(jbntVProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 270, 30));
+        jPanel3.add(jdcFFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 270, -1));
+        jPanel3.add(jdcFInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 270, -1));
+
+        jLabel19.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel19.setText("FECHA DE FIN");
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
+
+        jLabel20.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel20.setText("FECHA DE FIN");
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 850, 160));
 
-        jButton9.setBackground(new java.awt.Color(47, 123, 123));
-        jButton9.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("CONSULTAR VENTAS");
-        jButton9.setBorder(null);
-        jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 770, 30));
+        jbtnCVentas.setBackground(new java.awt.Color(47, 123, 123));
+        jbtnCVentas.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jbtnCVentas.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnCVentas.setText("CONSULTAR VENTAS");
+        jbtnCVentas.setBorder(null);
+        jPanel2.add(jbtnCVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 770, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 880, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jcbxMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxMonedaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
-
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_jcbxMonedaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,25 +195,24 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator11;
-    private javax.swing.JSeparator jSeparator12;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
+    public javax.swing.JButton jbntVCliente;
+    public javax.swing.JButton jbntVProducto;
+    public javax.swing.JButton jbntVVendedor;
+    public javax.swing.JButton jbtnCVentas;
+    public javax.swing.JComboBox<String> jcbxMoneda;
+    public com.toedter.calendar.JDateChooser jdcFFin;
+    public com.toedter.calendar.JDateChooser jdcFInicio;
+    public javax.swing.JTable jtblDatos;
     // End of variables declaration//GEN-END:variables
 }

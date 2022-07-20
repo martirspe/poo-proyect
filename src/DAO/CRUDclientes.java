@@ -23,7 +23,7 @@ public class CRUDclientes extends ConectarBD {
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;
                 Clientes cli = new Clientes();
-                cli.setId(rs.getInt(1));
+                cli.setId_cliente(rs.getInt(1));
                 cli.setTipo_doc(rs.getString(2));
                 cli.setNum_doc(rs.getInt(3));
                 cli.setNombre(rs.getString(4));
@@ -71,7 +71,7 @@ public class CRUDclientes extends ConectarBD {
             rs = st.executeQuery("SELECT id, tipo_doc, num_doc, nombre, apellidos, direccion, sexo, movil, email FROM clientes WHERE estado = 1 AND id = " + idcli);
             cli = new Clientes();
             if (rs.next()) {
-                cli.setId(rs.getInt(1));
+                cli.setId_cliente(rs.getInt(1));
                 cli.setTipo_doc(rs.getString(2));
                 cli.setNum_doc(rs.getInt(3));
                 cli.setNombre(rs.getString(4));
@@ -99,7 +99,7 @@ public class CRUDclientes extends ConectarBD {
             ps.setString(6, cli.getSexo());
             ps.setInt(7, cli.getMovil());
             ps.setString(8, cli.getEmail());
-            ps.setInt(9, cli.getId());
+            ps.setInt(9, cli.getId_cliente());
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {

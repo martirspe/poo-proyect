@@ -15,7 +15,7 @@ public class ListarCategorias extends ConectarBD {
     public void ActualizarListaCategorias() {
         Main.Listacat = new ListaCategorias();
         try {
-            rs = st.executeQuery("SELECT * FROM categorias where estado=1");
+            rs = st.executeQuery("SELECT * FROM categorias WHERE estado = 1");
             while (rs.next()) {
                 Categorias cat = new Categorias();
                 cat.setIdcat(rs.getInt(1));

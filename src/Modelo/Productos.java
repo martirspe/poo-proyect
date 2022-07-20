@@ -7,12 +7,12 @@ import DAO.NombreObjetos;
 public class Productos {
 
     //Atributos
-    private Integer idpro;
+    private Integer id_producto;
     private String codigo;
     private String nombre;
     private String modelo;
     private String marca;
-    private Integer categoria;
+    private Integer id_categoria;
     private Integer stock;
     private Double precio;
     private String descripcion;
@@ -22,11 +22,11 @@ public class Productos {
     }
 
     public Integer getIdpro() {
-        return idpro;
+        return id_producto;
     }
 
-    public void setIdpro(Integer idpro) {
-        this.idpro = idpro;
+    public void setIdpro(Integer id_producto) {
+        this.id_producto = id_producto;
     }
 
     public String getCodigo() {
@@ -62,11 +62,11 @@ public class Productos {
     }
 
     public Integer getCategoria() {
-        return categoria;
+        return id_categoria;
     }
 
-    public void setCategoria(Integer categoria) {
-        this.categoria = categoria;
+    public void setCategoria(Integer id_categoria) {
+        this.id_categoria = id_categoria;
     }
 
     public Integer getStock() {
@@ -104,7 +104,7 @@ public class Productos {
     public Object[] RegistroProducto(int num) {
         DecimalFormat df = new DecimalFormat("S/ ##0.00");
         NombreObjetos no = new NombreObjetos();
-        Object[] fila = {num, idpro, codigo, nombre, modelo, marca, no.RecuperarNombrecat(categoria), stock, df.format(precio), descripcion};
+        Object[] fila = {num, id_producto, codigo, nombre, modelo, marca, no.RecuperarNombreCat(id_categoria), stock, df.format(precio), descripcion};
         return fila;
     }
 
