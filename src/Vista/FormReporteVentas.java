@@ -31,7 +31,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jcbxMoneda = new javax.swing.JComboBox<>();
+        jcbxReferencia = new javax.swing.JComboBox<>();
         jbntVVendedor = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jbntVCliente = new javax.swing.JButton();
@@ -81,15 +81,15 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel17.setText("FECHA DE INICIO");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 250, -1));
 
-        jcbxMoneda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jcbxMoneda.setForeground(new java.awt.Color(153, 153, 153));
-        jcbxMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PEN", "USD" }));
-        jcbxMoneda.addActionListener(new java.awt.event.ActionListener() {
+        jcbxReferencia.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxReferencia.setForeground(new java.awt.Color(153, 153, 153));
+        jcbxReferencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FACEBOOK", "WHATSAPP", "MERCADO LIBRE", "LINIO", "PÁGINA WEB", "RECOMENDACIÓN", "OTRO" }));
+        jcbxReferencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbxMonedaActionPerformed(evt);
+                jcbxReferenciaActionPerformed(evt);
             }
         });
-        jPanel3.add(jcbxMoneda, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 270, 20));
+        jPanel3.add(jcbxReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 270, 20));
 
         jbntVVendedor.setBackground(new java.awt.Color(47, 123, 123));
         jbntVVendedor.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
@@ -99,7 +99,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jPanel3.add(jbntVVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel18.setText("MONEDA");
+        jLabel18.setText("REFERENCIA");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 250, -1));
 
         jbntVCliente.setBackground(new java.awt.Color(47, 123, 123));
@@ -140,9 +140,9 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jcbxMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxMonedaActionPerformed
+    private void jcbxReferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxReferenciaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jcbxMonedaActionPerformed
+    }//GEN-LAST:event_jcbxReferenciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,7 +210,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
     public javax.swing.JButton jbntVProducto;
     public javax.swing.JButton jbntVVendedor;
     public javax.swing.JButton jbtnCVentas;
-    public javax.swing.JComboBox<String> jcbxMoneda;
+    public javax.swing.JComboBox<String> jcbxReferencia;
     public com.toedter.calendar.JDateChooser jdcFFin;
     public com.toedter.calendar.JDateChooser jdcFInicio;
     public javax.swing.JTable jtblDatos;

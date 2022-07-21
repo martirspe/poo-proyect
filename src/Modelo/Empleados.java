@@ -34,4 +34,11 @@ public class Empleados extends Usuario {
         this.estado = estado;
     }
 
+    public Object[] RegistroCliente(int num) {
+        Object[] fila = {num, id_empleado, super.getTipo_doc(), super.getNum_doc(),
+            super.getNombre(), super.getApellidos(), super.getDireccion(), super.getSexo(),
+            super.getMovil(), super.getEmail(), cargo, estado};
+        return fila;
+    }
+
 }

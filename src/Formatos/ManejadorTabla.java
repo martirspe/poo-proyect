@@ -101,15 +101,23 @@ public class ManejadorTabla {
     
     //Método que la da formato a la JTable del tabla Clientes
     public static void FormatoTablaVentas(JTable tabla) {
-        AnchoColumnas(tabla, 0, 100);
+        AnchoColumnas(tabla, 0, 10);
         JustificarCelda(tabla, 0);
-        AnchoColumnas(tabla, 1, 100);
+        AnchoColumnas(tabla, 1, 10);
         JustificarCelda(tabla, 1);
-        AnchoColumnas(tabla, 2, 100);
+        AnchoColumnas(tabla, 2, 30);
         JustificarCelda(tabla, 2);
-        AnchoColumnas(tabla, 3, 250);
+        AnchoColumnas(tabla, 3, 30);
         JustificarCelda(tabla, 3);
-        AnchoColumnas(tabla, 4, 250);
+        AnchoColumnas(tabla, 4, 30);
         JustificarCelda(tabla, 4);
+        AnchoColumnas(tabla, 5, 10);
+        JustificarCelda(tabla, 5);
+        AnchoColumnas(tabla, 6, 10);
+        JustificarCelda(tabla, 6);
+        AnchoColumnas(tabla, 7, 30);
+        JustificarCelda(tabla, 7);
+        AnchoColumnas(tabla, 8, 50);
+        JustificarCelda(tabla, 8);
     }
 }

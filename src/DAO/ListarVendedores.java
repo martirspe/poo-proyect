@@ -15,11 +15,12 @@ public class ListarVendedores extends ConectarBD {
     public void ActualizarListaVendedores() {
         Main.Listaven = new ListaVendedores();
         try {
-            rs = st.executeQuery("SELECT nombre, apellidos FROM empleados WHERE estado = 1;");
+//            rs = st.executeQuery("SELECT nombre, apellidos FROM empleados WHERE estado = 1;");
+            rs = st.executeQuery("SELECT nombre FROM empleados WHERE estado = 1;");
             while (rs.next()) {
                 Empleados ven = new Empleados();
                 ven.setNombre(rs.getString(1));
-                ven.setApellidos(rs.getString(2));
+//                ven.setApellidos(rs.getString(2));
                 Main.Listaven.AgregarVendedor(ven);
             }
             rs.close();

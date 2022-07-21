@@ -2,12 +2,8 @@ package Formatos;
 
 //Librerías
 import DAO.NombreObjetos;
-import Modelo.Clientes;
 import Modelo.DetalleVenta;
-import Modelo.Empleados;
-import Modelo.Productos;
 import Modelo.Ventas;
-import Principal.Main;
 import Vista.FormVentas;
 
 public class FormatoVentas {
@@ -22,15 +18,15 @@ public class FormatoVentas {
         fv.jtxtCliente.setText("");
         fv.jtxtDireccion.setText("");
         fv.jcbxVendedor.setSelectedIndex(0);
-        fv.jcbxMoneda.setSelectedIndex(0);
         fv.jcbxReferencia.setSelectedIndex(0);
-        fv.jtxtTCambio.setText("");
         fv.jtxtCodigo.setText("");
         fv.jtxtProducto.setText("");
         fv.jspCantidad.setValue(0);
         fv.jspPrecio.setValue(0);
+        fv.jtxtSubTotal.setText("");
+        fv.jtxtIgv.setText("");
+        fv.jtxtTotal.setText("");
         fv.jcbxVendedor.setSelectedIndex(0);
-        fv.jtxtTCambio.requestFocus();
     }
 
     public static void Estado1(FormVentas fp) {
@@ -62,42 +58,22 @@ public class FormatoVentas {
     }
 
     public static Ventas LeerVentas(FormVentas fv) {
-
-        //Creación de Objetos
         Ventas ven = new Ventas();
-//        Clientes cli = new Clientes();
-//        Empleados emp = new Empleados();
-//        Productos pro = new Productos();
 
         //Buscamos el ID del cliente
         NombreObjetos oc = new NombreObjetos();
         Integer idcli = oc.RecuperarIdCli(fv.jtxtNDocumento.getText());
         ven.setId_cliente(idcli);
-//        cli.setNum_doc(Integer.parseInt(fv.jtxtNDocumento.getText()));
-//        cli.setNombre(fv.jtxtCliente.getText());
-//        cli.setDireccion(fv.jtxtDireccion.getText());
 
         //Buscamos el ID del empleado
-//        NombreObjetos oe = new NombreObjetos();
-//        Integer idemp = oe.RecuperarIdEmp(fv.jcbxVendedor.getSelectedItem().toString());
-        ven.setId_empleado(1);
-
-//        emp.setNombre(fv.jtxtCliente.getText());
-//
-//        //Buscamos el apellido del empleado
-//        NombreObjetos ae = new NombreObjetos();
-//        String ape = ae.RecuperarApellidoEmp(fv.jcbxVendedor.getSelectedItem().toString());
-//        emp.setApellidos(ape);
-        
-        //Calcular el total de la venta
-        Double totven = Double.parseDouble(fv.jspCantidad.getValue().toString()) * Double.parseDouble(fv.jspPrecio.getValue().toString());
+        NombreObjetos oe = new NombreObjetos();
+        Integer idemp = oe.RecuperarIdEmp(fv.jcbxVendedor.getSelectedItem().toString());
+        ven.setId_empleado(idemp);
 
         //Asignando datos al objeto ventas
         ven.setMet_pago(fv.jcbxFPago.getSelectedItem().toString());
-        ven.setMoneda(fv.jcbxMoneda.getSelectedItem().toString());
-        ven.setT_cambio(Double.parseDouble(fv.jtxtTCambio.getText()));
-        ven.setIgv(0.18);
-        ven.setTotal(totven);
+        ven.setIgv(Double.parseDouble(fv.jtxtIgv.getText()));
+        ven.setTotal(Double.parseDouble(fv.jtxtTotal.getText()));
         ven.setFecha(fv.jdcFecha.getDate());
         ven.setReferencia(fv.jcbxReferencia.getSelectedItem().toString());
         ven.setNota(fv.jtxtObservacion.getText());
@@ -113,8 +89,8 @@ public class FormatoVentas {
         NombreObjetos op = new NombreObjetos();
         Integer idpro = op.RecuperarIdPro(fv.jtxtCodigo.getText());
         dtven.setId_producto(idpro);
+        
         dtven.setCantidad(Integer.parseInt(fv.jspCantidad.getValue().toString()));
-        dtven.setDescuento(20.5);
         dtven.setPrecio(Double.parseDouble(fv.jspPrecio.getValue().toString()));
 
         return dtven;

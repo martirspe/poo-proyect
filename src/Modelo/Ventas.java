@@ -1,6 +1,8 @@
 package Modelo;
 
 //Librería
+import DAO.NombreObjetos;
+import java.text.DecimalFormat;
 import java.util.Date;
 
 public class Ventas {
@@ -10,8 +12,6 @@ public class Ventas {
     private Integer id_cliente;
     private Integer id_empleado;
     private String met_pago;
-    private String moneda;
-    private Double t_cambio;
     private Double igv;
     private Double total;
     private Date fecha;
@@ -22,11 +22,11 @@ public class Ventas {
     public Ventas() {
     }
 
-    public Integer getId() {
+    public Integer getId_venta() {
         return id_venta;
     }
 
-    public void setId(Integer id_venta) {
+    public void setId_venta(Integer id_venta) {
         this.id_venta = id_venta;
     }
 
@@ -52,22 +52,6 @@ public class Ventas {
 
     public void setMet_pago(String met_pago) {
         this.met_pago = met_pago;
-    }
-
-    public String getMoneda() {
-        return moneda;
-    }
-
-    public void setMoneda(String moneda) {
-        this.moneda = moneda;
-    }
-
-    public Double getT_cambio() {
-        return t_cambio;
-    }
-
-    public void setT_cambio(Double t_cambio) {
-        this.t_cambio = t_cambio;
     }
 
     public Double getIgv() {
@@ -116,6 +100,14 @@ public class Ventas {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public Object[] RegistroVentas(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        NombreObjetos oc = new NombreObjetos();
+        NombreObjetos oe = new NombreObjetos();
+        Object[] fila = {num, id_venta, oc.RecuperarNombreCli(id_cliente), oe.RecuperarNombreEmp(id_empleado), met_pago, df.format(total * 0.18), df.format(total), fecha, referencia, nota};
+        return fila;
     }
 
 }

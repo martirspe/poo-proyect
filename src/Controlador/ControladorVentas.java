@@ -43,7 +43,7 @@ public class ControladorVentas implements ActionListener {
         this.vista.jbtnAProducto.addActionListener(this);
         this.vista.jbtnRVenta.addActionListener(this);
         FormatoVentas.Presentacion(fv);
-//        FormatoVentas.Estado1(fv);
+        FormatoVentas.Estado1(fv);
         crudven = new CRUDventas();
         crudven.MostrarVentasEnTabla(vista.jtblDatos);
         vista.setVisible(true);
@@ -64,8 +64,10 @@ public class ControladorVentas implements ActionListener {
             Ventas ven = FormatoVentas.LeerVentas(vista);
             CRUDventas crud = new CRUDventas();
             crud.RegistrarVenta(ven);
+
             DetalleVenta dvent = FormatoVentas.LeerDetalleVenta(vista);
-            
+            crud.RegistrarDetalleVenta(dvent);
+
             crud.MostrarVentasEnTabla(vista.jtblDatos);
             FormatoVentas.LimpiarEntradas(vista);
         }
@@ -82,7 +84,7 @@ public class ControladorVentas implements ActionListener {
                 vista.jtxtCliente.setText(cli.getNombre());
                 vista.jtxtDireccion.setText(cli.getDireccion());
             }
-//            FormatoVentas.Estado2(vista);
+            FormatoVentas.Estado2(vista);
         }
 
         if (e.getSource() == vista.jbtnBProducto) {
@@ -95,9 +97,9 @@ public class ControladorVentas implements ActionListener {
                 vista.jtxtCodigo.setText(String.valueOf(pro.getCodigo()));
                 vista.jtxtProducto.setText(pro.getNombre());
             }
-//            FormatoVentas.Estado3(vista);
+            FormatoVentas.Estado3(vista);
         }
-        
+
         if (e.getSource() == vista.jbtnAProducto) {
             NombreObjetos no = new NombreObjetos();
             Mensajes.M1("Se ha añadido el producto a la lista de compras");
@@ -110,7 +112,7 @@ public class ControladorVentas implements ActionListener {
                 vista.jtxtCodigo.setText(String.valueOf(pro.getIdpro()));
                 vista.jtxtProducto.setText(pro.getNombre());
             }
-//            FormatoVentas.Estado3(vista);
+            FormatoVentas.Estado4(vista);
         }
     }
 }
