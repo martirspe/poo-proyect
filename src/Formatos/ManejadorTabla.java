@@ -127,4 +127,21 @@ public class ManejadorTabla {
         AnchoColumnas(tabla, 5, 250);
         JustificarCelda(tabla, 5);
     }
+    
+    public static void FormatoTablaReporteVentasCli(JTable tabla) {
+        AnchoColumnas(tabla, 0, 100);
+        JustificarCelda(tabla, 0);
+        AnchoColumnas(tabla, 1, 100);
+        JustificarCelda(tabla, 1);
+        AnchoColumnas(tabla, 2, 100);
+        JustificarCelda(tabla, 2);
+        AnchoColumnas(tabla, 3, 250);
+        JustificarCelda(tabla, 3);
+        AnchoColumnas(tabla, 4, 250);
+        JustificarCelda(tabla, 4);
+        AnchoColumnas(tabla, 5, 250);
+        JustificarCelda(tabla, 5);
+        AnchoColumnas(tabla, 6, 250);
+        JustificarCelda(tabla, 6);
+    }
 }

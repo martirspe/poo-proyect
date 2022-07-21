@@ -10,6 +10,8 @@ public class DetalleVenta {
     private Integer id;
     private Ventas venta;
     private Productos producto;
+    private Clientes cliente;
+    private Empleados empleados;
     private Integer cantidad;
     private String moneda;
     private Double t_cambio;
@@ -140,5 +142,33 @@ public class DetalleVenta {
         DecimalFormat df = new DecimalFormat("S/ ##0.00");
         Object[] fila = {num, id, producto.getNombre(), cantidad, df.format(precio), total};
         return fila;
+    }
+    
+    public Object[] RegistroDetalleVentaCliente(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        Object[] fila = {num, cliente.getNombre(),id, producto.getNombre(), cantidad, df.format(precio), total};
+        return fila;
+    }
+    
+    public Object[] RegistroDetalleVentaEmple(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        Object[] fila = {num, empleados.getNombre(),id, producto.getNombre(), cantidad, df.format(precio), total};
+        return fila;
+    }
+
+    public Clientes getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Clientes cliente) {
+        this.cliente = cliente;
+    }
+
+    public Empleados getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(Empleados empleados) {
+        this.empleados = empleados;
     }
 }

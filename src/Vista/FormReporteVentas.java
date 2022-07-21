@@ -35,12 +35,12 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         comboMoneda = new javax.swing.JComboBox<>();
-        jButton8 = new javax.swing.JButton();
+        btn_vemplea = new javax.swing.JButton();
         jSeparator12 = new javax.swing.JSeparator();
         fecha_final = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        btn_vclientes = new javax.swing.JButton();
+        btn_vprod = new javax.swing.JButton();
         btn_getVentas = new javax.swing.JButton();
 
         setClosable(true);
@@ -118,12 +118,12 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         });
         jPanel3.add(comboMoneda, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 270, 30));
 
-        jButton8.setBackground(new java.awt.Color(47, 123, 123));
-        jButton8.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("VENTAS POR VENDEDOR");
-        jButton8.setBorder(null);
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 270, 30));
+        btn_vemplea.setBackground(new java.awt.Color(47, 123, 123));
+        btn_vemplea.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        btn_vemplea.setForeground(new java.awt.Color(255, 255, 255));
+        btn_vemplea.setText("VENTAS POR VENDEDOR");
+        btn_vemplea.setBorder(null);
+        jPanel3.add(btn_vemplea, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 270, 30));
         jPanel3.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 270, 10));
 
         fecha_final.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -140,19 +140,19 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel18.setText("FECHA DE FIN");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
 
-        jButton10.setBackground(new java.awt.Color(47, 123, 123));
-        jButton10.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("VENTAS POR CLIENTE");
-        jButton10.setBorder(null);
-        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
+        btn_vclientes.setBackground(new java.awt.Color(47, 123, 123));
+        btn_vclientes.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        btn_vclientes.setForeground(new java.awt.Color(255, 255, 255));
+        btn_vclientes.setText("VENTAS POR CLIENTE");
+        btn_vclientes.setBorder(null);
+        jPanel3.add(btn_vclientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
 
-        jButton11.setBackground(new java.awt.Color(47, 123, 123));
-        jButton11.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(255, 255, 255));
-        jButton11.setText("VENTAS POR PRODUCTO");
-        jButton11.setBorder(null);
-        jPanel3.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 270, 30));
+        btn_vprod.setBackground(new java.awt.Color(47, 123, 123));
+        btn_vprod.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        btn_vprod.setForeground(new java.awt.Color(255, 255, 255));
+        btn_vprod.setText("VENTAS POR PRODUCTO");
+        btn_vprod.setBorder(null);
+        jPanel3.add(btn_vprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 270, 30));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 850, 160));
 
@@ -232,12 +232,12 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_getVentas;
+    public javax.swing.JButton btn_vclientes;
+    public javax.swing.JButton btn_vemplea;
+    public javax.swing.JButton btn_vprod;
     public javax.swing.JComboBox<String> comboMoneda;
     public javax.swing.JTextField fecha_final;
     public javax.swing.JTextField fecha_inicio;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
