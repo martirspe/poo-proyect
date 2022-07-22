@@ -76,12 +76,10 @@ public class ControladorMenu implements ActionListener {
         }
         
         if (e.getSource() == vista.jmiReporteVentas) {
-            Main.rventas = new FormReporteVentas();
-            Main.crventas = new ControladorDetalleVenta(Main.rventas);
-            vista.jdpContenedor.removeAll();
-            vista.jdpContenedor.updateUI();
-            vista.jdpContenedor.add(Main.rventas);
-            CentrarForma.CFDVentas(vista.jdpContenedor, Main.rventas);
+            Main.FRventas = new FormReporteVentas();
+            Main.crventas = new ControladorReporteVentas(Main.FRventas);
+            vista.jdpContenedor.add(Main.FRventas);
+            CentrarForma.CRVentas(vista.jdpContenedor, Main.FRventas);
         }
     }
 

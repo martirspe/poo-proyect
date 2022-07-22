@@ -42,7 +42,7 @@ public class CentrarForma {
                 (desktopSize.height - jifSize.height) / 2);
     }
     
-    public static void CFDVentas(JDesktopPane pan, JInternalFrame inf) {
+    public static void CRVentas(JDesktopPane pan, JInternalFrame inf) {
         Dimension desktopSize = pan.getSize();
         Dimension jifSize = inf.getSize();
         inf.setLocation((desktopSize.width - jifSize.width) / 2,
