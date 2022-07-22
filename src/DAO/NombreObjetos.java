@@ -20,23 +20,10 @@ public class NombreObjetos extends ConectarBD {
         return nom;
     }
 
-    public String RecuperarNombrePro(int cod) {
-        String nompro = "";
-        try {
-            rs = st.executeQuery("SELECT codigo, nombre, modelo, marca, id_categoria, cantidad, precio FROM productos WHERE estado = 1 AND codigo = " + cod);
-            if (rs.next()) {
-                nompro = rs.getString(1);
-            }
-        } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede recuperar el nombre del producto." + e);
-        }
-        return nompro;
-    }
-
     public Integer RecuperarIdPro(String cod) {
         Integer id = null;
         try {
-            rs = st.executeQuery("SELECT id FROM productos WHERE estado = 1 AND codigo = " + cod);
+            rs = st.executeQuery("SELECT id FROM productos WHERE estado = 1 AND codigo = " + "'" + cod + "'");
             if (rs.next()) {
                 id = rs.getInt(1);
             }
@@ -49,7 +36,7 @@ public class NombreObjetos extends ConectarBD {
     public Integer RecuperarIdCli(String numdoc) {
         Integer id = null;
         try {
-            rs = st.executeQuery("SELECT id FROM clientes WHERE estado = 1 AND num_doc = " + numdoc);
+            rs = st.executeQuery("SELECT id FROM clientes WHERE estado = 1 AND num_doc = " + "'" + numdoc + "'");
             if (rs.next()) {
                 id = rs.getInt(1);
             }
@@ -88,8 +75,8 @@ public class NombreObjetos extends ConectarBD {
     public Integer RecuperarIdEmp(String nom) {
         Integer id = null;
         try {
-//            rs = st.executeQuery("SELECT id FROM empleados WHERE estado = 1 AND CONCAT(nombre,' ',apellidos) = " + nom);
-            rs = st.executeQuery("SELECT id FROM empleados WHERE estado = 1 AND nombre =" + nom);
+//            rs = st.executeQuery("SELECT id FROM empleados WHERE estado = 1 AND CONCAT(nombre,' ',apellidos) = " + "'" + nom + "'");
+            rs = st.executeQuery("SELECT id FROM empleados WHERE estado = 1 AND nombre = " + "'" + nom + "'");
             if (rs.next()) {
                 id = rs.getInt(1);
             }

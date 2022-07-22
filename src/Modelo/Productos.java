@@ -107,5 +107,12 @@ public class Productos {
         Object[] fila = {num, id_producto, codigo, nombre, modelo, marca, no.RecuperarNombreCat(id_categoria), stock, df.format(precio), descripcion};
         return fila;
     }
+    
+    public Object[] ProductosTemp(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        NombreObjetos no = new NombreObjetos();
+        Object[] fila = {codigo, nombre, modelo, marca, no.RecuperarNombreCat(id_categoria), stock, df.format(precio)};
+        return fila;
+    }
 
 }

@@ -72,7 +72,6 @@ public class FormatoVentas {
 
         //Asignando datos al objeto ventas
         ven.setMet_pago(fv.jcbxFPago.getSelectedItem().toString());
-        ven.setIgv(Double.parseDouble(fv.jtxtIgv.getText()));
         ven.setTotal(Double.parseDouble(fv.jtxtTotal.getText()));
         ven.setFecha(fv.jdcFecha.getDate());
         ven.setReferencia(fv.jcbxReferencia.getSelectedItem().toString());
@@ -89,7 +88,7 @@ public class FormatoVentas {
         NombreObjetos op = new NombreObjetos();
         Integer idpro = op.RecuperarIdPro(fv.jtxtCodigo.getText());
         dtven.setId_producto(idpro);
-        
+
         dtven.setCantidad(Integer.parseInt(fv.jspCantidad.getValue().toString()));
         dtven.setPrecio(Double.parseDouble(fv.jspPrecio.getValue().toString()));
 

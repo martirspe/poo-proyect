@@ -7,7 +7,6 @@ public class DetalleVenta {
     private Integer id_venta;
     private Integer id_producto;
     private Integer cantidad;
-    private Double descuento;
     private Double precio;
 
     public DetalleVenta() {
@@ -43,14 +42,6 @@ public class DetalleVenta {
 
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
-    }
-
-    public Double getDescuento() {
-        return descuento;
-    }
-
-    public void setDescuento(Double descuento) {
-        this.descuento = descuento;
     }
 
     public Double getPrecio() {

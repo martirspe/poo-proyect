@@ -18,8 +18,11 @@ import Modelo.DetalleVenta;
 import Modelo.Productos;
 
 import Vista.FormVentas;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class ControladorVentas implements ActionListener {
 
@@ -36,6 +39,9 @@ public class ControladorVentas implements ActionListener {
     CRUDclientes crudcli;
     CRUDproductos crudpro;
 
+    DefaultTableModel modelo = new DefaultTableModel();
+    DefaultTableModel tmp = new DefaultTableModel();
+
     public ControladorVentas(FormVentas fv) {
         vista = fv;
         this.vista.jbtnBCliente.addActionListener(this);
@@ -45,7 +51,7 @@ public class ControladorVentas implements ActionListener {
         FormatoVentas.Presentacion(fv);
         FormatoVentas.Estado1(fv);
         crudven = new CRUDventas();
-        crudven.MostrarVentasEnTabla(vista.jtblDatos);
+        crudven.MostrarProductosEnTabla(vista.jtblDatos);
         vista.setVisible(true);
 
         //Coloca la fecha actual sobre JDateChooser
@@ -58,6 +64,16 @@ public class ControladorVentas implements ActionListener {
         ActualizarCombos.ActualizarComboVendedor(vista.jcbxVendedor);
     }
 
+    private void TotalPagar(FormVentas fv) {
+        Double tpagar = 0.00;
+        Integer numFila = fv.jtblDatos.getRowCount();
+        for (int i = 0; i < numFila; i++) {
+            Double cal = Double.parseDouble(String.valueOf(fv.jtblDatos.getModel().getValueAt(i, 7)));
+            tpagar = tpagar + cal;
+        }
+        fv.jtxtTotal.setText(String.format("%.2f", tpagar));
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jbtnRVenta) {
@@ -68,7 +84,6 @@ public class ControladorVentas implements ActionListener {
             DetalleVenta dvent = FormatoVentas.LeerDetalleVenta(vista);
             crud.RegistrarDetalleVenta(dvent);
 
-            crud.MostrarVentasEnTabla(vista.jtblDatos);
             FormatoVentas.LimpiarEntradas(vista);
         }
 
@@ -102,17 +117,77 @@ public class ControladorVentas implements ActionListener {
 
         if (e.getSource() == vista.jbtnAProducto) {
             NombreObjetos no = new NombreObjetos();
-            Mensajes.M1("Se ha añadido el producto a la lista de compras");
-            no.RecuperarNombrePro(idpro);
+            idpro = no.RecuperarIdPro(vista.jtxtCodigo.getText());
             crudpro = new CRUDproductos();
             pro = crudpro.ObtenerRegistroPro(idpro);
-            if (pro == null) {
-                Mensajes.M1("El ID " + idpro + "no existe en la tabla productos");
+            Integer cont = 0;
+            Integer cant = Integer.parseInt(vista.jspCantidad.getValue().toString());
+            Double price = Double.parseDouble(vista.jspPrecio.getValue().toString());
+            Double subtotal = cant * price;
+            Double igv = subtotal * 0.18;
+            Double total = subtotal + igv;
+            vista.jtxtSubTotal.setText(String.valueOf(subtotal));
+            vista.jtxtIgv.setText(String.valueOf(igv));
+            vista.jtxtTotal.setText(String.valueOf(total));
+            if (pro.getStock() >= cant) {
+                cont++;
+                tmp = (DefaultTableModel) vista.jtblDatos.getModel();
+                for (int i = 0; i < vista.jtblDatos.getRowCount(); i++) {
+                    if (vista.jtblDatos.getValueAt(i, 1).equals(vista.jtxtCodigo.getText())) {
+                        JOptionPane.showMessageDialog(null, "El producto ya esta registrado");
+                        return;
+                    }
+                }
+                ArrayList list = new ArrayList();
+                list.add(cont);
+                list.add(pro.getCodigo());
+                list.add(pro.getNombre());
+                list.add(pro.getModelo());
+                list.add(pro.getMarca());
+                Integer idcat = pro.getCategoria();
+                NombreObjetos nc = new NombreObjetos();
+                vista.jtxtDireccion.setText(cli.getDireccion());
+                String nomcat = nc.RecuperarNombreCat(idcat);
+                list.add(nomcat);
+                list.add(cant);
+                list.add(price);
+                Object[] O = new Object[10];
+                O[0] = list.get(1);
+                O[1] = list.get(2);
+                O[2] = list.get(3);
+                O[3] = list.get(4);
+                O[4] = list.get(5);
+                O[5] = list.get(6);
+                O[6] = list.get(7);
+                tmp.addRow(O);
+                vista.jtblDatos.setModel(tmp);
             } else {
-                vista.jtxtCodigo.setText(String.valueOf(pro.getIdpro()));
-                vista.jtxtProducto.setText(pro.getNombre());
+                JOptionPane.showMessageDialog(null, "Stock no disponible");
             }
             FormatoVentas.Estado4(vista);
+//            if (pro == null) {
+//                Mensajes.M1("El ID " + idpro + "no existe en la tabla productos");
+//            } else {
+//                vista.jtxtCodigo.setText(String.valueOf(pro.getCodigo()));
+//                vista.jtxtProducto.setText(pro.getNombre());
+//            }
+//            Mensajes.M1("Se ha añadido el producto a la list de compras");
+//            FormatoVentas.Estado4(vista);
         }
+
+//        if (e.getSource() == vista.jbtnAProducto) {
+//            NombreObjetos no = new NombreObjetos();
+//            Mensajes.M1("Se ha añadido el producto a la list de compras");
+//            no.RecuperarNombrePro(idpro);
+//            crudpro = new CRUDproductos();
+//            pro = crudpro.ObtenerRegistroPro(idpro);
+//            if (pro == null) {
+//                Mensajes.M1("El ID " + idpro + "no existe en la tabla productos");
+//            } else {
+//                vista.jtxtCodigo.setText(String.valueOf(pro.getIdpro()));
+//                vista.jtxtProducto.setText(pro.getNombre());
+//            }
+//            FormatoVentas.Estado4(vista);
+//        }
     }
 }
