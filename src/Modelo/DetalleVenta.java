@@ -1,39 +1,54 @@
 package Modelo;
 
+//Librería
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+
 public class DetalleVenta {
 
     //Atributos
-    private Integer id_detalle;
-    private Integer id_venta;
-    private Integer id_producto;
+    private Integer id;
+    private Ventas venta;
+    private Productos producto;
+    private Clientes cliente;
+    private Empleados empleados;
     private Integer cantidad;
+    private String moneda;
+    private Double t_cambio;
+    private Double igv;
+    private Double descuento;
     private Double precio;
+    private Double total;
+    private LocalDate fecha;
+    private String met_pago;
+    private String referencia;
+    private String nota;
 
     public DetalleVenta() {
     }
 
     public Integer getId() {
-        return id_detalle;
+        return id;
     }
 
-    public void setId(Integer id_detalle) {
-        this.id_detalle = id_detalle;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public Integer getId_venta() {
-        return id_venta;
+    public Ventas getVenta() {
+        return venta;
     }
 
-    public void setId_venta(Integer id_venta) {
-        this.id_venta = id_venta;
+    public void setVenta(Ventas venta) {
+        this.venta = venta;
     }
 
-    public Integer getId_producto() {
-        return id_producto;
+    public Productos getProducto() {
+        return producto;
     }
 
-    public void setId_producto(Integer id_producto) {
-        this.id_producto = id_producto;
+    public void setProducto(Productos producto) {
+        this.producto = producto;
     }
 
     public Integer getCantidad() {
@@ -44,6 +59,38 @@ public class DetalleVenta {
         this.cantidad = cantidad;
     }
 
+    public String getMoneda() {
+        return moneda;
+    }
+
+    public void setMoneda(String moneda) {
+        this.moneda = moneda;
+    }
+
+    public Double getT_cambio() {
+        return t_cambio;
+    }
+
+    public void setT_cambio(Double t_cambio) {
+        this.t_cambio = t_cambio;
+    }
+
+    public Double getIgv() {
+        return igv;
+    }
+
+    public void setIgv(Double igv) {
+        this.igv = igv;
+    }
+
+    public Double getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(Double descuento) {
+        this.descuento = descuento;
+    }
+
     public Double getPrecio() {
         return precio;
     }
@@ -52,4 +99,76 @@ public class DetalleVenta {
         this.precio = precio;
     }
 
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getMet_pago() {
+        return met_pago;
+    }
+
+    public void setMet_pago(String met_pago) {
+        this.met_pago = met_pago;
+    }
+
+    public String getReferencia() {
+        return referencia;
+    }
+
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
+    }
+
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
+    }
+    public Object[] RegistroDetalleVenta(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        Object[] fila = {num, id, producto.getNombre(), cantidad, df.format(precio), total};
+        return fila;
+    }
+    
+    public Object[] RegistroDetalleVentaCliente(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        Object[] fila = {num, cliente.getNombre(),id, producto.getNombre(), cantidad, df.format(precio), total};
+        return fila;
+    }
+    
+    public Object[] RegistroDetalleVentaEmple(int num) {
+        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        Object[] fila = {num, empleados.getNombre(),id, producto.getNombre(), cantidad, df.format(precio), total};
+        return fila;
+    }
+
+    public Clientes getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Clientes cliente) {
+        this.cliente = cliente;
+    }
+
+    public Empleados getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(Empleados empleados) {
+        this.empleados = empleados;
+    }
 }

@@ -24,7 +24,7 @@ public class ControladorDetalleVenta implements ActionListener {
 
     public ControladorDetalleVenta(FormReporteVentas fr) {
         vista = fr;
-        this.vista.jbtnCVentas.addActionListener(this);
+        this.vista.btn_getVentas.addActionListener(this);
         FormatoDetalleVentas.Presentacion(fr);
         crudven = new CRUDventas();
 //        crudven.MostrarVentasEnTabla(vista.jtblDatos);
