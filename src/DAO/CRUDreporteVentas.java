@@ -6,6 +6,7 @@ import Modelo.Clientes;
 import Modelo.DetalleVenta;
 import Modelo.Empleados;
 import Modelo.Productos;
+import static java.util.Objects.isNull;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,14 +14,23 @@ public class CRUDreporteVentas extends ConectarBD{
     public CRUDreporteVentas() {
     }
     
-    public void MostrarVentasEnTabla(JTable tabla){
+    public void MostrarVentasEnTabla(JTable tabla,String dateInit,String dateEnd){
         String[] titulo = {"N","ID", "PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL"};
         DefaultTableModel modelo = new DefaultTableModel(null, titulo);
         tabla.setModel(modelo);
+        String swhere = "";
+        if(!dateInit.isEmpty()){
+            swhere += "where dv.fecha BETWEEN "+"'"+dateInit+"'";
+            if(!dateEnd.isEmpty()){
+                swhere += " AND "+"'"+dateEnd+"'";
+            }
+        }
+        System.out.println(swhere);
         try {
             rs = st.executeQuery(""
                     + "SELECT dv.id, p.nombre, dv.cantidad, dv.precio, dv.total FROM detalle_ventas dv "
-                    + "inner join productos p on (p.id = dv.producto )");
+                    + "inner join productos p on (p.id = dv.producto ) "
+                    + swhere);
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;
@@ -44,18 +54,25 @@ public class CRUDreporteVentas extends ConectarBD{
         }
     }
     
-    public void MostrarVentasxClienteEnTabla(JTable tabla,int idCli){
+    public void MostrarVentasxClienteEnTabla(JTable tabla,int idCli,String dateInit,String dateEnd){
         String[] titulo = {"N","CLIENTE","ID-VENTA", "PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL"};
         DefaultTableModel modelo = new DefaultTableModel(null, titulo);
         tabla.setModel(modelo);
-        
+        String swhere = "";
+        if(!dateInit.isEmpty()){
+            swhere += "where dv.fecha BETWEEN "+"'"+dateInit+"'";
+            if(!dateEnd.isEmpty()){
+                swhere += " AND "+"'"+dateEnd+"'";
+            }
+        }
         try {
             rs = st.executeQuery(""
                     + "SELECT CONCAT(c.nombre, ' ', c.apellidos) as cliente,dv.id, p.nombre, dv.cantidad, dv.precio, dv.total FROM clientes c "
                     + "inner join ventas v on (v.cliente = c.id ) "
                     + "inner join detalle_ventas dv on (dv.venta = v.id ) "
                     + "inner join productos p on (p.id = dv.producto ) "
-                    + "where c.id = "+idCli);
+                    + "where c.id = "+idCli+" "
+                    + swhere);
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;
@@ -82,18 +99,25 @@ public class CRUDreporteVentas extends ConectarBD{
         }
     }
     
-    public void MostrarVentasxProdEnTabla(JTable tabla,int idpro){
+    public void MostrarVentasxProdEnTabla(JTable tabla,int idpro,String dateInit,String dateEnd){
         String[] titulo = {"N","ID", "PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL"};
         DefaultTableModel modelo = new DefaultTableModel(null, titulo);
         tabla.setModel(modelo);
-        
+        String swhere = "";
+        if(!dateInit.isEmpty()){
+            swhere += "where dv.fecha BETWEEN "+"'"+dateInit+"'";
+            if(!dateEnd.isEmpty()){
+                swhere += " AND "+"'"+dateEnd+"'";
+            }
+        }
         try {
             rs = st.executeQuery(""
                     + "SELECT dv.id, p.nombre, dv.cantidad, "
                     + "dv.precio, dv.total FROM ventas v "
                     + "inner join detalle_ventas dv on (dv.venta = v.id ) "
                     + "inner join productos p on (p.id = dv.producto ) "
-                    + "where p.id = "+idpro);
+                    + "where p.id = "+idpro+" "
+                    + swhere);
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;
@@ -117,18 +141,25 @@ public class CRUDreporteVentas extends ConectarBD{
         }
     }
     
-    public void MostrarVentasxEmplEnTabla(JTable tabla,int idven){
+    public void MostrarVentasxEmplEnTabla(JTable tabla,int idven,String dateInit,String dateEnd){
         String[] titulo = {"N","EMPLEADO","ID-VENTA", "PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL"};
         DefaultTableModel modelo = new DefaultTableModel(null, titulo);
         tabla.setModel(modelo);
-        
-                try {
+        String swhere = "";
+        if(!dateInit.isEmpty()){
+            swhere += "where dv.fecha BETWEEN "+"'"+dateInit+"'";
+            if(!dateEnd.isEmpty()){
+                swhere += " AND "+"'"+dateEnd+"'";
+            }
+        }
+        try {
             rs = st.executeQuery(""
                     + "SELECT CONCAT(em.nombre, ' ', em.apellidos) as empleado,dv.id, p.nombre, dv.cantidad, dv.precio, dv.total FROM empleados em "
                     + "inner join ventas v on (v.empleado = em.id ) "
                     + "inner join detalle_ventas dv on (dv.venta = v.id ) "
                     + "inner join productos p on (p.id = dv.producto ) "
-                    + "where em.id = "+idven);
+                    + "where em.id = "+idven+" "
+                    + swhere);
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;

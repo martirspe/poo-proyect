@@ -12,19 +12,10 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/DAO/CRUDstock.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Formatos/FormatoReporteVentas.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/DAO/CRUDreporteVentas.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Modelo/DetalleVenta.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/DAO/CRUDproductos.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Controlador/ControladorStock.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Modelo/Ventas.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/Controlador/ControladorReporteVentas.java</file>
+            <file>file:/D:/Programacion/Java/proyect-poo/src/DAO/CRUDreporteVentas.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/Vista/FormReporteVentas.java</file>
             <file>file:/D:/Programacion/Java/proyect-poo/src/Formatos/ManejadorTabla.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Principal/Main.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Controlador/ControladorMenu.java</file>
-            <file>file:/D:/Programacion/Java/proyect-poo/src/Modelo/Productos.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,6 +5,11 @@ import Formatos.Mensajes;
 import Vista.FormReporteVentas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import static java.util.Objects.isNull;
 
 public class ControladorReporteVentas implements ActionListener{
         //Atributos
@@ -31,27 +36,34 @@ public class ControladorReporteVentas implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        String dateInit = "",dateEnd="";
+        if(!isNull(vista.jdcDateInit.getDate())){
+            Date dInit = vista.jdcDateInit.getDate();
+            Date dEnd = vista.jdcDateEnd.getDate();
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            dateInit = dateFormat.format(dInit);
+            dateEnd = dateFormat.format(dEnd);
+        }
+
         if (e.getSource() == vista.btn_getVentas) {
-            System.out.println(vista.fecha_inicio.getText());
-            System.out.println(vista.fecha_final.getText());
-            System.out.println(vista.comboMoneda.getSelectedItem().toString());
+            
             crud = new CRUDreporteVentas();
-            crud.MostrarVentasEnTabla(vista.jTable1);
+            crud.MostrarVentasEnTabla(vista.jTable1, dateInit, dateEnd);
         }
         if (e.getSource() == vista.btn_vclientes) {
             idcli = Mensajes.M2("Ingrese el ID del cliente a buscar");
             crud = new CRUDreporteVentas();
-            crud.MostrarVentasxClienteEnTabla(vista.jTable1,idcli);
+            crud.MostrarVentasxClienteEnTabla(vista.jTable1,idcli, dateInit, dateEnd);
         }
         if (e.getSource() == vista.btn_vprod) {
             idpro = Mensajes.M2("Ingrese el ID del producto a buscar");
             crud = new CRUDreporteVentas();
-            crud.MostrarVentasxProdEnTabla(vista.jTable1,idpro);
+            crud.MostrarVentasxProdEnTabla(vista.jTable1,idpro, dateInit, dateEnd);
         }
         if (e.getSource() == vista.btn_vemplea) {
             idven = Mensajes.M2("Ingrese el ID del empleado a buscar");
             crud = new CRUDreporteVentas();
-            crud.MostrarVentasxEmplEnTabla(vista.jTable1,idven);
+            crud.MostrarVentasxEmplEnTabla(vista.jTable1,idven, dateInit, dateEnd);
         }
         
     }
