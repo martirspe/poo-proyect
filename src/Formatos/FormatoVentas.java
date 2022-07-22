@@ -87,7 +87,8 @@ public class FormatoVentas {
         //Buscamos el ID del producto
         NombreObjetos op = new NombreObjetos();
         Integer idpro = op.RecuperarIdPro(fv.jtxtCodigo.getText());
-        dtven.setId_producto(idpro);
+        
+        dtven.getProducto().setIdpro(idpro);
 
         dtven.setCantidad(Integer.parseInt(fv.jspCantidad.getValue().toString()));
         dtven.setPrecio(Double.parseDouble(fv.jspPrecio.getValue().toString()));

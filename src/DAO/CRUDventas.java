@@ -86,8 +86,8 @@ public class CRUDventas extends ConectarBD {
         try {
             ps = conexion.prepareStatement("INSERT INTO detalle_ventas (id_venta, id_producto, cantidad, precio)"
                     + " values(?,?,?,?,?);");
-            ps.setInt(1, dtven.getId_venta());
-            ps.setInt(2, dtven.getId_producto());
+            ps.setInt(1, dtven.getId());
+            ps.setInt(2, dtven.getProducto().getIdpro());
             ps.setInt(3, dtven.getCantidad());
             ps.setDouble(4, dtven.getPrecio());
             ps.executeUpdate();
