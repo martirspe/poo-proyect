@@ -33,8 +33,11 @@ public class ControladorMenu implements ActionListener {
         if (e.getSource() == vista.jmiMantenimientoProductos) {
             Main.fpro = new FormProductos();
             Main.cpro = new ControladorProductos(Main.fpro);
+<<<<<<< HEAD
             vista.jdpContenedor.removeAll();
             vista.jdpContenedor.updateUI();
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             vista.jdpContenedor.add(Main.fpro);
             CentrarForma.CFProductos(vista.jdpContenedor, Main.fpro);
         }
@@ -42,8 +45,11 @@ public class ControladorMenu implements ActionListener {
         if (e.getSource() == vista.jmiMantenimientoCategorias) {
             Main.fcat = new FormCategorias();
             Main.ccat = new ControladorCategorias(Main.fcat);
+<<<<<<< HEAD
             vista.jdpContenedor.removeAll();
             vista.jdpContenedor.updateUI();
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             vista.jdpContenedor.add(Main.fcat);
             CentrarForma.CFCategorias(vista.jdpContenedor, Main.fcat);
         }
@@ -51,8 +57,11 @@ public class ControladorMenu implements ActionListener {
         if (e.getSource() == vista.jmiMantenimientoClientes) {
             Main.fcli = new FormClientes();
             Main.ccli = new ControladorClientes(Main.fcli);
+<<<<<<< HEAD
             vista.jdpContenedor.removeAll();
             vista.jdpContenedor.updateUI();
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             vista.jdpContenedor.add(Main.fcli);
             CentrarForma.CFClientes(vista.jdpContenedor, Main.fcli);
         }
@@ -60,8 +69,11 @@ public class ControladorMenu implements ActionListener {
         if (e.getSource() == vista.jmiMantenimientoStock) {
             Main.fstock = new FormStock();
             Main.cstock = new ControladorStock(Main.fstock);
+<<<<<<< HEAD
             vista.jdpContenedor.removeAll();
             vista.jdpContenedor.updateUI();
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             vista.jdpContenedor.add(Main.fstock);
             CentrarForma.CFStock(vista.jdpContenedor, Main.fstock);
         }
@@ -69,13 +81,17 @@ public class ControladorMenu implements ActionListener {
         if (e.getSource() == vista.jmiRegistroVentas) {
             Main.fventas = new FormVentas();
             Main.cventas = new ControladorVentas(Main.fventas);
+<<<<<<< HEAD
             vista.jdpContenedor.removeAll();
             vista.jdpContenedor.updateUI();
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             vista.jdpContenedor.add(Main.fventas);
             CentrarForma.CFVentas(vista.jdpContenedor, Main.fventas);
         }
         
         if (e.getSource() == vista.jmiReporteVentas) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             Main.rventas = new FormReporteVentas();
             Main.crventas = new ControladorDetalleVenta(Main.rventas);
@@ -85,12 +101,17 @@ public class ControladorMenu implements ActionListener {
             CentrarForma.CFDVentas(vista.jdpContenedor, Main.rventas);
         }
 =======
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             Main.FRventas = new FormReporteVentas();
             Main.crventas = new ControladorReporteVentas(Main.FRventas);
             vista.jdpContenedor.add(Main.FRventas);
             CentrarForma.CRVentas(vista.jdpContenedor, Main.FRventas);
         }
 
+<<<<<<< HEAD
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
+=======
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     }
 

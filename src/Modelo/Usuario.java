@@ -3,6 +3,10 @@ package Modelo;
 public class Usuario {
 
     //Atributos
+<<<<<<< HEAD
+=======
+    private Integer id;
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private String tipo_doc;
     private Integer num_doc;
     private String nombre;
@@ -15,6 +19,17 @@ public class Usuario {
     public Usuario() {
     }
 
+<<<<<<< HEAD
+=======
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     public String getTipo_doc() {
         return tipo_doc;
     }

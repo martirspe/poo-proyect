@@ -26,7 +26,11 @@ public class ListaVendedores {
 
     public String BuscarNombreVendedor(int idven) {
         for (int i = 0; i < Listaven.size(); i++) {
+<<<<<<< HEAD
             if (idven == Listaven.get(i).getId_empleado()) {
+=======
+            if (idven == Listaven.get(i).getId()) {
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
                 return Listaven.get(i).getNombre();
             }
         }
@@ -36,7 +40,11 @@ public class ListaVendedores {
     public int BuscarIdVendedor(String nomven) {
         for (int i = 0; i < Listaven.size(); i++) {
             if (nomven.equals(Listaven.get(i).getNombre())) {
+<<<<<<< HEAD
                 return Listaven.get(i).getId_empleado();
+=======
+                return Listaven.get(i).getId();
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             }
         }
         return -1;

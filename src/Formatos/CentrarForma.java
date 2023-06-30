@@ -43,7 +43,11 @@ public class CentrarForma {
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static void CFDVentas(JDesktopPane pan, JInternalFrame inf) {
+=======
+    public static void CRVentas(JDesktopPane pan, JInternalFrame inf) {
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 =======
     public static void CRVentas(JDesktopPane pan, JInternalFrame inf) {
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c

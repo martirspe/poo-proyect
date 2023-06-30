@@ -47,6 +47,10 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jcbxMoneda = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+<<<<<<< HEAD
+=======
+        jcbxFPago = new javax.swing.JComboBox<>();
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jcbxTDocumento = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jtxtCliente = new javax.swing.JTextField();
@@ -58,7 +62,10 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jtxtNDocumento = new javax.swing.JTextField();
         jSeparator14 = new javax.swing.JSeparator();
         jcbxReferencia = new javax.swing.JComboBox<>();
+<<<<<<< HEAD
         jcbxFPago = new javax.swing.JComboBox<>();
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jPanel5 = new javax.swing.JPanel();
         jbtnBProducto = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -68,8 +75,11 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jSeparator12 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
         jspCantidad = new javax.swing.JSpinner();
+<<<<<<< HEAD
         jLabel22 = new javax.swing.JLabel();
         jspPrecio = new javax.swing.JSpinner();
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jcbxVendedor = new javax.swing.JComboBox<>();
         jTextField5 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -201,9 +211,24 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jLabel13.setText("FORMAS DE PAGO:");
         jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 140, 20));
 
+<<<<<<< HEAD
         jcbxTDocumento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jcbxTDocumento.setForeground(new java.awt.Color(153, 153, 153));
         jcbxTDocumento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DNI", "RUC" }));
+=======
+        jcbxFPago.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxFPago.setForeground(new java.awt.Color(153, 153, 153));
+        jcbxFPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CONTADO", "CREDITO" }));
+        jcbxFPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbxFPagoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jcbxFPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 110, 20));
+
+        jcbxTDocumento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jcbxTDocumento.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jcbxTDocumento.setEnabled(false);
         jcbxTDocumento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,6 +263,11 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jbtnBCliente.setText("BUSCAR CLIENTE");
         jbtnBCliente.setBorder(null);
         jPanel3.add(jbtnBCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 840, 30));
+<<<<<<< HEAD
+=======
+
+        jdcFecha.setEnabled(false);
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jPanel3.add(jdcFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 30, 180, -1));
 
         jLabel21.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
@@ -266,6 +296,7 @@ public class FormVentas extends javax.swing.JInternalFrame {
         });
         jPanel3.add(jcbxReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 140, 20));
 
+<<<<<<< HEAD
         jcbxFPago.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jcbxFPago.setForeground(new java.awt.Color(153, 153, 153));
         jcbxFPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CONTADO", "CREDITO" }));
@@ -276,6 +307,8 @@ public class FormVentas extends javax.swing.JInternalFrame {
         });
         jPanel3.add(jcbxFPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 110, 20));
 
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 860, 210));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -317,6 +350,7 @@ public class FormVentas extends javax.swing.JInternalFrame {
 
         jLabel17.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel17.setText("VENDEDOR");
+<<<<<<< HEAD
         jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 150, -1));
         jPanel5.add(jspCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 140, -1));
 
@@ -333,6 +367,12 @@ public class FormVentas extends javax.swing.JInternalFrame {
             }
         });
         jPanel5.add(jcbxVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 260, 20));
+=======
+        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 150, -1));
+        jPanel5.add(jspCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 140, -1));
+
+        jPanel5.add(jcbxVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 420, -1));
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 860, 170));
 
@@ -403,9 +443,15 @@ public class FormVentas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbxTDocumentoActionPerformed
 
+<<<<<<< HEAD
     private void jcbxVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxVendedorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbxVendedorActionPerformed
+=======
+    private void jcbxFPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxFPagoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbxFPagoActionPerformed
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
     private void jcbxMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxMonedaActionPerformed
         // TODO add your handling code here:
@@ -451,10 +497,13 @@ public class FormVentas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbxReferenciaActionPerformed
 
+<<<<<<< HEAD
     private void jcbxFPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxFPagoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbxFPagoActionPerformed
 
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     /**
      * @param args the command line arguments
      */
@@ -512,7 +561,10 @@ public class FormVentas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel22;
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -548,7 +600,10 @@ public class FormVentas extends javax.swing.JInternalFrame {
     public javax.swing.JComboBox<String> jcbxVendedor;
     public com.toedter.calendar.JDateChooser jdcFecha;
     public javax.swing.JSpinner jspCantidad;
+<<<<<<< HEAD
     public javax.swing.JSpinner jspPrecio;
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     public javax.swing.JTable jtblDatos;
     public javax.swing.JTextField jtxtCliente;
     public javax.swing.JTextField jtxtCodigo;

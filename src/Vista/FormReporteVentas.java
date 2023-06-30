@@ -24,12 +24,17 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
         jtblDatos = new javax.swing.JTable();
+=======
+        jTable1 = new javax.swing.JTable();
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+<<<<<<< HEAD
 <<<<<<< HEAD
         jLabel17 = new javax.swing.JLabel();
         jcbxMoneda = new javax.swing.JComboBox<>();
@@ -43,6 +48,8 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel20 = new javax.swing.JLabel();
         jbtnCVentas = new javax.swing.JButton();
 =======
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jSeparator11 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -55,6 +62,9 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jdcDateEnd = new com.toedter.calendar.JDateChooser();
         jdcDateInit = new com.toedter.calendar.JDateChooser();
         btn_getVentas = new javax.swing.JButton();
+<<<<<<< HEAD
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
+=======
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         setClosable(true);
@@ -64,7 +74,22 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+<<<<<<< HEAD
         jScrollPane1.setViewportView(jtblDatos);
+=======
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "CODIGO","PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL",
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 850, 260));
 
@@ -92,6 +117,10 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        jPanel3.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 270, 10));
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 =======
         jPanel3.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 270, 10));
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
@@ -100,6 +129,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel17.setText("FECHA DE INICIO");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 250, -1));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         jcbxMoneda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jcbxMoneda.setForeground(new java.awt.Color(153, 153, 153));
@@ -118,6 +148,8 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jbntVVendedor.setBorder(null);
         jPanel3.add(jbntVVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
 =======
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel8.setText("MONEDA:");
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 170, 20));
@@ -139,6 +171,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         btn_vemplea.setBorder(null);
         jPanel3.add(btn_vemplea, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 270, 30));
         jPanel3.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 270, 10));
+<<<<<<< HEAD
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
@@ -179,6 +212,13 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jbtnCVentas.setBorder(null);
         jPanel2.add(jbtnCVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 770, 30));
 =======
+=======
+
+        jLabel18.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLabel18.setText("FECHA DE FIN");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 250, -1));
+
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         btn_vclientes.setBackground(new java.awt.Color(47, 123, 123));
         btn_vclientes.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         btn_vclientes.setForeground(new java.awt.Color(255, 255, 255));
@@ -203,6 +243,9 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         btn_getVentas.setText("CONSULTAR VENTAS");
         btn_getVentas.setBorder(null);
         jPanel2.add(btn_getVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 770, 30));
+<<<<<<< HEAD
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
+=======
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 880, 580));
@@ -211,9 +254,15 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void jcbxMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxMonedaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbxMonedaActionPerformed
+=======
+    private void comboMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMonedaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboMonedaActionPerformed
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 =======
     private void comboMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMonedaActionPerformed
         // TODO add your handling code here:
@@ -272,12 +321,16 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     public javax.swing.JButton btn_getVentas;
     public javax.swing.JButton btn_vclientes;
     public javax.swing.JButton btn_vemplea;
     public javax.swing.JButton btn_vprod;
     public javax.swing.JComboBox<String> comboMoneda;
+<<<<<<< HEAD
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;
@@ -286,10 +339,19 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
+=======
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel8;
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+<<<<<<< HEAD
 <<<<<<< HEAD
     public javax.swing.JButton jbntVCliente;
     public javax.swing.JButton jbntVProducto;
@@ -300,11 +362,16 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
     public com.toedter.calendar.JDateChooser jdcFInicio;
     public javax.swing.JTable jtblDatos;
 =======
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
     public javax.swing.JTable jTable1;
     public com.toedter.calendar.JDateChooser jdcDateEnd;
     public com.toedter.calendar.JDateChooser jdcDateInit;
+<<<<<<< HEAD
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
+=======
 >>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     // End of variables declaration//GEN-END:variables
 }

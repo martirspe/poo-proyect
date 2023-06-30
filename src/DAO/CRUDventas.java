@@ -3,18 +3,27 @@ package DAO;
 //Librerías
 import Modelo.Ventas;
 import Modelo.Productos;
+<<<<<<< HEAD
+=======
+import Modelo.Clientes;
+import Modelo.Empleados;
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 import Formatos.Mensajes;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import Formatos.ManejadorTabla;
+<<<<<<< HEAD
 import Modelo.DetalleVentaIDs;
 import java.text.SimpleDateFormat;
+=======
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
 public class CRUDventas extends ConectarBD {
 
     public CRUDventas() {
     }
 
+<<<<<<< HEAD
     //Método que recibe un JTable y JLabel y muestra los registros en el JTable
     public void MostrarProductosEnTabla(JTable tabla) {
         String[] titulo = {"#", "ID", "CÓDIGO", "NOMBRE", "MODELO", "MARCA", "CATEGORÍA", "STOCK", "PRECIO", "DESCRIPCIÓN"};
@@ -90,4 +99,16 @@ public class CRUDventas extends ConectarBD {
             }
         }
     }
+=======
+    //Método que recibe un JTable y JLabel y miuestra los registros de la tabla en el JTable
+    public void MostrarVentasEnTabla(JTable tabla) {
+
+    }
+
+    //Método que recibe un producto y lo inserta en la tabla PRODUCTOS
+    public void RegistrarVenta(Ventas ven, Clientes cli, Empleados emp) {
+
+    }
+
+>>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 }
