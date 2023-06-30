@@ -1,7 +1,6 @@
 package Formatos;
 
 //Librerías
-<<<<<<< HEAD
 import DAO.NombreObjetos;
 import Modelo.Clientes;
 import Modelo.DetalleVentaIDs;
@@ -9,9 +8,6 @@ import Modelo.Empleados;
 import Modelo.Productos;
 import Modelo.Ventas;
 import Principal.Main;
-=======
-import Modelo.Ventas;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 import Vista.FormVentas;
 
 public class FormatoVentas {
@@ -25,26 +21,18 @@ public class FormatoVentas {
         fv.jtxtNDocumento.setText("");
         fv.jtxtCliente.setText("");
         fv.jtxtDireccion.setText("");
-<<<<<<< HEAD
         fv.jcbxVendedor.setSelectedIndex(0);
-=======
-        fv.jcbxFPago.setSelectedIndex(0);
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         fv.jcbxMoneda.setSelectedIndex(0);
         fv.jcbxReferencia.setSelectedIndex(0);
         fv.jtxtTCambio.setText("");
         fv.jtxtCodigo.setText("");
         fv.jtxtProducto.setText("");
         fv.jspCantidad.setValue(0);
-<<<<<<< HEAD
         fv.jspPrecio.setValue(0);
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         fv.jcbxVendedor.setSelectedIndex(0);
         fv.jtxtTCambio.requestFocus();
     }
 
-<<<<<<< HEAD
     public static void Estado1(FormVentas fp) {
         fp.jbtnBCliente.setEnabled(true);
         fp.jbtnBProducto.setEnabled(false);
@@ -129,9 +117,5 @@ public class FormatoVentas {
         dtven.setPrecio(Double.parseDouble(fv.jspPrecio.getValue().toString()));
 
         return dtven;
-=======
-    public static Ventas LeerVentas(FormVentas fv) {
-        return null;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     }
 }

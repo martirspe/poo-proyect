@@ -1,6 +1,5 @@
 package Controlador;
 
-<<<<<<< HEAD
 //Librerías
 import DAO.CRUDdetalleVenta;
 import java.awt.event.ActionEvent;
@@ -67,8 +66,4 @@ public class ControladorDetalleVenta implements ActionListener {
             crud.MostrarVentasProductoEnTabla(vista.jtblDatos, idpro, dateInit, dateEnd);
         }
     }
-=======
-public class ControladorDetalleVenta {
-    
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 }

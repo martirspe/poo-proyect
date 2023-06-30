@@ -36,10 +36,7 @@ public class FormStock extends javax.swing.JInternalFrame {
         jSeparator8 = new javax.swing.JSeparator();
         jspStock = new javax.swing.JSpinner();
         jtxtCodigo = new javax.swing.JTextField();
-<<<<<<< HEAD
         jSeparator4 = new javax.swing.JSeparator();
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -73,39 +70,17 @@ public class FormStock extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1240, 100));
 
-<<<<<<< HEAD
-=======
-        jtblDatos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "N°", "CODIGO", "NOMBRE", "MODELO", "MARCA", "CATEGORIA", "CANTIDAD", "PRECIO"
-            }
-        ));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         jScrollPane1.setViewportView(jtblDatos);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 1240, 250));
 
         jLabel5.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         jLabel5.setText("STOCK");
-<<<<<<< HEAD
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, -1, 20));
 
         jLabel6.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel6.setText("CÓDIGO");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 400, 20));
-=======
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, -1, 20));
-
-        jLabel6.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel6.setText("CÓDIGO");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 400, 20));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jtxtId.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jtxtId.setForeground(new java.awt.Color(153, 153, 153));
@@ -116,21 +91,12 @@ public class FormStock extends javax.swing.JInternalFrame {
                 jtxtIdActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         jPanel1.add(jtxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 400, 20));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 400, 10));
 
         jLabel13.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel13.setText("MODELO");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 400, 20));
-=======
-        jPanel1.add(jtxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 400, 20));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 400, 10));
-
-        jLabel13.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel13.setText("MODELO");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 400, 20));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jtxtModelo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jtxtModelo.setForeground(new java.awt.Color(153, 153, 153));
@@ -141,21 +107,12 @@ public class FormStock extends javax.swing.JInternalFrame {
                 jtxtModeloActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         jPanel1.add(jtxtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 400, 20));
         jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 400, 10));
 
         jLabel7.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel7.setText("NOMBRE");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 810, 20));
-=======
-        jPanel1.add(jtxtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, 400, 20));
-        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 400, 10));
-
-        jLabel7.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel7.setText("NOMBRE");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 810, 20));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jtxtNombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jtxtNombre.setForeground(new java.awt.Color(153, 153, 153));
@@ -166,51 +123,30 @@ public class FormStock extends javax.swing.JInternalFrame {
                 jtxtNombreActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         jPanel1.add(jtxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 810, 20));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 810, 10));
-=======
-        jPanel1.add(jtxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 810, 20));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 810, 10));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jbtnConsultar.setBackground(new java.awt.Color(47, 123, 123));
         jbtnConsultar.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jbtnConsultar.setForeground(new java.awt.Color(255, 255, 255));
         jbtnConsultar.setText("CONSULTAR");
         jbtnConsultar.setBorder(null);
-<<<<<<< HEAD
         jPanel1.add(jbtnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 400, 30));
 
         jLabel12.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel12.setText("ID");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 400, 20));
-=======
-        jPanel1.add(jbtnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 400, 30));
-
-        jLabel12.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel12.setText("ID");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 400, 20));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jbtnActualizar.setBackground(new java.awt.Color(47, 123, 123));
         jbtnActualizar.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jbtnActualizar.setForeground(new java.awt.Color(255, 255, 255));
         jbtnActualizar.setText("ACTUALIZAR");
         jbtnActualizar.setBorder(null);
-<<<<<<< HEAD
         jPanel1.add(jbtnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 400, 30));
 
         jLabel14.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel14.setText("MARCA");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 170, 400, 20));
-=======
-        jPanel1.add(jbtnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 400, 30));
-
-        jLabel14.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel14.setText("MARCA");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 170, 400, 20));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jtxtMarca.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jtxtMarca.setForeground(new java.awt.Color(153, 153, 153));
@@ -221,15 +157,9 @@ public class FormStock extends javax.swing.JInternalFrame {
                 jtxtMarcaActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         jPanel1.add(jtxtMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 190, 400, 20));
         jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 210, 400, 10));
         jPanel1.add(jspStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 400, 40));
-=======
-        jPanel1.add(jtxtMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 190, 400, 20));
-        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 210, 400, 10));
-        jPanel1.add(jspStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 400, 40));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         jtxtCodigo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jtxtCodigo.setForeground(new java.awt.Color(153, 153, 153));
@@ -240,16 +170,10 @@ public class FormStock extends javax.swing.JInternalFrame {
                 jtxtCodigoActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         jPanel1.add(jtxtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 400, 20));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 400, 10));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 620));
-=======
-        jPanel1.add(jtxtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 400, 20));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 620));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -290,10 +214,7 @@ public class FormStock extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-<<<<<<< HEAD
     private javax.swing.JSeparator jSeparator4;
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
     public javax.swing.JButton jbtnActualizar;

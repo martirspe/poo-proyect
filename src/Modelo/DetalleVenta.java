@@ -1,39 +1,14 @@
 package Modelo;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import java.text.DecimalFormat;
-=======
-//Librería
-import java.text.DecimalFormat;
-import java.time.LocalDate;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
-=======
-//Librería
-import java.text.DecimalFormat;
-import java.time.LocalDate;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
 public class DetalleVenta {
 
     //Atributos
     private Integer id;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private String producto;
     private String cliente;
     private String vendedor;
-=======
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
-    private Ventas venta;
-    private Productos producto;
-    private Clientes cliente;
-    private Empleados empleados;
-<<<<<<< HEAD
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private Integer cantidad;
     private String moneda;
     private Double t_cambio;
@@ -41,21 +16,11 @@ public class DetalleVenta {
     private Double descuento;
     private Double precio;
     private Double total;
-<<<<<<< HEAD
     private String fecha;
-=======
-    private LocalDate fecha;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private String met_pago;
     private String referencia;
     private String nota;
 
-<<<<<<< HEAD
-=======
-    public DetalleVenta() {
-    }
-
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     public Integer getId() {
         return id;
     }
@@ -64,7 +29,6 @@ public class DetalleVenta {
         this.id = id;
     }
 
-<<<<<<< HEAD
     public String getProducto() {
         return producto;
     }
@@ -89,24 +53,6 @@ public class DetalleVenta {
         this.vendedor = vendedor;
     }
 
-=======
-    public Ventas getVenta() {
-        return venta;
-    }
-
-    public void setVenta(Ventas venta) {
-        this.venta = venta;
-    }
-
-    public Productos getProducto() {
-        return producto;
-    }
-
-    public void setProducto(Productos producto) {
-        this.producto = producto;
-    }
-
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     public Integer getCantidad() {
         return cantidad;
     }
@@ -163,19 +109,11 @@ public class DetalleVenta {
         this.total = total;
     }
 
-<<<<<<< HEAD
     public String getFecha() {
         return fecha;
     }
 
     public void setFecha(String fecha) {
-=======
-    public LocalDate getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
         this.fecha = fecha;
     }
 
@@ -202,26 +140,7 @@ public class DetalleVenta {
     public void setNota(String nota) {
         this.nota = nota;
     }
-    public Object[] RegistroDetalleVenta(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
-        Object[] fila = {num, id, producto.getNombre(), cantidad, df.format(precio), total};
-        return fila;
-    }
-    
-    public Object[] RegistroDetalleVentaCliente(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
-        Object[] fila = {num, cliente.getNombre(),id, producto.getNombre(), cantidad, df.format(precio), total};
-        return fila;
-    }
-    
-    public Object[] RegistroDetalleVentaEmple(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
-        Object[] fila = {num, empleados.getNombre(),id, producto.getNombre(), cantidad, df.format(precio), total};
-        return fila;
-    }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public Object[] RegistroDetalleVenta(int num) {
         DecimalFormat df = new DecimalFormat("S/ ##0.00");
         Object[] fila = {num, id, producto, cantidad, df.format(precio), df.format(total), vendedor, cliente, fecha};
@@ -244,26 +163,5 @@ public class DetalleVenta {
         DecimalFormat df = new DecimalFormat("S/ ##0.00");
         Object[] fila = {num, id, producto, cantidad, df.format(precio), df.format(total), vendedor, cliente, fecha};
         return fila;
-=======
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
-    public Clientes getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Clientes cliente) {
-        this.cliente = cliente;
-    }
-
-    public Empleados getEmpleados() {
-        return empleados;
-    }
-
-    public void setEmpleados(Empleados empleados) {
-        this.empleados = empleados;
-<<<<<<< HEAD
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     }
 }

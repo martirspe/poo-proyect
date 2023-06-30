@@ -1,6 +1,5 @@
 package Modelo;
 
-<<<<<<< HEAD
 //Librería
 import java.util.Date;
 
@@ -19,20 +18,11 @@ public class Ventas {
     private String referencia;
     private String nota;
     private String estado;
-=======
-public class Ventas {
-
-    //Atributos
-    private Integer id;
-    private Clientes cliente;
-    private Empleados empleado;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
     public Ventas() {
     }
 
     public Integer getId() {
-<<<<<<< HEAD
         return id_venta;
     }
 
@@ -126,29 +116,6 @@ public class Ventas {
 
     public void setEstado(String estado) {
         this.estado = estado;
-=======
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Clientes getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Clientes cliente) {
-        this.cliente = cliente;
-    }
-
-    public Empleados getEmpleado() {
-        return empleado;
-    }
-
-    public void setEmpleado(Empleados empleado) {
-        this.empleado = empleado;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     }
 
 }

@@ -412,11 +412,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-<<<<<<< HEAD
             <Component class="javax.swing.JComboBox" name="jcbxTDocumento">
-=======
-            <Component class="javax.swing.JComboBox" name="jcbxFPago">
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="0"/>
@@ -426,42 +422,10 @@
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
-<<<<<<< HEAD
                     <StringItem index="0" value="DNI"/>
                     <StringItem index="1" value="RUC"/>
                   </StringArray>
                 </Property>
-=======
-                    <StringItem index="0" value="CONTADO"/>
-                    <StringItem index="1" value="CREDITO"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbxFPagoActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="530" y="90" width="110" height="20"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jcbxTDocumento">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="99" green="99" red="99" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -563,12 +527,6 @@
               </Constraints>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="jdcFecha">
-<<<<<<< HEAD
-=======
-              <Properties>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
@@ -658,7 +616,6 @@
                 </Constraint>
               </Constraints>
             </Component>
-<<<<<<< HEAD
             <Component class="javax.swing.JComboBox" name="jcbxFPago">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -687,8 +644,6 @@
                 </Constraint>
               </Constraints>
             </Component>
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel5">
@@ -830,11 +785,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD
                   <AbsoluteConstraints x="330" y="60" width="150" height="-1"/>
-=======
-                  <AbsoluteConstraints x="170" y="60" width="150" height="-1"/>
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
                 </Constraint>
               </Constraints>
             </Component>
@@ -848,7 +799,6 @@
                 </Constraint>
               </Constraints>
             </Component>
-<<<<<<< HEAD
             <Component class="javax.swing.JLabel" name="jLabel22">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -880,31 +830,20 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
-=======
-            <Component class="javax.swing.JComboBox" name="jcbxVendedor">
-              <Properties>
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="0"/>
                 </Property>
               </Properties>
-<<<<<<< HEAD
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbxVendedorActionPerformed"/>
               </Events>
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-<<<<<<< HEAD
                   <AbsoluteConstraints x="330" y="80" width="260" height="20"/>
-=======
-                  <AbsoluteConstraints x="170" y="80" width="420" height="-1"/>
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
                 </Constraint>
               </Constraints>
             </Component>

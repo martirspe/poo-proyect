@@ -7,7 +7,6 @@ public class NombreObjetos extends ConectarBD {
     public NombreObjetos() {
     }
 
-<<<<<<< HEAD
     public String RecuperarNombreCat(int id) {
         String nom = "";
         try {
@@ -84,19 +83,6 @@ public class NombreObjetos extends ConectarBD {
             Mensajes.M1("ERROR: no se puede recuperar el apellido del empleado." + e);
         }
         return ape;
-=======
-    public String RecuperarNombrecat(int id) {
-        String nomcat = "";
-        try {
-            rs = st.executeQuery("SELECT nombre FROM categorias WHERE estado = 1 AND id = " + id);
-            if (rs.next()) {
-                nomcat = rs.getString(1);
-            }
-        } catch (Exception e) {
-            Mensajes.M1("ERROR: no se puede recuperar el nombre de la categoria..." + e);
-        }
-        return nomcat;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     }
 
 }

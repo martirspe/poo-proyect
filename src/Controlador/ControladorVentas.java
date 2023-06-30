@@ -1,7 +1,6 @@
 package Controlador;
 
 //Librerías
-<<<<<<< HEAD
 import DAO.CRUDclientes;
 import DAO.CRUDproductos;
 import java.awt.event.ActionEvent;
@@ -20,44 +19,21 @@ import Modelo.Productos;
 import Vista.FormVentas;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-=======
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import Modelo.Ventas;
-import Modelo.Clientes;
-import Modelo.Empleados;
-import Modelo.Productos;
-import DAO.CRUDventas;
-import DAO.ListarCategorias;
-import Formatos.ActualizarCombos;
-import Formatos.FormatoVentas;
-
-import Vista.FormVentas;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
 public class ControladorVentas implements ActionListener {
 
     //Atributos
     FormVentas vista;
-<<<<<<< HEAD
     Ventas ven;
     Productos pro;
     Empleados emp;
-=======
-    Productos pro;
-    Empleados ven;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     Clientes cli;
     int idpro;
     int idven;
     int idcli;
-<<<<<<< HEAD
     CRUDventas crudven;
     CRUDclientes crudcli;
     CRUDproductos crudpro;
-=======
-    CRUDventas crud;
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 
     public ControladorVentas(FormVentas fv) {
         vista = fv;
@@ -66,7 +42,6 @@ public class ControladorVentas implements ActionListener {
         this.vista.jbtnAProducto.addActionListener(this);
         this.vista.jbtnRVenta.addActionListener(this);
         FormatoVentas.Presentacion(fv);
-<<<<<<< HEAD
 
         //FormatoVentas.Estado1(fv);
         crudven = new CRUDventas();
@@ -81,16 +56,10 @@ public class ControladorVentas implements ActionListener {
         ListarVendedores lv = new ListarVendedores();
         lv.ActualizarListaVendedores();
         ActualizarCombos.ActualizarComboVendedor(vista.jcbxVendedor);
-=======
-        crud = new CRUDventas();
-        crud.MostrarVentasEnTabla(vista.jtblDatos);
-        vista.setVisible(true);
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
         
         //Registra las ventas
         if (e.getSource() == vista.jbtnRVenta) {
@@ -148,9 +117,4 @@ public class ControladorVentas implements ActionListener {
             //FormatoVentas.Estado3(vista);
         }
     }
-=======
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
 }

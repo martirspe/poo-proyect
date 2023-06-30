@@ -27,21 +27,13 @@ public class Main {
     public static FormVentas fventas;
     public static ControladorVentas cventas;
 
-<<<<<<< HEAD
     //Reporte de Ventas
     public static FormReporteVentas rventas;
     public static ControladorDetalleVenta crventas;
 
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     //Formulario Menú
     public static FormMenu fm;
     public static ControladorMenu cfm;
-    
-        //Formulario Menú
-    public static FormReporteVentas FRventas;
-    public static ControladorReporteVentas crventas;
-
 
     //Colecciones de datos
     public static ListaCategorias Listacat;

@@ -14,19 +14,11 @@ public class CRUDproductos extends ConectarBD {
 
     //Método que recibe un JTable y JLabel y miuestra los registros de la tabla en el JTable
     public void MostrarProductosEnTabla(JTable tabla) {
-<<<<<<< HEAD
         String[] titulo = {"#", "ID", "CÓDIGO", "NOMBRE", "MODELO", "MARCA", "CATEGORÍA", "STOCK", "PRECIO", "DESCRIPCIÓN"};
         DefaultTableModel modelo = new DefaultTableModel(null, titulo);
         tabla.setModel(modelo);
         try {
             rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, id_categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1");
-=======
-        String[] titulo = {"No.", "ID", "Código", "Nombre", "Modelo", "Marca", "Categoría", "Stock", "Precio", "Descripción"};
-        DefaultTableModel modelo = new DefaultTableModel(null, titulo);
-        tabla.setModel(modelo);
-        try {
-            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1");
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             int cont = 0;
             while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
                 cont++;
@@ -54,11 +46,7 @@ public class CRUDproductos extends ConectarBD {
     //Método que recibe un producto y lo inserta en la tabla PRODUCTOS
     public void InsertarProducto(Productos pro) {
         try {
-<<<<<<< HEAD
             ps = conexion.prepareStatement("INSERT INTO productos (codigo, nombre, modelo, marca, id_categoria, cantidad, precio, descripcion, estado)"
-=======
-            ps = conexion.prepareStatement("INSERT INTO productos (codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion, estado)"
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
                     + " values(?,?,?,?,?,?,?,?,1);");
             ps.setString(1, pro.getCodigo());
             ps.setString(2, pro.getNombre());
@@ -80,11 +68,7 @@ public class CRUDproductos extends ConectarBD {
     public Productos ObtenerRegistroPro(int idcat) {
         Productos pro = null; //No hay datos asociados al objeto
         try {
-<<<<<<< HEAD
             rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, id_categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1 AND id = " + idcat);
-=======
-            rs = st.executeQuery("SELECT id, codigo, nombre, modelo, marca, categoria, cantidad, precio, descripcion FROM productos WHERE estado = 1 AND id = " + idcat);
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             pro = new Productos();
             if (rs.next()) {
                 pro.setIdpro(rs.getInt(1));
@@ -106,11 +90,7 @@ public class CRUDproductos extends ConectarBD {
 
     public void ActualizarRegistroPro(Productos pro) {
         try {
-<<<<<<< HEAD
             ps = conexion.prepareStatement("UPDATE productos SET codigo = ?, nombre = ?, modelo = ?, marca = ?, id_categoria = ?, cantidad = ?, precio = ?, descripcion = ? WHERE id = ?");
-=======
-            ps = conexion.prepareStatement("UPDATE productos SET codigo = ?, nombre = ?, modelo = ?, marca = ?, categoria = ?, cantidad = ?, precio = ?, descripcion = ? WHERE id = ?");
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             ps.setString(1, pro.getCodigo());
             ps.setString(2, pro.getNombre());
             ps.setString(3, pro.getModelo());

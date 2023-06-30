@@ -113,8 +113,6 @@ public class ManejadorTabla {
         JustificarCelda(tabla, 4);
     }
     
-<<<<<<< HEAD
-<<<<<<< HEAD
     //Método que la da formato a la JTable del tabla Detalle de Ventas
     public static void FormatoTablaDetalleVentas(JTable tabla) {
         AnchoColumnas(tabla, 0, 50);
@@ -135,42 +133,5 @@ public class ManejadorTabla {
         JustificarCelda(tabla, 7);
         AnchoColumnas(tabla, 8, 130);
         JustificarCelda(tabla, 8);
-=======
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
-    public static void FormatoTablaReporteVentas(JTable tabla) {
-        AnchoColumnas(tabla, 0, 100);
-        JustificarCelda(tabla, 0);
-        AnchoColumnas(tabla, 1, 100);
-        JustificarCelda(tabla, 1);
-        AnchoColumnas(tabla, 2, 100);
-        JustificarCelda(tabla, 2);
-        AnchoColumnas(tabla, 3, 250);
-        JustificarCelda(tabla, 3);
-        AnchoColumnas(tabla, 4, 250);
-        JustificarCelda(tabla, 4);
-        AnchoColumnas(tabla, 5, 250);
-        JustificarCelda(tabla, 5);
-    }
-    
-    public static void FormatoTablaReporteVentasCli(JTable tabla) {
-        AnchoColumnas(tabla, 0, 100);
-        JustificarCelda(tabla, 0);
-        AnchoColumnas(tabla, 1, 100);
-        JustificarCelda(tabla, 1);
-        AnchoColumnas(tabla, 2, 100);
-        JustificarCelda(tabla, 2);
-        AnchoColumnas(tabla, 3, 250);
-        JustificarCelda(tabla, 3);
-        AnchoColumnas(tabla, 4, 250);
-        JustificarCelda(tabla, 4);
-        AnchoColumnas(tabla, 5, 250);
-        JustificarCelda(tabla, 5);
-        AnchoColumnas(tabla, 6, 250);
-        JustificarCelda(tabla, 6);
-<<<<<<< HEAD
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     }
 }

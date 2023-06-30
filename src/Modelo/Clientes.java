@@ -3,10 +3,7 @@ package Modelo;
 public class Clientes extends Usuario {
 
     //Cliente
-<<<<<<< HEAD
     private Integer id_cliente;
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     private String usuario;
     private String password;
     private Integer estado;
@@ -14,7 +11,6 @@ public class Clientes extends Usuario {
     public Clientes() {
     }
 
-<<<<<<< HEAD
     public Integer getId_cliente() {
         return id_cliente;
     }
@@ -23,8 +19,6 @@ public class Clientes extends Usuario {
         this.id_cliente = id_cliente;
     }
 
-=======
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
     public String getUsuario() {
         return usuario;
     }
@@ -50,11 +44,7 @@ public class Clientes extends Usuario {
     }
 
     public Object[] RegistroCliente(int num) {
-<<<<<<< HEAD
         Object[] fila = {num, id_cliente, super.getTipo_doc(), super.getNum_doc(),
-=======
-        Object[] fila = {num, super.getId(), super.getTipo_doc(), super.getNum_doc(),
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             super.getNombre(), super.getApellidos(), super.getDireccion(), super.getSexo(),
             super.getMovil(), super.getEmail(), usuario, password};
         return fila;

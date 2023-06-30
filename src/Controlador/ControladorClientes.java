@@ -46,11 +46,7 @@ public class ControladorClientes implements ActionListener {
             if (cli == null) {
                 Mensajes.M1("El ID " + idcli + "no existe en la tabla clientes");
             } else {
-<<<<<<< HEAD
                 vista.jtxtId.setText(String.valueOf(cli.getId_cliente()));
-=======
-                vista.jtxtId.setText(String.valueOf(cli.getId()));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
                 vista.jcbxTipoDoc.setSelectedItem(cli.getTipo_doc());
                 vista.jtxtNumDoc.setText(String.valueOf(cli.getNum_doc()));
                 vista.jtxtNombreRazon.setText(cli.getNombre());
@@ -64,11 +60,7 @@ public class ControladorClientes implements ActionListener {
         }
         if (e.getSource() == vista.jbtnActualizar) {
             cli = FormatoClientes.LeerClientes(vista);
-<<<<<<< HEAD
             cli.setId_cliente(Integer.parseInt(vista.jtxtId.getText()));
-=======
-            cli.setId(Integer.parseInt(vista.jtxtId.getText()));
->>>>>>> 59b9cee1b210ed698810531a8e473f6910570d2c
             crud = new CRUDclientes();
             crud.ActualizarRegistroCli(cli);
             Mensajes.M1("Cliente actualizado.");
