@@ -6,8 +6,7 @@ import Modelo.Productos;
 import Formatos.Mensajes;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import Formatos.ManejadorTabla;
-import Modelo.DetalleVentaIDs;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 
 public class CRUDventas extends ConectarBD {
@@ -15,7 +14,7 @@ public class CRUDventas extends ConectarBD {
     String[] titulo = {"ID", "CÓDIGO", "NOMBRE", "MODELO", "MARCA", "CATEGORÍA", "CANTIDAD", "PRECIO"};
     DefaultTableModel modelo = new DefaultTableModel(null, titulo);
     
-    double sub_total, igv, total = 0;
+    public double sub_total, igv, total = 0;
 
     public CRUDventas() {
     }
@@ -24,6 +23,13 @@ public class CRUDventas extends ConectarBD {
     public void MostrarProductosEnTabla(JTable tabla) {
         
         tabla.setModel(modelo);
+    }
+    
+    public void limpiarTabla(JTable tabla) {
+        for (int i=0; i < tabla.getRowCount(); i++) {
+            modelo.removeRow(i);
+            i=i-1;
+        }
     }
     
     public void AgregarFilaEnTabla(Object row) {
@@ -50,8 +56,6 @@ public class CRUDventas extends ConectarBD {
         total=sub_total+(sub_total*0.18);
         return total;
     }
-    
-    
     
     public Productos ObtenerRegistroPro(int idcat) {
         Productos pro = null; //No hay datos asociados al objeto
@@ -86,8 +90,8 @@ public class CRUDventas extends ConectarBD {
             ps.setInt(1, ven.getId_cliente());
             ps.setInt(2, ven.getId_empleado());
             ps.setString(3, ven.getMet_pago());
-            ps.setDouble(4, ven.getIgv());
-            ps.setDouble(5, ven.getTotal());
+            ps.setDouble(4, igv);
+            ps.setDouble(5, total);
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             ps.setString(6, sdf.format(ven.getFecha()));
             ps.setString(7, ven.getReferencia());
@@ -100,24 +104,45 @@ public class CRUDventas extends ConectarBD {
             Mensajes.M1("ERROR: no se puede registrar la venta." + e);
         }
 
-        //Insertando datos en la tabla detalle_ventas
-        DetalleVentaIDs dtven = new DetalleVentaIDs();
-        if (dtven.getId_producto() != null) {
-
-            try {
-                ps = conexion.prepareStatement("INSERT INTO detalle_ventas (id_venta, producto, cantidad, precio)"
-                        + " values(?,?,?,?,?);");
-                ps.setInt(1, dtven.getId_venta());
-                ps.setInt(2, dtven.getId_producto());
-                ps.setInt(3, dtven.getCantidad());
-                ps.setDouble(4, dtven.getPrecio());
+    //Insertando datos en la tabla detalle_ventas
+        
+        String id_nuevaVenta="";
+        
+    //Consultando ID de Venta recién creada
+        try {
+            
+            String sql = "select * from ventas ORDER BY id ASC";
+            st=conexion.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            rs=st.executeQuery(sql);
+            
+            rs.last();
+            String[] ventas = new String[1];
+            ventas[0] = rs.getString(1);
+            id_nuevaVenta = ventas[0];
+            
+            
+        } catch (Exception e) {
+            System.err.println("Fallo al cargar Driver: " + e.getMessage());
+        }
+        
+    //Insertar cada ítem en la tabla detalle_ventas
+        
+        for (int i = 0; i < modelo.getRowCount(); i++) {
+        
+        String insert4="insert into detalle_ventas(id_venta, id_producto, cantidad, precio) values (?,?,?,?)";
+        
+        try {
+                ps=conexion.prepareStatement(insert4);
+                ps.setString(1, id_nuevaVenta);
+                ps.setString(2, modelo.getValueAt(i, 0).toString());
+                ps.setString(3, modelo.getValueAt(i, 6).toString());
+                ps.setString(4, modelo.getValueAt(i, 7).toString());
                 ps.executeUpdate();
-                ps.close();
-                Mensajes.M1("¡La venta se ha registrado correctamente!");
-
-            } catch (Exception e) {
-                Mensajes.M1("ERROR: no se puede registrar la venta." + e);
-            }
+        }
+        
+        catch (Exception e) {
+            System.err.println("Fallo al cargar Driver: " + e.getMessage());
+        }
         }
     }
 }

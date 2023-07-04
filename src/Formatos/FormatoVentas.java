@@ -28,6 +28,9 @@ public class FormatoVentas {
         fv.jspCantidad.setValue(0);
         fv.jspPrecio.setValue(0);
         fv.jcbxVendedor.setSelectedIndex(0);
+        fv.SubTotalVen.setText("");
+        fv.Igv.setText("");
+        fv.Total.setText("");
     }
 
     public static void Estado1(FormVentas fp) {

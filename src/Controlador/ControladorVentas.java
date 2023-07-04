@@ -24,12 +24,9 @@ public class ControladorVentas implements ActionListener {
 
     //Atributos
     FormVentas vista;
-    Ventas ven;
     Productos pro;
-    Empleados emp;
     Clientes cli;
     int idpro;
-    int idven;
     int idcli;
     CRUDventas crudven;
     CRUDclientes crudcli;
@@ -64,11 +61,13 @@ public class ControladorVentas implements ActionListener {
         //Registra las ventas
         if (e.getSource() == vista.jbtnRVenta) {
             Ventas ven = FormatoVentas.LeerVentas(vista);
-            CRUDventas crud = new CRUDventas();
-            crud.RegistrarVenta(ven);
+            //CRUDventas crud = new CRUDventas();
+            //crud.RegistrarVenta(ven);
+            crudven.RegistrarVenta(ven);
 
-            crud.MostrarProductosEnTabla(vista.jtblDatos);
+            crudven.MostrarProductosEnTabla(vista.jtblDatos);
             FormatoVentas.LimpiarEntradas(vista);
+            crudven.limpiarTabla(vista.jtblDatos);
         }
         
         //Añade el cliente al formulario de ventas
@@ -98,7 +97,7 @@ public class ControladorVentas implements ActionListener {
             crudpro = new CRUDproductos();
             pro = crudpro.ObtenerRegistroPro(idpro);
             if (pro == null) {
-                Mensajes.M1("El ID " + idpro + "no existe en la tabla productos");
+                Mensajes.M1("El ID " + idpro + " no existe en la tabla productos");
             } else {
                 vista.jtxtCodigo.setText(String.valueOf(pro.getCodigo()));
                 vista.jtxtProducto.setText(pro.getNombre());
@@ -130,9 +129,13 @@ public class ControladorVentas implements ActionListener {
                 crudven.AgregarFilaEnTabla(modeloTabla);
             }
             
-            vista.SubTotalVen.setText("S/." + crudven.CalcularSubTotal());
-            vista.Igv.setText("S/." + crudven.CalcularIGV());
-            vista.Total.setText("S/." + crudven.CalcularTotal());
+            crudven.CalcularSubTotal();
+            crudven.CalcularIGV();
+            crudven.CalcularTotal();
+            
+            vista.SubTotalVen.setText("S/." + crudven.sub_total);
+            vista.Igv.setText("S/." + crudven.igv);
+            vista.Total.setText("S/." + crudven.total);
             
         }
     }
