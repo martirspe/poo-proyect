@@ -10,7 +10,17 @@ public static void M1(String mensaje){
 }
 
 public static int M2(String mensaje){
-    return Integer.parseInt(JOptionPane.showInputDialog(mensaje));
+    
+    String result = JOptionPane.showInputDialog(mensaje);
+    int res_int = 0;
+    
+    if (result != null) {
+        res_int = Integer.parseInt(result);
+        
+    } else {
+    }
+    
+    return res_int;
 }
 
 public static int M3(String titulo,String mensaje){

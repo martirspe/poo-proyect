@@ -32,10 +32,12 @@ public class ControladorStock implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jbtnConsultar) {
             idpro = Mensajes.M2("Ingrese el ID del producto a buscar");
+            
+            if (idpro != 0) {
             crud = new CRUDstock();
             pro = crud.ObtenerRegistroPro(idpro);
             if (pro == null) {
-                Mensajes.M1("El ID " + idpro + "no existe en la tabla productos");
+                Mensajes.M1("El ID " + idpro + " no existe en la tabla productos");
             } else {
                 vista.jtxtId.setText(String.valueOf(pro.getIdpro()));
                 vista.jtxtCodigo.setText(String.valueOf(pro.getCodigo()));
@@ -44,6 +46,7 @@ public class ControladorStock implements ActionListener {
                 vista.jtxtMarca.setText(pro.getMarca());
                 vista.jspStock.setValue(pro.getStock());
                 FormatoStock.Estado2(vista);
+            }
             }
         }
         if (e.getSource() == vista.jbtnActualizar) {

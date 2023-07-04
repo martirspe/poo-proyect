@@ -55,6 +55,8 @@ public class CRUDstock extends ConectarBD {
                 pro.setModelo(rs.getString(4));
                 pro.setMarca(rs.getString(5));
                 pro.setStock(rs.getInt(6));
+            } else {
+                pro = null;
             }
             rs.close();
         } catch (Exception e) {

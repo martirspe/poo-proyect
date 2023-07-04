@@ -48,10 +48,12 @@ public class ControladorProductos implements ActionListener {
         }
         if (e.getSource() == vista.jbtnConsultar) {
             idpro = Mensajes.M2("Ingrese el ID del producto a buscar");
+            
+            if (idpro != 0) {
             crud = new CRUDproductos();
             pro = crud.ObtenerRegistroPro(idpro);
             if (pro == null) {
-                Mensajes.M1("El ID " + idpro + "no existe en la tabla productos");
+                Mensajes.M1("El ID " + idpro + " no existe en la tabla productos");
             } else {
                 vista.jtxtId.setText(String.valueOf(pro.getIdpro()));
                 vista.jtxtCodigo.setText(String.valueOf(pro.getCodigo()));
@@ -63,6 +65,7 @@ public class ControladorProductos implements ActionListener {
                 vista.jspPrecio.setValue(pro.getPrecio());
                 vista.jtxtaDescripcion.setText(pro.getDescripcion());
                 FormatoProductos.Estado2(vista);
+            }
             }
         }
         if (e.getSource() == vista.jbtnActualizar) {

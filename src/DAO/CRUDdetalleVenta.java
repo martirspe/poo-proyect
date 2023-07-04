@@ -65,34 +65,47 @@ public class CRUDdetalleVenta extends ConectarBD {
                 swhere += " AND " + "'" + dateEnd + "'";
             }
         }
+        
         try {
-            rs = st.executeQuery(""
-                    + "SELECT dv.id, p.nombre, dv.cantidad, dv.precio, (dv.cantidad * dv.precio) AS total, concat(e.nombre, \" \", e.apellidos) AS vendedor, concat(c.nombre, \" \", c.apellidos) AS cliente, v.fecha AS fecha_venta FROM detalle_ventas dv "
-                    + "INNER JOIN productos p ON (p.id = dv.id_producto) "
-                    + "INNER JOIN ventas v ON (v.id = dv.id_venta) "
-                    + "INNER JOIN empleados e ON (e.id = v.id_empleado) "
-                    + "INNER JOIN clientes c ON (c.id = v.id_cliente) "
-                    + "WHERE v.id_empleado = " + idVen + " "
-                    + swhere);
-            int cont = 0;
-            while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
-                cont++;
-                DetalleVenta dv = new DetalleVenta();
-                dv.setId(rs.getInt(1));
-                dv.setProducto(rs.getString(2));
-                dv.setCantidad(rs.getInt(3));
-                dv.setPrecio(rs.getDouble(4));
-                dv.setTotal(rs.getDouble(5));
-                dv.setVendedor(rs.getString(6));
-                dv.setCliente(rs.getString(7));
-                dv.setFecha(rs.getString(8));
+            rs=st.executeQuery("SELECT id FROM empleados WHERE estado = 1 AND id = " + idVen);
+            
+            if (rs.next()) {
+                try {
+                    rs = st.executeQuery(""
+                        + "SELECT dv.id, p.nombre, dv.cantidad, dv.precio, (dv.cantidad * dv.precio) AS total, concat(e.nombre, \" \", e.apellidos) AS vendedor, concat(c.nombre, \" \", c.apellidos) AS cliente, v.fecha AS fecha_venta FROM detalle_ventas dv "
+                        + "INNER JOIN productos p ON (p.id = dv.id_producto) "
+                        + "INNER JOIN ventas v ON (v.id = dv.id_venta) "
+                        + "INNER JOIN empleados e ON (e.id = v.id_empleado) "
+                        + "INNER JOIN clientes c ON (c.id = v.id_cliente) "
+                        + "WHERE v.id_empleado = " + idVen + " "
+                        + swhere);
+                int cont = 0;
+                while (rs.next()) { //netx(): recupera un registro de la consulta si existe.
+                    cont++;
+                    DetalleVenta dv = new DetalleVenta();
+                    dv.setId(rs.getInt(1));
+                    dv.setProducto(rs.getString(2));
+                    dv.setCantidad(rs.getInt(3));
+                    dv.setPrecio(rs.getDouble(4));
+                    dv.setTotal(rs.getDouble(5));
+                    dv.setVendedor(rs.getString(6));
+                    dv.setCliente(rs.getString(7));
+                    dv.setFecha(rs.getString(8));
 
-                modelo.addRow(dv.RegistroDetalleVentaVendedor(cont));
+                    modelo.addRow(dv.RegistroDetalleVentaVendedor(cont));
+                }
+
+                ManejadorTabla.FormatoTablaDetalleVentas(tabla);
+                conexion.close();
+
+                } catch (Exception e) {
+                    Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla detalle ventas." + e);
+                }
+            
+            } else {
+            Mensajes.M1("El vendedor con ID " + idVen + " no existe en la base de datos");
             }
-
-            ManejadorTabla.FormatoTablaDetalleVentas(tabla);
-            conexion.close();
-
+            
         } catch (Exception e) {
             Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla detalle ventas." + e);
         }
@@ -109,6 +122,12 @@ public class CRUDdetalleVenta extends ConectarBD {
                 swhere += " AND " + "'" + dateEnd + "'";
             }
         }
+        
+        try {
+            rs=st.executeQuery("SELECT id FROM clientes WHERE estado = 1 AND id = " + idCli);
+            
+            if (rs.next()) {
+        
         try {
             rs = st.executeQuery(""
                     + "SELECT dv.id, p.nombre, dv.cantidad, dv.precio, (dv.cantidad * dv.precio) AS total, concat(e.nombre, \" \", e.apellidos) AS vendedor, concat(c.nombre, \" \", c.apellidos) AS cliente, v.fecha AS fecha_venta FROM detalle_ventas dv "
@@ -140,6 +159,14 @@ public class CRUDdetalleVenta extends ConectarBD {
         } catch (Exception e) {
             Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla detalle ventas." + e);
         }
+        
+        } else {
+            Mensajes.M1("El cliente con ID " + idCli + " no existe en la base de datos");
+            }
+            
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla detalle ventas." + e);
+        }
     }
 
     public void MostrarVentasProductoEnTabla(JTable tabla, int idPro, String dateInit, String dateEnd) {
@@ -153,6 +180,11 @@ public class CRUDdetalleVenta extends ConectarBD {
                 swhere += " AND " + "'" + dateEnd + "'";
             }
         }
+        
+        try {
+            rs=st.executeQuery("SELECT id FROM productos WHERE estado = 1 AND id = " + idPro);
+            
+            if (rs.next()) {
         try {
             rs = st.executeQuery(""
                     + "SELECT dv.id, p.nombre, dv.cantidad, dv.precio, (dv.cantidad * dv.precio) AS total, concat(e.nombre, \" \", e.apellidos) AS vendedor, concat(c.nombre, \" \", c.apellidos) AS cliente, v.fecha AS fecha_venta FROM detalle_ventas dv "
@@ -181,6 +213,14 @@ public class CRUDdetalleVenta extends ConectarBD {
             ManejadorTabla.FormatoTablaDetalleVentas(tabla);
             conexion.close();
 
+        } catch (Exception e) {
+            Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla detalle ventas." + e);
+        }
+        
+        } else {
+            Mensajes.M1("El producto con ID " + idPro + " no existe en la base de datos");
+            }
+            
         } catch (Exception e) {
             Mensajes.M1("ERROR: no se puede recuperar los registros de la tabla detalle ventas." + e);
         }

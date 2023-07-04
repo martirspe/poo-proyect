@@ -40,6 +40,8 @@ public class ControladorCategorias implements ActionListener {
         }
         if (e.getSource() == vista.jbtnConsultar) {
             idcat = Mensajes.M2("Ingrese el ID de la categoría a buscar");
+            
+            if (idcat != 0) {
             crud = new CRUDcategorias();
             cate = crud.ObtenerRegistroCat(idcat);
             if (cate == null) {
@@ -49,6 +51,7 @@ public class ControladorCategorias implements ActionListener {
                 vista.jtxtCategoria.setText(cate.getNombre());
                 vista.jtxtaDescripcion.setText(cate.getDescripcion());
                 FormatoCategorias.Estado2(vista);
+            }
             }
         }
         if (e.getSource() == vista.jbtnActualizar) {

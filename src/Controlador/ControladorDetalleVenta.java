@@ -50,20 +50,28 @@ public class ControladorDetalleVenta implements ActionListener {
         
         if (e.getSource() == vista.jbntVVendedor) {
             idven = Mensajes.M2("Ingrese el ID del vendedor a buscar");
-            crud = new CRUDdetalleVenta();
-            crud.MostrarVentasVendedorEnTabla(vista.jtblDatos, idven, dateInit, dateEnd);
+            
+            if (idven != 0) {
+                crud = new CRUDdetalleVenta();
+                crud.MostrarVentasVendedorEnTabla(vista.jtblDatos, idven, dateInit, dateEnd);
+            }
         }
         
         if (e.getSource() == vista.jbntVCliente) {
             idcli = Mensajes.M2("Ingrese el ID del cliente a buscar");
+            
+            if (idcli != 0) {
             crud = new CRUDdetalleVenta();
             crud.MostrarVentasClienteEnTabla(vista.jtblDatos, idcli, dateInit, dateEnd);
+            }
         }
         
         if (e.getSource() == vista.jbntVProducto) {
             idpro = Mensajes.M2("Ingrese el ID del producto a buscar");
+            if (idpro != 0) {
             crud = new CRUDdetalleVenta();
             crud.MostrarVentasProductoEnTabla(vista.jtblDatos, idpro, dateInit, dateEnd);
+            }
         }
     }
 }

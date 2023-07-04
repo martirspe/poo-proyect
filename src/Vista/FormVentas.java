@@ -40,11 +40,6 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jSeparator10 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         jtxtDireccion = new javax.swing.JTextField();
-        jSeparator3 = new javax.swing.JSeparator();
-        jtxtTCambio = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jcbxMoneda = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jcbxTDocumento = new javax.swing.JComboBox<>();
@@ -71,15 +66,15 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jLabel22 = new javax.swing.JLabel();
         jspPrecio = new javax.swing.JSpinner();
         jcbxVendedor = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
+        SubTotalVen = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
         jbtnRVenta = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        Igv = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel20 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        Total = new javax.swing.JTextField();
         jSeparator8 = new javax.swing.JSeparator();
 
         setClosable(true);
@@ -163,43 +158,14 @@ public class FormVentas extends javax.swing.JInternalFrame {
             }
         });
         jPanel3.add(jtxtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 340, -1));
-        jPanel3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 120, 10));
-
-        jtxtTCambio.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jtxtTCambio.setForeground(new java.awt.Color(153, 153, 153));
-        jtxtTCambio.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jtxtTCambio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxtTCambioActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jtxtTCambio, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 130, 120, 20));
-
-        jLabel14.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel14.setText("T. CAMBIO:");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 80, 20));
-
-        jLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel8.setText("MONEDA:");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 70, 20));
-
-        jcbxMoneda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jcbxMoneda.setForeground(new java.awt.Color(153, 153, 153));
-        jcbxMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PEN", "USD" }));
-        jcbxMoneda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbxMonedaActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jcbxMoneda, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, 130, 20));
 
         jLabel7.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel7.setText("FECHA :");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 60, 20));
+        jLabel7.setText("FECHA:");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 60, -1));
 
         jLabel13.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel13.setText("FORMAS DE PAGO:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 140, 20));
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 140, 20));
 
         jcbxTDocumento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jcbxTDocumento.setForeground(new java.awt.Color(153, 153, 153));
@@ -214,7 +180,7 @@ public class FormVentas extends javax.swing.JInternalFrame {
 
         jLabel10.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel10.setText("REFERENCIA:");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 90, 20));
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 100, 20));
 
         jtxtCliente.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jtxtCliente.setForeground(new java.awt.Color(153, 153, 153));
@@ -264,7 +230,7 @@ public class FormVentas extends javax.swing.JInternalFrame {
                 jcbxReferenciaActionPerformed(evt);
             }
         });
-        jPanel3.add(jcbxReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 140, 20));
+        jPanel3.add(jcbxReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 140, 20));
 
         jcbxFPago.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jcbxFPago.setForeground(new java.awt.Color(153, 153, 153));
@@ -274,7 +240,7 @@ public class FormVentas extends javax.swing.JInternalFrame {
                 jcbxFPagoActionPerformed(evt);
             }
         });
-        jPanel3.add(jcbxFPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 110, 20));
+        jPanel3.add(jcbxFPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, 110, 20));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 860, 210));
 
@@ -336,16 +302,16 @@ public class FormVentas extends javax.swing.JInternalFrame {
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 860, 170));
 
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField5.setEnabled(false);
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        SubTotalVen.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        SubTotalVen.setForeground(new java.awt.Color(153, 153, 153));
+        SubTotalVen.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SubTotalVen.setEnabled(false);
+        SubTotalVen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                SubTotalVenActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 640, 190, 20));
+        jPanel2.add(SubTotalVen, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 640, 190, 20));
 
         jLabel11.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -365,16 +331,16 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jLabel12.setText("IGV:");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 670, 130, 20));
 
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField6.setEnabled(false);
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        Igv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Igv.setForeground(new java.awt.Color(153, 153, 153));
+        Igv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        Igv.setEnabled(false);
+        Igv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                IgvActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 670, 190, 20));
+        jPanel2.add(Igv, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 670, 190, 20));
         jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 690, 190, 10));
 
         jLabel20.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
@@ -382,16 +348,16 @@ public class FormVentas extends javax.swing.JInternalFrame {
         jLabel20.setText("TOTAL:");
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 700, 130, 20));
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField7.setEnabled(false);
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        Total.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Total.setForeground(new java.awt.Color(153, 153, 153));
+        Total.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        Total.setEnabled(false);
+        Total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                TotalActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 700, 190, 20));
+        jPanel2.add(Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 700, 190, 20));
         jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 720, 190, 10));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 740));
@@ -406,14 +372,6 @@ public class FormVentas extends javax.swing.JInternalFrame {
     private void jcbxVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxVendedorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbxVendedorActionPerformed
-
-    private void jcbxMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxMonedaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcbxMonedaActionPerformed
-
-    private void jtxtTCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtTCambioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtxtTCambioActionPerformed
 
     private void jtxtObservacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtObservacionActionPerformed
         // TODO add your handling code here:
@@ -431,17 +389,17 @@ public class FormVentas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtClienteActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void SubTotalVenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubTotalVenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_SubTotalVenActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void IgvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IgvActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_IgvActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void TotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_TotalActionPerformed
 
     private void jtxtNDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtNDocumentoActionPerformed
         // TODO add your handling code here:
@@ -498,12 +456,14 @@ public class FormVentas extends javax.swing.JInternalFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextField Igv;
+    public javax.swing.JTextField SubTotalVen;
+    public javax.swing.JTextField Total;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -517,7 +477,6 @@ public class FormVentas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -529,20 +488,15 @@ public class FormVentas extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    public javax.swing.JTextField jTextField5;
-    public javax.swing.JTextField jTextField6;
-    public javax.swing.JTextField jTextField7;
     public javax.swing.JButton jbtnAProducto;
     public javax.swing.JButton jbtnBCliente;
     public javax.swing.JButton jbtnBProducto;
     public javax.swing.JButton jbtnRVenta;
     public javax.swing.JComboBox<String> jcbxFPago;
-    public javax.swing.JComboBox<String> jcbxMoneda;
     public javax.swing.JComboBox<String> jcbxReferencia;
     public javax.swing.JComboBox<String> jcbxTDocumento;
     public javax.swing.JComboBox<String> jcbxVendedor;
@@ -556,6 +510,5 @@ public class FormVentas extends javax.swing.JInternalFrame {
     public javax.swing.JTextField jtxtNDocumento;
     public javax.swing.JTextField jtxtObservacion;
     public javax.swing.JTextField jtxtProducto;
-    public javax.swing.JTextField jtxtTCambio;
     // End of variables declaration//GEN-END:variables
 }

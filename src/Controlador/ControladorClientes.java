@@ -41,10 +41,11 @@ public class ControladorClientes implements ActionListener {
         }
         if (e.getSource() == vista.jbtnConsultar) {
             idcli = Mensajes.M2("Ingrese el ID del cliente a buscar");
+            if (idcli != 0) {
             crud = new CRUDclientes();
             cli = crud.ObtenerRegistroCli(idcli);
             if (cli == null) {
-                Mensajes.M1("El ID " + idcli + "no existe en la tabla clientes");
+                Mensajes.M1("El ID " + idcli + " no existe en la tabla clientes");
             } else {
                 vista.jtxtId.setText(String.valueOf(cli.getId_cliente()));
                 vista.jcbxTipoDoc.setSelectedItem(cli.getTipo_doc());
@@ -56,6 +57,7 @@ public class ControladorClientes implements ActionListener {
                 vista.jtxtCelular.setText(String.valueOf(cli.getMovil()));
                 vista.jcbxSexo.setSelectedItem(cli.getSexo());
                 FormatoClientes.Estado2(vista);
+            }
             }
         }
         if (e.getSource() == vista.jbtnActualizar) {

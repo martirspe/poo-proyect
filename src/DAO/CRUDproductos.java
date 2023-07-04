@@ -80,6 +80,8 @@ public class CRUDproductos extends ConectarBD {
                 pro.setStock(rs.getInt(7));
                 pro.setPrecio(rs.getDouble(8));
                 pro.setDescripcion(rs.getString(9));
+            } else {
+                pro = null;
             }
             rs.close();
         } catch (Exception e) {

@@ -66,6 +66,7 @@ public class CRUDclientes extends ConectarBD {
     }
 
     public Clientes ObtenerRegistroCli(int idcli) {
+        
         Clientes cli = null; //No hay datos asociados al objeto
         try {
             rs = st.executeQuery("SELECT id, tipo_doc, num_doc, nombre, apellidos, direccion, sexo, movil, email FROM clientes WHERE estado = 1 AND id = " + idcli);
@@ -80,6 +81,8 @@ public class CRUDclientes extends ConectarBD {
                 cli.setSexo(rs.getString(7));
                 cli.setMovil(rs.getInt(8));
                 cli.setEmail(rs.getString(9));
+            } else {
+                cli = null;
             }
             rs.close();
         } catch (Exception e) {

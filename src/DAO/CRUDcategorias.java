@@ -61,6 +61,8 @@ public class CRUDcategorias extends ConectarBD {
                 cat.setIdcat(rs.getInt(1));
                 cat.setNombre(rs.getString(2));
                 cat.setDescripcion(rs.getString(3));
+            } else {
+                cat = null;
             }
             rs.close();
         } catch (Exception e) {

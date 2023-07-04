@@ -74,15 +74,18 @@ public class ControladorVentas implements ActionListener {
         //Añade el cliente al formulario de ventas
         if (e.getSource() == vista.jbtnBCliente) {
             idcli = Mensajes.M2("Ingrese el ID del cliente a buscar");
+            
+            if (idcli != 0) {
             crudcli = new CRUDclientes();
             cli = crudcli.ObtenerRegistroCli(idcli);
             if (cli == null) {
-                Mensajes.M1("El ID " + idcli + "no existe en la tabla productos");
+                Mensajes.M1("El ID " + idcli + " no existe en la tabla clientes");
             } else {
                 vista.jcbxTDocumento.setSelectedItem(cli.getTipo_doc());
                 vista.jtxtNDocumento.setText(String.valueOf(cli.getNum_doc()));
                 vista.jtxtCliente.setText(cli.getNombre());
                 vista.jtxtDireccion.setText(cli.getDireccion());
+            }
             }
             //FormatoVentas.Estado2(vista);
         }
@@ -90,6 +93,8 @@ public class ControladorVentas implements ActionListener {
         //Añade el producto al formulario de ventas
         if (e.getSource() == vista.jbtnBProducto) {
             idpro = Mensajes.M2("Ingrese el ID del producto a buscar");
+            
+            if (idpro != 0) {
             crudpro = new CRUDproductos();
             pro = crudpro.ObtenerRegistroPro(idpro);
             if (pro == null) {
@@ -97,24 +102,38 @@ public class ControladorVentas implements ActionListener {
             } else {
                 vista.jtxtCodigo.setText(String.valueOf(pro.getCodigo()));
                 vista.jtxtProducto.setText(pro.getNombre());
+                vista.jspPrecio.setValue(pro.getPrecio());
+            }
             }
             //FormatoVentas.Estado3(vista);
         }
 
         //Añade el producto a la lista de compras
         if (e.getSource() == vista.jbtnAProducto) {
+            
             NombreObjetos no = new NombreObjetos();
-            Mensajes.M1("Se ha añadido el producto a la lista de compras");
-            no.RecuperarNombrePro(idpro);
-            crudpro = new CRUDproductos();
-            pro = crudpro.ObtenerRegistroPro(idpro);
+            Object[] modeloTabla = new Object[8];
+            
             if (pro == null) {
-                Mensajes.M1("El ID " + idpro + "no existe en la tabla productos");
+                Mensajes.M1("El ID " + idpro + " no existe en la tabla productos");
             } else {
-                vista.jtxtCodigo.setText(String.valueOf(pro.getCodigo()));
-                vista.jtxtProducto.setText(pro.getNombre());
+                   
+                modeloTabla [0] = String.valueOf(pro.getIdpro());
+                modeloTabla [1] = String.valueOf(pro.getCodigo());
+                modeloTabla [2] = pro.getNombre();
+                modeloTabla [3] = pro.getModelo();
+                modeloTabla [4] = pro.getMarca();
+                modeloTabla [5] = no.RecuperarNombreCat(pro.getCategoria());
+                modeloTabla [6] = vista.jspCantidad.getValue();
+                modeloTabla [7] = pro.getPrecio();
+                
+                crudven.AgregarFilaEnTabla(modeloTabla);
             }
-            //FormatoVentas.Estado3(vista);
+            
+            vista.SubTotalVen.setText("S/." + crudven.CalcularSubTotal());
+            vista.Igv.setText("S/." + crudven.CalcularIGV());
+            vista.Total.setText("S/." + crudven.CalcularTotal());
+            
         }
     }
 }

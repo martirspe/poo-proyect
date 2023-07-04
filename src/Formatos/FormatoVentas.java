@@ -22,15 +22,12 @@ public class FormatoVentas {
         fv.jtxtCliente.setText("");
         fv.jtxtDireccion.setText("");
         fv.jcbxVendedor.setSelectedIndex(0);
-        fv.jcbxMoneda.setSelectedIndex(0);
         fv.jcbxReferencia.setSelectedIndex(0);
-        fv.jtxtTCambio.setText("");
         fv.jtxtCodigo.setText("");
         fv.jtxtProducto.setText("");
         fv.jspCantidad.setValue(0);
         fv.jspPrecio.setValue(0);
         fv.jcbxVendedor.setSelectedIndex(0);
-        fv.jtxtTCambio.requestFocus();
     }
 
     public static void Estado1(FormVentas fp) {
@@ -94,8 +91,6 @@ public class FormatoVentas {
 
         //Asignando datos al objeto ventas
         ven.setMet_pago(fv.jcbxFPago.getSelectedItem().toString());
-        ven.setMoneda(fv.jcbxMoneda.getSelectedItem().toString());
-        ven.setT_cambio(Double.parseDouble(fv.jtxtTCambio.getText()));
         ven.setIgv(0.18);
         ven.setTotal(totven);
         ven.setFecha(fv.jdcFecha.getDate());
