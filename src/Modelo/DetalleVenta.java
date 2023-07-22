@@ -142,25 +142,25 @@ public class DetalleVenta {
     }
 
     public Object[] RegistroDetalleVenta(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        DecimalFormat df = new DecimalFormat("S/##0.00");
         Object[] fila = {num, id, producto, cantidad, df.format(precio), df.format(total), vendedor, cliente, fecha};
         return fila;
     }
 
     public Object[] RegistroDetalleVentaCliente(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        DecimalFormat df = new DecimalFormat("S/##0.00");
         Object[] fila = {num, id, producto, cantidad, df.format(precio), df.format(total), vendedor, cliente, fecha};
         return fila;
     }
 
     public Object[] RegistroDetalleVentaVendedor(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        DecimalFormat df = new DecimalFormat("S/##0.00");
         Object[] fila = {num, id, producto, cantidad, df.format(precio), df.format(total), vendedor, cliente, fecha};
         return fila;
     }
 
     public Object[] RegistroDetalleVentaProducto(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        DecimalFormat df = new DecimalFormat("S/##0.00");
         Object[] fila = {num, id, producto, cantidad, df.format(precio), df.format(total), vendedor, cliente, fecha};
         return fila;
     }

@@ -102,7 +102,7 @@ public class Productos {
     }
 
     public Object[] RegistroProducto(int num) {
-        DecimalFormat df = new DecimalFormat("S/ ##0.00");
+        DecimalFormat df = new DecimalFormat("S/##0.00");
         NombreObjetos no = new NombreObjetos();
         Object[] fila = {num, id_producto, codigo, nombre, modelo, marca, no.RecuperarNombreCat(id_categoria), stock, df.format(precio), descripcion};
         return fila;

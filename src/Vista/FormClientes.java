@@ -88,7 +88,7 @@ public class FormClientes extends javax.swing.JInternalFrame {
         jLabel3.setText("REGISTRO Y MANTENIMIENTO DEL CLIENTE / EMPRESA");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 670, 60));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1360, 100));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1350, 100));
 
         jLabel5.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel5.setText("NO. DE DOCUMENTO");

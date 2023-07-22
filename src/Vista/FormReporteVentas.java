@@ -48,19 +48,19 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
 
         jScrollPane1.setViewportView(jtblDatos);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 850, 260));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 1000, 410));
 
         jPanel1.setBackground(new java.awt.Color(0, 173, 188));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, -40, 150, 160));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, -40, 150, 160));
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("REPORTE DE VENTAS");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 300, 50));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 300, 50));
 
         jLabel2.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -68,7 +68,7 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
         jLabel2.setText("INFOCOM SAC");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 230, 50));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 850, 50));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1000, 50));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -76,45 +76,45 @@ public class FormReporteVentas extends javax.swing.JInternalFrame {
 
         jLabel17.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel17.setText("FECHA DE INICIO");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 250, -1));
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 250, -1));
 
         jbntVVendedor.setBackground(new java.awt.Color(47, 123, 123));
         jbntVVendedor.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jbntVVendedor.setForeground(new java.awt.Color(255, 255, 255));
         jbntVVendedor.setText("VENTAS POR VENDEDOR");
         jbntVVendedor.setBorder(null);
-        jPanel3.add(jbntVVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 270, 30));
+        jPanel3.add(jbntVVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 270, 30));
 
         jbntVCliente.setBackground(new java.awt.Color(47, 123, 123));
         jbntVCliente.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jbntVCliente.setForeground(new java.awt.Color(255, 255, 255));
         jbntVCliente.setText("VENTAS POR CLIENTE");
         jbntVCliente.setBorder(null);
-        jPanel3.add(jbntVCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 270, 30));
+        jPanel3.add(jbntVCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 270, 30));
 
         jbntVProducto.setBackground(new java.awt.Color(47, 123, 123));
         jbntVProducto.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jbntVProducto.setForeground(new java.awt.Color(255, 255, 255));
         jbntVProducto.setText("VENTAS POR PRODUCTO");
         jbntVProducto.setBorder(null);
-        jPanel3.add(jbntVProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 270, 30));
-        jPanel3.add(jdcFFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 270, -1));
-        jPanel3.add(jdcFInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 270, -1));
+        jPanel3.add(jbntVProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 30, 270, 30));
+        jPanel3.add(jdcFFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 270, -1));
+        jPanel3.add(jdcFInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 270, -1));
 
         jLabel19.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel19.setText("FECHA DE FIN");
-        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 250, -1));
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 250, -1));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 850, 160));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 1000, 160));
 
         jbtnCVentas.setBackground(new java.awt.Color(47, 123, 123));
         jbtnCVentas.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
         jbtnCVentas.setForeground(new java.awt.Color(255, 255, 255));
         jbtnCVentas.setText("CONSULTAR VENTAS");
         jbtnCVentas.setBorder(null);
-        jPanel2.add(jbtnCVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 770, 30));
+        jPanel2.add(jbtnCVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 1000, 30));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 880, 580));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1030, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

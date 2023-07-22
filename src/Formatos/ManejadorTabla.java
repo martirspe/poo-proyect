@@ -24,9 +24,9 @@ public class ManejadorTabla {
 
     //Método que la da formato a la JTable del tabla Categorías
     public static void FormatoTablaCategorias(JTable tabla) {
-        AnchoColumnas(tabla, 0, 100);
+        AnchoColumnas(tabla, 0, 30);
         JustificarCelda(tabla, 0);
-        AnchoColumnas(tabla, 1, 100);
+        AnchoColumnas(tabla, 1, 30);
         JustificarCelda(tabla, 1);
         AnchoColumnas(tabla, 2, 100);
         AnchoColumnas(tabla, 3, 250);
@@ -47,9 +47,10 @@ public class ManejadorTabla {
         JustificarCelda(tabla, 5);
         AnchoColumnas(tabla, 6, 50);
         JustificarCelda(tabla, 6);
-        AnchoColumnas(tabla, 7, 10);
+        AnchoColumnas(tabla, 7, 15);
         JustificarCelda(tabla, 7);
         AnchoColumnas(tabla, 8, 50);
+        JustificarCelda(tabla, 8);
         AnchoColumnas(tabla, 9, 200);
     }
 
@@ -61,18 +62,18 @@ public class ManejadorTabla {
         JustificarCelda(tabla, 1);
         AnchoColumnas(tabla, 2, 20);
         JustificarCelda(tabla, 2);
-        AnchoColumnas(tabla, 3, 60);
+        AnchoColumnas(tabla, 3, 100);
         AnchoColumnas(tabla, 4, 40);
         JustificarCelda(tabla, 4);
         AnchoColumnas(tabla, 5, 30);
         JustificarCelda(tabla, 5);
-        AnchoColumnas(tabla, 6, 30);
+        AnchoColumnas(tabla, 6, 50);
         JustificarCelda(tabla, 6);
         AnchoColumnas(tabla, 7, 10);
         JustificarCelda(tabla, 7);
         AnchoColumnas(tabla, 8, 10);
         JustificarCelda(tabla, 8);
-        AnchoColumnas(tabla, 9, 200);
+        AnchoColumnas(tabla, 9, 250);
     }
 
     //Método que la da formato a la JTable del tabla Clientes
@@ -101,16 +102,22 @@ public class ManejadorTabla {
     
     //Método que la da formato a la JTable del tabla Clientes
     public static void FormatoTablaVentas(JTable tabla) {
-        AnchoColumnas(tabla, 0, 100);
+        AnchoColumnas(tabla, 0, 50);
         JustificarCelda(tabla, 0);
         AnchoColumnas(tabla, 1, 100);
         JustificarCelda(tabla, 1);
-        AnchoColumnas(tabla, 2, 100);
+        AnchoColumnas(tabla, 2, 200);
         JustificarCelda(tabla, 2);
-        AnchoColumnas(tabla, 3, 250);
+        AnchoColumnas(tabla, 3, 200);
         JustificarCelda(tabla, 3);
-        AnchoColumnas(tabla, 4, 250);
+        AnchoColumnas(tabla, 4, 200);
         JustificarCelda(tabla, 4);
+        AnchoColumnas(tabla, 5, 200);
+        JustificarCelda(tabla, 5);
+        AnchoColumnas(tabla, 6, 100);
+        JustificarCelda(tabla, 6);
+        AnchoColumnas(tabla, 7, 100);
+        JustificarCelda(tabla, 7);
     }
     
     //Método que la da formato a la JTable del tabla Detalle de Ventas
@@ -119,7 +126,7 @@ public class ManejadorTabla {
         JustificarCelda(tabla, 0);
         AnchoColumnas(tabla, 1, 50);
         JustificarCelda(tabla, 1);
-        AnchoColumnas(tabla, 2, 150);
+        AnchoColumnas(tabla, 2, 200);
         JustificarCelda(tabla, 2);
         AnchoColumnas(tabla, 3, 90);
         JustificarCelda(tabla, 3);
@@ -127,7 +134,7 @@ public class ManejadorTabla {
         JustificarCelda(tabla, 4);
         AnchoColumnas(tabla, 5, 100);
         JustificarCelda(tabla, 5);
-        AnchoColumnas(tabla, 6, 250);
+        AnchoColumnas(tabla, 6, 200);
         JustificarCelda(tabla, 6);
         AnchoColumnas(tabla, 7, 200);
         JustificarCelda(tabla, 7);
