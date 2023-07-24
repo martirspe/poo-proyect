@@ -25,12 +25,12 @@ public class CRUDclientes extends ConectarBD {
                 Clientes cli = new Clientes();
                 cli.setId_cliente(rs.getInt(1));
                 cli.setTipo_doc(rs.getString(2));
-                cli.setNum_doc(rs.getInt(3));
+                cli.setNum_doc(rs.getString(3));
                 cli.setNombre(rs.getString(4));
                 cli.setApellidos(rs.getString(5));
                 cli.setDireccion(rs.getString(6));
                 cli.setSexo(rs.getString(7));
-                cli.setMovil(rs.getInt(8));
+                cli.setMovil(rs.getString(8));
                 cli.setEmail(rs.getString(9));
                 modelo.addRow(cli.RegistroCliente(cont));
             }
@@ -49,12 +49,12 @@ public class CRUDclientes extends ConectarBD {
             ps = conexion.prepareStatement("INSERT INTO clientes (tipo_doc, num_doc, nombre, apellidos, direccion, sexo, movil, email, estado)"
                     + " values(?,?,?,?,?,?,?,?,1);");
             ps.setString(1, cli.getTipo_doc());
-            ps.setInt(2, cli.getNum_doc());
+            ps.setLong(2, Long.parseLong(cli.getNum_doc()));
             ps.setString(3, cli.getNombre());
             ps.setString(4, cli.getApellidos());
             ps.setString(5, cli.getDireccion());
             ps.setString(6, cli.getSexo());
-            ps.setInt(7, cli.getMovil());
+            ps.setLong(7, Long.parseLong(cli.getMovil()));
             ps.setString(8, cli.getEmail());
             ps.executeUpdate();
             ps.close();
@@ -74,12 +74,12 @@ public class CRUDclientes extends ConectarBD {
             if (rs.next()) {
                 cli.setId_cliente(rs.getInt(1));
                 cli.setTipo_doc(rs.getString(2));
-                cli.setNum_doc(rs.getInt(3));
+                cli.setNum_doc(rs.getString(3));
                 cli.setNombre(rs.getString(4));
                 cli.setApellidos(rs.getString(5));
                 cli.setDireccion(rs.getString(6));
                 cli.setSexo(rs.getString(7));
-                cli.setMovil(rs.getInt(8));
+                cli.setMovil(rs.getString(8));
                 cli.setEmail(rs.getString(9));
             } else {
                 cli = null;
@@ -95,12 +95,12 @@ public class CRUDclientes extends ConectarBD {
         try {
             ps = conexion.prepareStatement("UPDATE clientes SET tipo_doc = ?, num_doc = ?, nombre = ?, apellidos = ?, direccion = ?, sexo = ?, movil = ?, email = ? WHERE id = ?");
             ps.setString(1, cli.getTipo_doc());
-            ps.setInt(2, cli.getNum_doc());
+            ps.setLong(2, Long.parseLong(cli.getNum_doc()));
             ps.setString(3, cli.getNombre());
             ps.setString(4, cli.getApellidos());
             ps.setString(5, cli.getDireccion());
             ps.setString(6, cli.getSexo());
-            ps.setInt(7, cli.getMovil());
+            ps.setLong(7, Long.parseLong(cli.getMovil()));
             ps.setString(8, cli.getEmail());
             ps.setInt(9, cli.getId_cliente());
             ps.executeUpdate();

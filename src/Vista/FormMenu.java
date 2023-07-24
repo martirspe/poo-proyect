@@ -27,6 +27,10 @@ public class FormMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jdpContenedor = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmClientes = new javax.swing.JMenu();
         jmiMantenimientoClientes = new javax.swing.JMenuItem();
@@ -38,20 +42,53 @@ public class FormMenu extends javax.swing.JFrame {
         jmiRegistroVentas = new javax.swing.JMenuItem();
         jmReportes = new javax.swing.JMenu();
         jmiReporteVentas = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jdpContenedor.setBackground(new java.awt.Color(204, 255, 255));
 
+        jLabel1.setText("Fecha y Hora:");
+
+        jLabel2.setText("Datos Usuario:");
+
+        jLabel3.setText("jLabel3");
+
+        jLabel4.setText("jLabel4");
+
+        jdpContenedor.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpContenedor.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpContenedor.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpContenedor.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout jdpContenedorLayout = new javax.swing.GroupLayout(jdpContenedor);
         jdpContenedor.setLayout(jdpContenedorLayout);
         jdpContenedorLayout.setHorizontalGroup(
             jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1198, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpContenedorLayout.createSequentialGroup()
+                .addContainerGap(842, Short.MAX_VALUE)
+                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(231, 231, 231))
         );
         jdpContenedorLayout.setVerticalGroup(
             jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 583, Short.MAX_VALUE)
+            .addGroup(jdpContenedorLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addContainerGap(513, Short.MAX_VALUE))
         );
 
         jmClientes.setText("Clientes");
@@ -104,6 +141,18 @@ public class FormMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jmReportes);
 
+        jMenu2.setText("Usuario");
+
+        jMenuItem1.setText("Cerrar Sesión");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu2);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -132,16 +181,20 @@ public class FormMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmiMantenimientoCategoriasActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+   // public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
+       /* try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -161,15 +214,21 @@ public class FormMenu extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+       /* java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FormMenu().setVisible(true);
             }
         });
-    }
+    }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenuItem jMenuItem1;
     public javax.swing.JDesktopPane jdpContenedor;
     public javax.swing.JMenu jmClientes;
     public javax.swing.JMenu jmProductos;

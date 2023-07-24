@@ -5,8 +5,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import Formatos.*;
+import Modelo.Login;
 import Vista.*;
 import Principal.*;
+import static Principal.Main.cLogin;
+import static Principal.Main.fm;
+import static Principal.Main.formLogin;
+import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.swing.Timer;
 
 public class ControladorMenu implements ActionListener {
 
@@ -20,11 +29,15 @@ public class ControladorMenu implements ActionListener {
         vista.jmiMantenimientoStock.addActionListener(this);
         vista.jmiRegistroVentas.addActionListener(this);
         vista.jmiReporteVentas.addActionListener(this);
+        vista.jMenuItem1.addActionListener(this);
         fm.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
-        fm.setDefaultCloseOperation(fm.EXIT_ON_CLOSE);
+        //fm.setDefaultCloseOperation(fm.EXIT_ON_CLOSE);
+        fm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         fm.setVisible(true);
         fm.setTitle("INFOCOM S.A.C");
+
     }
 
     @Override
@@ -74,7 +87,7 @@ public class ControladorMenu implements ActionListener {
             vista.jdpContenedor.add(Main.fventas);
             CentrarForma.CFVentas(vista.jdpContenedor, Main.fventas);
         }
-        
+
         if (e.getSource() == vista.jmiReporteVentas) {
             Main.rventas = new FormReporteVentas();
             Main.crventas = new ControladorDetalleVenta(Main.rventas);
@@ -83,6 +96,28 @@ public class ControladorMenu implements ActionListener {
             vista.jdpContenedor.add(Main.rventas);
             CentrarForma.CFDVentas(vista.jdpContenedor, Main.rventas);
         }
+        if (e.getSource() == vista.jMenuItem1) {
+            formLogin = new FormLogin();
+            cLogin = new ControladorLogin(formLogin);
+            vista.dispatchEvent(new WindowEvent(vista, WindowEvent.WINDOW_CLOSING));
+        }
+
+    }
+
+    public void recuperadoDatosSesion(Login login) {
+        vista.jLabel4.setText(login.getNombre() + " " + login.getApellidos());
+        // Formateamos la fecha y hora actual y la mostramos en el JTextField
+        Timer timer;
+        timer = new Timer(1000, (ActionEvent e) -> {
+            // Obtenemos la fecha y hora actual
+            Date now1 = new Date();
+            // Creamos un formato para mostrar la fecha y hora con segundos
+            SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            // Formateamos la fecha y hora actual y la mostramos en el JTextField
+            vista.jLabel3.setText(dateFormat1.format(now1));
+        });
+        // Iniciamos el timer
+        timer.start();
     }
 
 }

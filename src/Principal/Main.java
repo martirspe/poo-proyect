@@ -4,6 +4,7 @@ package Principal;
 import Vista.*;
 import Controlador.*;
 import Colecciones.*;
+import java.awt.event.WindowEvent;
 
 public class Main {
 
@@ -34,14 +35,18 @@ public class Main {
     //Formulario Menú
     public static FormMenu fm;
     public static ControladorMenu cfm;
-
+    //Formulario Login
+    public static FormLogin formLogin;
+    public static ControladorLogin cLogin;
     //Colecciones de datos
     public static ListaCategorias Listacat;
     public static ListaVendedores Listaven;
 
     public static void main(String[] args) {
-        fm = new FormMenu();
-        cfm = new ControladorMenu(fm);
+        formLogin = new FormLogin();
+        cLogin = new ControladorLogin(formLogin);
+       
+
     }
 
 }

@@ -91,7 +91,7 @@ public class FormClientes extends javax.swing.JInternalFrame {
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1350, 100));
 
         jLabel5.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        jLabel5.setText("NO. DE DOCUMENTO");
+        jLabel5.setText("N°. DE DOCUMENTO");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 400, 20));
 
         jLabel6.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
@@ -136,7 +136,7 @@ public class FormClientes extends javax.swing.JInternalFrame {
 
         jLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel8.setText("CORREO ELECTRÓNICO");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 160, 20));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 240, 20));
         jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 400, 10));
 
         jLabel9.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
@@ -145,7 +145,7 @@ public class FormClientes extends javax.swing.JInternalFrame {
 
         jLabel10.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel10.setText("TELÉFONO / CELULAR");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 150, 20));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 240, 20));
 
         jcbxTipoDoc.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jcbxTipoDoc.setForeground(new java.awt.Color(153, 153, 153));

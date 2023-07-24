@@ -73,7 +73,7 @@ public class FormatoVentas {
         NombreObjetos oc = new NombreObjetos();
         Integer idcli = oc.RecuperarIdCli(fv.jtxtNDocumento.getText());
         ven.setId_cliente(idcli);
-        cli.setNum_doc(Integer.parseInt(fv.jtxtNDocumento.getText()));
+        cli.setNum_doc(fv.jtxtNDocumento.getText());
         cli.setNombre(fv.jtxtCliente.getText());
         cli.setDireccion(fv.jtxtDireccion.getText());
 

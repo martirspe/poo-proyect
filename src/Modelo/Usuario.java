@@ -4,12 +4,12 @@ public class Usuario {
 
     //Atributos
     private String tipo_doc;
-    private Integer num_doc;
+    private String num_doc;
     private String nombre;
     private String apellidos;
     private String sexo;
     private String email;
-    private Integer movil;
+    private String movil;
     private String direccion;
 
     public Usuario() {
@@ -21,14 +21,6 @@ public class Usuario {
 
     public void setTipo_doc(String tipo_doc) {
         this.tipo_doc = tipo_doc;
-    }
-
-    public Integer getNum_doc() {
-        return num_doc;
-    }
-
-    public void setNum_doc(Integer num_doc) {
-        this.num_doc = num_doc;
     }
 
     public String getNombre() {
@@ -63,13 +55,22 @@ public class Usuario {
         this.email = email;
     }
 
-    public Integer getMovil() {
+    public String getNum_doc() {
+        return num_doc;
+    }
+
+    public void setNum_doc(String num_doc) {
+        this.num_doc = num_doc;
+    }
+
+    public String getMovil() {
         return movil;
     }
 
-    public void setMovil(Integer movil) {
+    public void setMovil(String movil) {
         this.movil = movil;
     }
+
 
     public String getDireccion() {
         return direccion;
