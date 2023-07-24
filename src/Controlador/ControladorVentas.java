@@ -102,6 +102,7 @@ public class ControladorVentas implements ActionListener {
 
             NombreObjetos no = new NombreObjetos();
             Object[] modeloTabla = new Object[8];
+            Object[] modeloTabla2 = new Object[8];
 
             if (pro == null) {
                 Mensajes.M1("El ID " + idpro + " no existe en la tabla productos");
@@ -115,8 +116,19 @@ public class ControladorVentas implements ActionListener {
                 modeloTabla[5] = no.RecuperarNombreCat(pro.getCategoria());
                 modeloTabla[6] = vista.jspCantidad.getValue();
                 modeloTabla[7] = pro.getPrecio();
+                
+                //Modelo usado solo para agregar el "S/. al precio
+                modeloTabla2[0] = String.valueOf(pro.getIdpro());
+                modeloTabla2[1] = String.valueOf(pro.getCodigo());
+                modeloTabla2[2] = pro.getNombre();
+                modeloTabla2[3] = pro.getModelo();
+                modeloTabla2[4] = pro.getMarca();
+                modeloTabla2[5] = no.RecuperarNombreCat(pro.getCategoria());
+                modeloTabla2[6] = vista.jspCantidad.getValue();
+                modeloTabla2[7] = "S/." + pro.getPrecio();
 
                 crudven.AgregarFilaEnTabla(modeloTabla);
+                crudven.AgregarFilaEnTabla2(modeloTabla2);
             }
 
             crudven.CalcularSubTotal();

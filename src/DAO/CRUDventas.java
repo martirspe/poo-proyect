@@ -14,6 +14,7 @@ public class CRUDventas extends ConectarBD {
 
     String[] titulo = {"ID", "CÓDIGO", "NOMBRE", "MODELO", "MARCA", "CATEGORÍA", "CANTIDAD", "PRECIO"};
     DefaultTableModel modelo = new DefaultTableModel(null, titulo);
+    DefaultTableModel modelo2 = new DefaultTableModel(null, titulo);
 
     public double sub_total, igv, total = 0;
 
@@ -22,13 +23,14 @@ public class CRUDventas extends ConectarBD {
 
     //Método que recibe un JTable y JLabel y muestra los registros en el JTable
     public void MostrarProductosEnTabla(JTable tabla) {
-        tabla.setModel(modelo);
+        tabla.setModel(modelo2);
         ManejadorTabla.FormatoTablaVentas(tabla);
     }
 
     public void limpiarTabla(JTable tabla) {
         for (int i = 0; i < tabla.getRowCount(); i++) {
             modelo.removeRow(i);
+            modelo2.removeRow(i);
             i = i - 1;
         }
     }
@@ -36,6 +38,11 @@ public class CRUDventas extends ConectarBD {
     public void AgregarFilaEnTabla(Object row) {
 
         modelo.addRow((Object[]) row);
+    }
+    
+    public void AgregarFilaEnTabla2(Object row) {
+
+        modelo2.addRow((Object[]) row);
     }
 
     public Double CalcularSubTotal() {
@@ -49,6 +56,7 @@ public class CRUDventas extends ConectarBD {
 
     public Double CalcularIGV() {
         igv = sub_total * 0.18;
+        igv = Math.round(igv * 100.0) / 100.0;
         return igv;
     }
 

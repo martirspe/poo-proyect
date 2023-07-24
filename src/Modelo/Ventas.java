@@ -71,6 +71,7 @@ public class Ventas {
     }
 
     public Double getIgv() {
+        
         return igv;
     }
 
