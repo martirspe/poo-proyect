@@ -17,7 +17,6 @@ public class Mensajes {
         if (result != null) {
             res_int = Integer.parseInt(result);
 
-        } else {
         }
 
         return res_int;
@@ -25,9 +24,9 @@ public class Mensajes {
 
     public static int M3(String titulo, String mensaje) {
         return JOptionPane.showConfirmDialog(null, mensaje, titulo, JOptionPane.OK_CANCEL_OPTION);
-    }// Se elijio si (OK) retornará 0
-    public static void M4(String mensaje) {
-        JOptionPane.showMessageDialog(null, mensaje,"Error", 0);
-        //JOptionPane.showConfirmDialog(null, mensaje, "Error", 0, 0, JOptionPane.Er);
     }
-}//fin de la clase
+
+    public static void M4(String mensaje) {
+        JOptionPane.showMessageDialog(null, mensaje, "Error", 0);
+    }
+}

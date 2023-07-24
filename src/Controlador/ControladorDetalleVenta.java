@@ -29,6 +29,7 @@ public class ControladorDetalleVenta implements ActionListener {
         this.vista.jbntVVendedor.addActionListener(this);
         FormatoDetalleVentas.Presentacion(frv);
         crud = new CRUDdetalleVenta();
+        crud.MostrarVentasEnTabla(vista.jtblDatos, "", "");
         vista.setVisible(true);
     }
 
@@ -47,30 +48,30 @@ public class ControladorDetalleVenta implements ActionListener {
             crud = new CRUDdetalleVenta();
             crud.MostrarVentasEnTabla(vista.jtblDatos, dateInit, dateEnd);
         }
-        
+
         if (e.getSource() == vista.jbntVVendedor) {
             idven = Mensajes.M2("Ingrese el ID del vendedor a buscar");
-            
+
             if (idven != 0) {
                 crud = new CRUDdetalleVenta();
                 crud.MostrarVentasVendedorEnTabla(vista.jtblDatos, idven, dateInit, dateEnd);
             }
         }
-        
+
         if (e.getSource() == vista.jbntVCliente) {
             idcli = Mensajes.M2("Ingrese el ID del cliente a buscar");
-            
+
             if (idcli != 0) {
-            crud = new CRUDdetalleVenta();
-            crud.MostrarVentasClienteEnTabla(vista.jtblDatos, idcli, dateInit, dateEnd);
+                crud = new CRUDdetalleVenta();
+                crud.MostrarVentasClienteEnTabla(vista.jtblDatos, idcli, dateInit, dateEnd);
             }
         }
-        
+
         if (e.getSource() == vista.jbntVProducto) {
             idpro = Mensajes.M2("Ingrese el ID del producto a buscar");
             if (idpro != 0) {
-            crud = new CRUDdetalleVenta();
-            crud.MostrarVentasProductoEnTabla(vista.jtblDatos, idpro, dateInit, dateEnd);
+                crud = new CRUDdetalleVenta();
+                crud.MostrarVentasProductoEnTabla(vista.jtblDatos, idpro, dateInit, dateEnd);
             }
         }
     }
