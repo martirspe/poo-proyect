@@ -16,7 +16,6 @@ public class Mensajes {
 
         if (result != null) {
             res_int = Integer.parseInt(result);
-
         }
 
         return res_int;
