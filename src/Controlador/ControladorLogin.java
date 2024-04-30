@@ -34,9 +34,9 @@ public class ControladorLogin implements ActionListener {
 
     public ControladorLogin(FormLogin fp) {
         vista = fp;
-        this.vista.jButton1.addActionListener(this);
+        this.vista.jbtnIniciarSesion.addActionListener(this);
         try {
-            String originalString = "rvera12345678912";
+            String originalString = "mrojas";
             String datoClave = "Scodwmx3YUVBt/2mBJsGDA==";//ecp.generateAES256Key();
             System.out.println("CLAVE original: " + datoClave);
             String encryptedString = ecp.encrypt(originalString, datoClave);
@@ -60,9 +60,9 @@ public class ControladorLogin implements ActionListener {
         //Validando Datos
         if (validandoDatos()) {
             //Ejecusión boton
-            if (e.getSource() == vista.jButton1) {
-                String usuarioIngresado = vista.jTextField1.getText();
-                String passIngresado = new String(vista.jPasswordField1.getPassword());
+            if (e.getSource() == vista.jbtnIniciarSesion) {
+                String usuarioIngresado = vista.jtxtUser.getText();
+                String passIngresado = new String(vista.jpwdContraseña.getPassword());
                 String passEncrypt = null;
                 String datoClave = "Scodwmx3YUVBt/2mBJsGDA==";
                 Login loginRecuperado = dao.ObteniendoCredenciales(usuarioIngresado);
@@ -75,7 +75,7 @@ public class ControladorLogin implements ActionListener {
                     }
 
                     //Validando que sean iguales
-                    if (loginRecuperado.getUsuario().equals(vista.jTextField1.getText())
+                    if (loginRecuperado.getUsuario().equals(vista.jtxtUser.getText())
                             && loginRecuperado.getPass().equals(passEncrypt)) {
                         Login datosRecuperadosLogueado = dao.usuarioLogueado(loginRecuperado.getId_empleado());
                         Login lg = new Login();
@@ -101,9 +101,9 @@ public class ControladorLogin implements ActionListener {
     private Boolean validandoDatos() {
         Boolean response = false;
         //Validando usuario
-        if (vista.jTextField1.getText().equalsIgnoreCase("") || vista.jTextField1.getText() == null) {
+        if (vista.jtxtUser.getText().equalsIgnoreCase("") || vista.jtxtUser.getText() == null) {
             Mensajes.M4("Error - Debe Ingresar su Usuario");
-        } else if (vista.jPasswordField1.getPassword().length <=0) {
+        } else if (vista.jpwdContraseña.getPassword().length <= 0) {
             Mensajes.M4("Error - Debe Ingresar la Password");
         } else {
             response = true;

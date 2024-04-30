@@ -27,10 +27,10 @@ public class FormMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jdpContenedor = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jlFechaHora = new javax.swing.JLabel();
+        jlUsuario = new javax.swing.JLabel();
+        jlFechaHoraDatos = new javax.swing.JLabel();
+        jlUsuarioDatos = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmClientes = new javax.swing.JMenu();
         jmiMantenimientoClientes = new javax.swing.JMenuItem();
@@ -42,53 +42,56 @@ public class FormMenu extends javax.swing.JFrame {
         jmiRegistroVentas = new javax.swing.JMenuItem();
         jmReportes = new javax.swing.JMenu();
         jmiReporteVentas = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jmUsuario = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jdpContenedor.setBackground(new java.awt.Color(204, 255, 255));
 
-        jLabel1.setText("Fecha y Hora:");
+        jlFechaHora.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jlFechaHora.setText("Fecha y Hora:");
 
-        jLabel2.setText("Datos Usuario:");
+        jlUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jlUsuario.setText("Datos Usuario:");
 
-        jLabel3.setText("jLabel3");
+        jlFechaHoraDatos.setText("dateTime");
 
-        jLabel4.setText("jLabel4");
+        jlUsuarioDatos.setText("userData");
 
-        jdpContenedor.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpContenedor.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpContenedor.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpContenedor.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpContenedor.setLayer(jlFechaHora, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpContenedor.setLayer(jlUsuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpContenedor.setLayer(jlFechaHoraDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpContenedor.setLayer(jlUsuarioDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jdpContenedorLayout = new javax.swing.GroupLayout(jdpContenedor);
         jdpContenedor.setLayout(jdpContenedorLayout);
         jdpContenedorLayout.setHorizontalGroup(
             jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpContenedorLayout.createSequentialGroup()
-                .addContainerGap(842, Short.MAX_VALUE)
+                .addContainerGap(1133, Short.MAX_VALUE)
                 .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(231, 231, 231))
+                    .addGroup(jdpContenedorLayout.createSequentialGroup()
+                        .addComponent(jlUsuario)
+                        .addGap(12, 12, 12)
+                        .addComponent(jlUsuarioDatos))
+                    .addGroup(jdpContenedorLayout.createSequentialGroup()
+                        .addComponent(jlFechaHora)
+                        .addGap(18, 18, 18)
+                        .addComponent(jlFechaHoraDatos)))
+                .addContainerGap())
         );
         jdpContenedorLayout.setVerticalGroup(
             jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpContenedorLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addContainerGap(513, Short.MAX_VALUE))
+                .addGap(6, 6, 6)
+                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlUsuario)
+                    .addComponent(jlUsuarioDatos))
+                .addGap(6, 6, 6)
+                .addGroup(jdpContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlFechaHora)
+                    .addComponent(jlFechaHoraDatos)))
         );
 
         jmClientes.setText("Clientes");
@@ -141,7 +144,7 @@ public class FormMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jmReportes);
 
-        jMenu2.setText("Usuario");
+        jmUsuario.setText("Usuario");
 
         jMenuItem1.setText("Cerrar Sesión");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -149,9 +152,9 @@ public class FormMenu extends javax.swing.JFrame {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem1);
+        jmUsuario.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jmUsuario);
 
         setJMenuBar(jMenuBar1);
 
@@ -222,17 +225,17 @@ public class FormMenu extends javax.swing.JFrame {
     }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
-    public javax.swing.JLabel jLabel4;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JMenuItem jMenuItem1;
     public javax.swing.JDesktopPane jdpContenedor;
+    private javax.swing.JLabel jlFechaHora;
+    public javax.swing.JLabel jlFechaHoraDatos;
+    private javax.swing.JLabel jlUsuario;
+    public javax.swing.JLabel jlUsuarioDatos;
     public javax.swing.JMenu jmClientes;
     public javax.swing.JMenu jmProductos;
     public javax.swing.JMenu jmReportes;
+    private javax.swing.JMenu jmUsuario;
     public javax.swing.JMenu jmVentas;
     public javax.swing.JMenuItem jmiMantenimientoCategorias;
     public javax.swing.JMenuItem jmiMantenimientoClientes;

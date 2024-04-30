@@ -105,7 +105,7 @@ public class ControladorMenu implements ActionListener {
     }
 
     public void recuperadoDatosSesion(Login login) {
-        vista.jLabel4.setText(login.getNombre() + " " + login.getApellidos());
+        vista.jlUsuarioDatos.setText(login.getNombre() + " " + login.getApellidos());
         // Formateamos la fecha y hora actual y la mostramos en el JTextField
         Timer timer;
         timer = new Timer(1000, (ActionEvent e) -> {
@@ -114,7 +114,7 @@ public class ControladorMenu implements ActionListener {
             // Creamos un formato para mostrar la fecha y hora con segundos
             SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             // Formateamos la fecha y hora actual y la mostramos en el JTextField
-            vista.jLabel3.setText(dateFormat1.format(now1));
+            vista.jlFechaHoraDatos.setText(dateFormat1.format(now1));
         });
         // Iniciamos el timer
         timer.start();
